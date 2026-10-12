@@ -35,13 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const site = process.env.SITE_URL ?? "http://localhost:3000";
   return {
     metadataBase: new URL(site),
-    title: { default: d.meta.title, template: `%s | ${locale === "ar" ? "بنك السلام كابيتال" : "Alsalam Capital Bank"}` },
+    title: { default: d.meta.title, template: `%s | ${locale === "ar" ? "بنك وثاق" : "Withaq Bank"}` },
     description: d.meta.description,
     alternates: { canonical: `/${locale}`, languages: { ar: "/ar", en: "/en", "x-default": "/ar" } },
     openGraph: { type: "website", locale: locale === "ar" ? "ar_YE" : "en_US", siteName: d.meta.title, title: d.meta.title, description: d.meta.description },
     twitter: { card: "summary_large_image", title: d.meta.title, description: d.meta.description },
     manifest: "/manifest.webmanifest",
-    appleWebApp: { capable: true, statusBarStyle: "black-translucent", title: locale === "ar" ? "السلام كابيتال" : "Alsalam Capital" },
+    appleWebApp: { capable: true, statusBarStyle: "black-translucent", title: locale === "ar" ? "بنك وثاق" : "Withaq Bank" },
     icons: { icon: [{ url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" }], apple: [{ url: "/icons/icon-192.png", sizes: "192x192" }] },
   };
 }

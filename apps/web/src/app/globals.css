@@ -5,7 +5,7 @@
 /* Design tokens — see docs/DESIGN-SYSTEM.md. Values are RGB triplets for Tailwind alpha support. */
 @layer base {
   :root {
-    --brand-900: 40 56 112;  /* #283870 كحليُّ السلام */
+    --brand-900: 40 56 112;  /* #283870 كحليُّ وثاق */
     --brand-700: 48 64 128;  /* #304080 */
     --brand-100: 228 234 246;/* #E4EAF6 */
     --accent: 48 144 208;    /* #3090D0 أزرقُ الشعار */

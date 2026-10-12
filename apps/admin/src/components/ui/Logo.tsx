@@ -1,4 +1,4 @@
-/** علامةُ بنك السلام كابيتال — مأخوذةٌ من دليل البنك، كما في apps/web. */
+/** علامةُ بنك وثاق — مأخوذةٌ من دليل البنك، كما في apps/web. */
 export function LogoMark({ light = false, className = "size-8" }: { light?: boolean; className?: string }) {
   return (
     <img

@@ -3,7 +3,7 @@ import type { Locale, Seo } from "@/types/content";
 import { locales, t } from "@/lib/i18n/config";
 
 export const siteUrl = () => process.env.SITE_URL ?? "http://localhost:3000";
-export const bankName = (l: Locale) => (l === "ar" ? "بنك السلام كابيتال" : "Alsalam Capital Bank");
+export const bankName = (l: Locale) => (l === "ar" ? "بنك وثاق" : "Withaq Bank");
 
 /** `/about` → `/ar/about`; `/` → `/ar`. */
 export const localePath = (l: Locale, path: string) => `/${l}${path === "/" ? "" : path}`;

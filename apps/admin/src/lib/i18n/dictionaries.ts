@@ -2,7 +2,7 @@ import type { Locale } from "@/types/api";
 
 /** Full admin UI dictionary. Arabic is the source of truth for the shape; English must match it. */
 const ar = {
-  app: { name: "لوحة بنك السلام كابيتال", short: "السلام كابيتال", bank: "بنك السلام كابيتال", console: "لوحة الإدارة", skip: "تخطَّ إلى المحتوى", demoBadge: "وضع تجريبي" },
+  app: { name: "لوحة بنك وثاق", short: "بنك وثاق", bank: "بنك وثاق", console: "لوحة الإدارة", skip: "تخطَّ إلى المحتوى", demoBadge: "وضع تجريبي" },
   common: {
     save: "حفظ", saving: "جارٍ الحفظ…", saved: "تم الحفظ", cancel: "إلغاء", close: "إغلاق", delete: "حذف", edit: "تعديل", create: "إنشاء",
     add: "إضافة", new: "جديد", back: "رجوع", confirm: "تأكيد", search: "بحث", searchPlaceholder: "ابحث…", filters: "التصفية", clear: "مسح",
@@ -111,7 +111,7 @@ const ar = {
       gallery: "معرض صور", video: "فيديو", map: "خريطة المواقع", people: "أشخاص (مجلس/إدارة)", documents: "مستندات وتقارير",
       "home:hero": "الواجهة الرئيسية", "home:services": "الخدمات", "home:needs": "ماذا تحتاج؟", "home:accounts": "الحسابات", "home:financing": "التمويل والحاسبة",
       "home:digital": "الخدمات الرقمية", "home:cards": "البطاقات", "home:network": "الفروع والصرافات", "home:news": "الأخبار", "home:offers": "العروض",
-      "home:why": "لماذا بنك السلام كابيتال", "home:app": "تطبيق الجوال", "home:faq": "الأسئلة الشائعة", "home:cta": "الدعوة الختامية",
+      "home:why": "لماذا بنك وثاق", "home:app": "تطبيق الجوال", "home:faq": "الأسئلة الشائعة", "home:cta": "الدعوة الختامية",
     },
     fields: { title: "العنوان", subtitle: "العنوان الفرعي", heading: "عنوان القسم", body: "النص", image: "الصورة", caption: "التعليق", primary: "الزر الرئيسي", secondary: "الزر الثانوي",
       items: "العناصر", icon: "الأيقونة", href: "الرابط", value: "القيمة", suffix: "اللاحقة", label: "الوصف", question: "السؤال", answer: "الإجابة", images: "الصور", url: "رابط الفيديو",
@@ -180,7 +180,7 @@ export type Dictionary = typeof ar;
 type Widen<T> = { [K in keyof T]: T[K] extends string ? string : Widen<T[K]> };
 
 const en: Widen<Dictionary> = {
-  app: { name: "Alsalam Capital Admin", short: "Alsalam Capital", bank: "Alsalam Capital Bank", console: "Admin console", skip: "Skip to content", demoBadge: "Demo mode" },
+  app: { name: "Withaq Bank Admin", short: "Withaq Bank", bank: "Withaq Bank", console: "Admin console", skip: "Skip to content", demoBadge: "Demo mode" },
   common: {
     save: "Save", saving: "Saving…", saved: "Saved", cancel: "Cancel", close: "Close", delete: "Delete", edit: "Edit", create: "Create",
     add: "Add", new: "New", back: "Back", confirm: "Confirm", search: "Search", searchPlaceholder: "Search…", filters: "Filters", clear: "Clear",
@@ -289,7 +289,7 @@ const en: Widen<Dictionary> = {
       gallery: "Gallery", video: "Video", map: "Locations map", people: "People (board/executives)", documents: "Documents & reports",
       "home:hero": "Hero", "home:services": "Services", "home:needs": "What do you need?", "home:accounts": "Accounts", "home:financing": "Financing & calculator",
       "home:digital": "Digital banking", "home:cards": "Cards", "home:network": "Branches & ATMs", "home:news": "News", "home:offers": "Offers",
-      "home:why": "Why Alsalam Capital", "home:app": "Mobile app", "home:faq": "FAQ", "home:cta": "Closing CTA",
+      "home:why": "Why Withaq Bank", "home:app": "Mobile app", "home:faq": "FAQ", "home:cta": "Closing CTA",
     },
     fields: { title: "Title", subtitle: "Subtitle", heading: "Section heading", body: "Body", image: "Image", caption: "Caption", primary: "Primary button", secondary: "Secondary button",
       items: "Items", icon: "Icon", href: "Link", value: "Value", suffix: "Suffix", label: "Label", question: "Question", answer: "Answer", images: "Images", url: "Video URL",

@@ -3,7 +3,7 @@ import { pagesAr, pagesEn } from "./dictionary-pages";
 
 /** Static UI strings. Editorial content comes from the CMS, not from here. */
 const ar = {
-  meta: { title: "بنك السلام كابيتال — عالمٌ من الخدمات المصرفيّة", description: "حساباتٌ وودائعُ وتمويلٌ إسلاميٌّ وحلولٌ رقميّةٌ وحوالاتٌ وبطاقات — من بنك السلام كابيتال للتمويل الأصغر الإسلاميّ." },
+  meta: { title: "بنك وثاق — عالمٌ من الخدمات المصرفيّة", description: "حساباتٌ وودائعُ وتمويلٌ إسلاميٌّ وحلولٌ رقميّةٌ وحوالاتٌ وبطاقات — من بنك وثاق للتمويل الأصغر الإسلاميّ." },
   topbar: { care: "خدمة العملاء", tollFree: "الرقم المجاني", internetBanking: "الإنترنت المصرفي" },
   nav: {
     home: "الرئيسية", about: "من نحن", personal: "الأفراد", business: "الشركات", financing: "التمويل",
@@ -54,7 +54,7 @@ const ar = {
   faq: { eyebrow: "الأسئلة الشائعة", title: "إجابات سريعة", more: "كل الأسئلة" },
   cta: { title: "ابدأ رحلتك المصرفية اليوم", body: "افتح حسابك عبر الموقع واستلم رقماً مرجعياً لمتابعة طلبك.", primary: "افتح حسابك", secondary: "تواصل معنا" },
   footer: {
-    about: "بنك السلام كابيتال للتمويل الأصغر الإسلاميّ: مؤسّسةٌ مصرفيّةٌ يمنيّةٌ تعمل وفق أحكام ومبادئ الشريعة الإسلاميّة.",
+    about: "بنك وثاق للتمويل الأصغر الإسلاميّ: مؤسّسةٌ مصرفيّةٌ يمنيّةٌ تعمل وفق أحكام ومبادئ الشريعة الإسلاميّة.",
     groups: { bank: "البنك", services: "الخدمات", help: "المساعدة" },
     links: {
       about: "عن البنك", careers: "الوظائف", news: "الأخبار", governance: "الحوكمة",
@@ -74,7 +74,7 @@ const ar = {
 export type Dictionary = typeof ar;
 
 const en: Dictionary = {
-  meta: { title: "Alsalam Capital Bank — A world of banking services", description: "Accounts, deposits, Islamic financing, digital solutions, transfers and cards — Alsalam Capital Bank for Islamic Microfinance." },
+  meta: { title: "Withaq Bank — A world of banking services", description: "Accounts, deposits, Islamic financing, digital solutions, transfers and cards — Withaq Bank for Islamic Microfinance." },
   topbar: { care: "Customer care", tollFree: "Toll-free", internetBanking: "Internet Banking" },
   nav: {
     home: "Home", about: "About", personal: "Personal", business: "Business", financing: "Financing",
@@ -125,7 +125,7 @@ const en: Dictionary = {
   faq: { eyebrow: "FAQ", title: "Quick answers", more: "All questions" },
   cta: { title: "Start your banking journey today", body: "Open your account online and get a reference number to track your request.", primary: "Open your account", secondary: "Contact us" },
   footer: {
-    about: "Alsalam Capital Bank for Islamic Microfinance is a Yemeni institution operating under Islamic principles.",
+    about: "Withaq Bank for Islamic Microfinance is a Yemeni institution operating under Islamic principles.",
     groups: { bank: "The bank", services: "Services", help: "Help" },
     links: {
       about: "About", careers: "Careers", news: "News", governance: "Governance",

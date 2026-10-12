@@ -5,16 +5,16 @@ import { activeOffers, toNewsItem } from "@/lib/content";
 
 /**
  * Demo content — used when the API is unreachable (local dev, previews).
- * Profile data aligned with Al Salam Capital Bank for Islamic Microfinance.
+ * Profile data aligned with Withaq Bank for Islamic Microfinance.
  */
 export const demoHome: HomeContent = {
   settings: {
-    bankName: { ar: "بنك السلام كابيتال", en: "Al Salam Capital Bank" },
+    bankName: { ar: "بنك وثاق", en: "Withaq Bank" },
     phone: "+967 1 400 400",
     tollFree: "8008 800",
-    email: "care@alsalam-capital.example",
+    email: "care@withaq-bank.example",
     address: { ar: "شارع الزبيري، صنعاء، الجمهورية اليمنية", en: "Al-Zubairi St., Sana'a, Republic of Yemen" },
-    internetBankingUrl: "https://ebank.alsalam-capital.example",
+    internetBankingUrl: "https://ebank.withaq-bank.example",
     social: {
       facebook: "https://facebook.com/", instagram: "https://instagram.com/", x: "https://x.com/",
       linkedin: "https://linkedin.com/", youtube: "https://youtube.com/",
@@ -28,7 +28,7 @@ export const demoHome: HomeContent = {
     { id: "n1", icon: "account", href: "/apply/account", label: { ar: "أريد فتح حساب", en: "Open an account" } },
     { id: "n2", icon: "financing", href: "/apply/financing", label: { ar: "أريد تمويلاً إسلامياً", en: "Islamic financing" } },
     { id: "n3", icon: "card", href: "/apply/card", label: { ar: "أريد بطاقة مصرفية", en: "Get a bank card" } },
-    { id: "n4", icon: "send", href: "/transfers#send", label: { ar: "إرسال حوالة (سلام كاش)", en: "Send via Salam Cash" } },
+    { id: "n4", icon: "send", href: "/transfers#send", label: { ar: "إرسال حوالة (وثاق كاش)", en: "Send via Withaq Cash" } },
     { id: "n5", icon: "receive", href: "/transfers#receive", label: { ar: "استقبال حوالة", en: "Receive money" } },
     { id: "n6", icon: "branch", href: "/branches", label: { ar: "أقرب فرع وصراف آلي", en: "Branches & ATMs" } },
   ],
@@ -38,12 +38,12 @@ export const demoHome: HomeContent = {
   financing: demoFinancing,
 
   digital: [
-    { id: "d1", icon: "mobile", name: { ar: "السلام موبايلي", en: "Salam Mobile" }, summary: { ar: "تطبيقك المصرفي الذكي لإدارة الحسابات والتحويلات.", en: "Your smart banking app for accounts and transfers." } },
-    { id: "d2", icon: "wallet", name: { ar: "سلام Wallet", en: "Salam Wallet" }, summary: { ar: "محفظتك الرقمية الذكية تعمل أونلاين وأوفلاين.", en: "Smart digital wallet working online and offline." } },
-    { id: "d3", icon: "transfer", name: { ar: "سلام كاش", en: "Salam Cash" }, summary: { ar: "شبكة الحوالات المحلية والشبكة الموحدة UNMoney.", en: "Local transfer network & UNMoney integration." } },
-    { id: "d4", icon: "qr", name: { ar: "سلام باي", en: "Salam Pay" }, summary: { ar: "مدفوعات ذكية تعتمد على رمز الاستجابة السريع QR.", en: "Smart QR code payments for merchants and users." } },
-    { id: "d5", icon: "payment", name: { ar: "سلام سداد", en: "Salam Sadad" }, summary: { ar: "سداد فواتير الاتصالات والإنترنت والكهرباء والمياه.", en: "Instant bill payment for telecom, power & water." } },
-    { id: "d6", icon: "digital", name: { ar: "سلام موني", en: "Salam Money" }, summary: { ar: "سحب نقدي من أجهزة الصراف الآلي بدون بطاقة.", en: "Cardless cash withdrawal from ATMs." } },
+    { id: "d1", icon: "mobile", name: { ar: "وثاق موبايل", en: "Withaq Mobile" }, summary: { ar: "تطبيقك المصرفي الذكي لإدارة الحسابات والتحويلات.", en: "Your smart banking app for accounts and transfers." } },
+    { id: "d2", icon: "wallet", name: { ar: "وثاق Wallet", en: "Withaq Wallet" }, summary: { ar: "محفظتك الرقمية الذكية تعمل أونلاين وأوفلاين.", en: "Smart digital wallet working online and offline." } },
+    { id: "d3", icon: "transfer", name: { ar: "وثاق كاش", en: "Withaq Cash" }, summary: { ar: "شبكة الحوالات المحلية والشبكة الموحدة UNMoney.", en: "Local transfer network & UNMoney integration." } },
+    { id: "d4", icon: "qr", name: { ar: "وثاق باي", en: "Withaq Pay" }, summary: { ar: "مدفوعات ذكية تعتمد على رمز الاستجابة السريع QR.", en: "Smart QR code payments for merchants and users." } },
+    { id: "d5", icon: "payment", name: { ar: "وثاق سداد", en: "Withaq Sadad" }, summary: { ar: "سداد فواتير الاتصالات والإنترنت والكهرباء والمياه.", en: "Instant bill payment for telecom, power & water." } },
+    { id: "d6", icon: "digital", name: { ar: "وثاق موني", en: "Withaq Money" }, summary: { ar: "سحب نقدي من أجهزة الصراف الآلي بدون بطاقة.", en: "Cardless cash withdrawal from ATMs." } },
   ],
 
   cards: demoCards,
@@ -79,9 +79,9 @@ export const demoHome: HomeContent = {
   ],
 
   faqs: [
-    { id: "q1", question: { ar: "ما الذي يميز بنك السلام كابيتال؟", en: "What makes Al Salam Capital Bank unique?" }, answer: { ar: "نقدم عالماً متكاملاً من الخدمات المصرفية والحلول الرقمية (السلام موبايلي، سلام Wallet، سلام كاش، سلام باي) التي تجمع بين مبادئ الصيرفة الإسلامية وأحدث التقنيات المالية تحت سقف واحد.", en: "We offer a complete world of banking services and digital solutions (Salam Mobile, Salam Wallet, Salam Cash, Salam Pay) combining Islamic banking principles with modern technology." } },
-    { id: "q2", question: { ar: "ما الفرق بين السلام موبايلي وسلام Wallet؟", en: "What is the difference between Salam Mobile and Salam Wallet?" }, answer: { ar: "السلام موبايلي مخصص لعملاء البنك أصحاب الحسابات لإدارة كافة معاملاتهم وحساباتهم، بينما سلام Wallet محفظة رقمية ذكية تناسب جميع أفراد المجتمع لتنفيذ الخدمات اليومية بسرعة بدون الحاجة لحساب مصرفي تقليدي وتعمل أونلاين وأوفلاين.", en: "Salam Mobile is for bank account holders to manage full banking services, while Salam Wallet is a quick digital wallet for everyone to perform daily payments online & offline without a traditional account." } },
-    { id: "q3", question: { ar: "كيف تعمل خدمة سلام كاش والحوالات؟", en: "How does Salam Cash remittance network work?" }, answer: { ar: "سلام كاش هي شبكة الحوالات المحلية التابعة للبنك والتي تتكامل مع التطبيق الذكي والشبكة الموحدة UNMoney لإرسال واستقبال الأموال بسرعة وأمان عبر الفروع والوكلاء المعتمدين.", en: "Salam Cash is the bank's local remittance network integrated with mobile banking and the UNMoney national network for instant local transfers." } },
-    { id: "q4", question: { ar: "كيف أستفيد من خدمات الدفع سلام باي وسلام سداد؟", en: "How do I use Salam Pay and Salam Sadad?" }, answer: { ar: "تتيح لك خدمة سلام باي الدفع السريع لدى المتاجر والشركاء باستخدام رمز الاستجابة السريع QR، بينما تتيح خدمة سلام سداد دفع فواتير الاتصالات والإنترنت والكهرباء والمياه والرسوم الحكومية فورياً من التطبيق.", en: "Salam Pay allows instant merchant payments via QR code, while Salam Sadad handles instant bill payments for telecom, internet, power, water and fees directly from the app." } },
+    { id: "q1", question: { ar: "ما الذي يميز بنك وثاق؟", en: "What makes Withaq Bank unique?" }, answer: { ar: "نقدم عالماً متكاملاً من الخدمات المصرفية والحلول الرقمية (وثاق موبايل، وثاق Wallet، وثاق كاش، وثاق باي) التي تجمع بين مبادئ الصيرفة الإسلامية وأحدث التقنيات المالية تحت سقف واحد.", en: "We offer a complete world of banking services and digital solutions (Withaq Mobile, Withaq Wallet, Withaq Cash, Withaq Pay) combining Islamic banking principles with modern technology." } },
+    { id: "q2", question: { ar: "ما الفرق بين وثاق موبايل ووثاق Wallet؟", en: "What is the difference between Withaq Mobile and Withaq Wallet?" }, answer: { ar: "وثاق موبايل مخصص لعملاء البنك أصحاب الحسابات لإدارة كافة معاملاتهم وحساباتهم، بينما وثاق Wallet محفظة رقمية ذكية تناسب جميع أفراد المجتمع لتنفيذ الخدمات اليومية بسرعة بدون الحاجة لحساب مصرفي تقليدي وتعمل أونلاين وأوفلاين.", en: "Withaq Mobile is for bank account holders to manage full banking services, while Withaq Wallet is a quick digital wallet for everyone to perform daily payments online & offline without a traditional account." } },
+    { id: "q3", question: { ar: "كيف تعمل خدمة وثاق كاش والحوالات؟", en: "How does Withaq Cash remittance network work?" }, answer: { ar: "وثاق كاش هي شبكة الحوالات المحلية التابعة للبنك والتي تتكامل مع التطبيق الذكي والشبكة الموحدة UNMoney لإرسال واستقبال الأموال بسرعة وأمان عبر الفروع والوكلاء المعتمدين.", en: "Withaq Cash is the bank's local remittance network integrated with mobile banking and the UNMoney national network for instant local transfers." } },
+    { id: "q4", question: { ar: "كيف أستفيد من خدمات الدفع وثاق باي ووثاق سداد؟", en: "How do I use Withaq Pay and Withaq Sadad?" }, answer: { ar: "تتيح لك خدمة وثاق باي الدفع السريع لدى المتاجر والشركاء باستخدام رمز الاستجابة السريع QR، بينما تتيح خدمة وثاق سداد دفع فواتير الاتصالات والإنترنت والكهرباء والمياه والرسوم الحكومية فورياً من التطبيق.", en: "Withaq Pay allows instant merchant payments via QR code, while Withaq Sadad handles instant bill payments for telecom, internet, power, water and fees directly from the app." } },
   ],
 };

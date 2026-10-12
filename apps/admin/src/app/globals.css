@@ -5,7 +5,7 @@
 /* Design tokens — identical to apps/web (docs/DESIGN-SYSTEM.md) + `raised` for admin panels. */
 @layer base {
   :root {
-    --brand-900: 40 56 112;   /* #283870 كحليُّ السلام */
+    --brand-900: 40 56 112;   /* #283870 كحليُّ وثاق */
     --brand-700: 48 64 128;   /* #304080 */
     --brand-100: 228 234 246; /* #E4EAF6 */
     --accent: 48 144 208;     /* #3090D0 */

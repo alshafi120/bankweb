@@ -1,5 +1,5 @@
 -- ==============================================================================
--- Withaq / Al Salam Capital Bank - Complete Supabase PostgreSQL Schema
+-- Withaq Bank - Complete Supabase PostgreSQL Schema
 -- Project Ref: qlqfzwboxogabwffavec
 -- ==============================================================================
 
