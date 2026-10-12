@@ -1,0 +1,540 @@
+openapi: 3.1.0
+info:
+  title: Withaq Bank API
+  version: 1.0.0
+  summary: Public website API (/api/v1) and admin authentication (/api/admin/v1/auth).
+  description: |
+    JSON keys are camelCase. Bilingual text is `{ar, en}`. Envelopes: `{data}` and `{data, meta}` for paginated lists.
+    Errors: 401 unauthenticated · 403 forbidden · 404 not found · 419 CSRF expired · 422 `{message, errors}` · 423 locked · 429 too many requests (`Retry-After`).
+    Exact TypeScript shapes: `packages/api-types/src/index.ts`. Admin CRUD resources follow the generic pattern described under `x-admin-resources`.
+servers:
+  - url: https://api.bank.ye
+  - url: http://127.0.0.1:8000
+tags:
+  - name: Public content
+  - name: Public forms
+  - name: Admin auth
+
+paths:
+  /api/v1/settings:
+    get: { tags: [Public content], operationId: getSettings, responses: { '200': { $ref: '#/components/responses/SiteSettings' } } }
+  /api/v1/menus/{location}:
+    get:
+      tags: [Public content]
+      operationId: getMenu
+      parameters: [{ name: location, in: path, required: true, schema: { type: string, enum: [header, footer] } }]
+      responses:
+        '200': { description: Menu tree, content: { application/json: { schema: { $ref: '#/components/schemas/ListOf', properties: { data: { type: array, items: { $ref: '#/components/schemas/MenuItem' } } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /api/v1/pages/home/content:
+    get:
+      tags: [Public content]
+      operationId: getHomeContent
+      responses:
+        '200': { description: Home content, content: { application/json: { schema: { type: object, properties: { data: { $ref: '#/components/schemas/HomeContent' } } } } } }
+  /api/v1/pages/{slug}:
+    get:
+      tags: [Public content]
+      operationId: getPage
+      description: Published pages only; sections are visible and currently within their schedule, ordered.
+      parameters: [{ $ref: '#/components/parameters/Slug' }]
+      responses:
+        '200': { description: CMS page, content: { application/json: { schema: { type: object, properties: { data: { $ref: '#/components/schemas/CmsPage' } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /api/v1/services:
+    get: { tags: [Public content], operationId: getServices, responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/products:
+    get:
+      tags: [Public content]
+      operationId: getAccountProducts
+      parameters: [{ name: type, in: query, schema: { type: string, enum: [account] } }]
+      responses: { '200': { $ref: '#/components/responses/AnyList' } }
+  /api/v1/financing:
+    get: { tags: [Public content], operationId: getFinancingProducts, responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/financing/{id}:
+    get:
+      tags: [Public content]
+      operationId: getFinancingProduct
+      parameters: [{ name: id, in: path, required: true, description: slug, schema: { type: string } }]
+      responses: { '200': { $ref: '#/components/responses/AnyOne' }, '404': { $ref: '#/components/responses/NotFound' } }
+  /api/v1/cards:
+    get: { tags: [Public content], operationId: getCards, responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/cards/{id}:
+    get:
+      tags: [Public content]
+      operationId: getCard
+      parameters: [{ name: id, in: path, required: true, description: slug, schema: { type: string } }]
+      responses: { '200': { $ref: '#/components/responses/AnyOne' }, '404': { $ref: '#/components/responses/NotFound' } }
+  /api/v1/news:
+    get:
+      tags: [Public content]
+      operationId: getNews
+      description: Published items with publishedAt ≤ now, newest first.
+      parameters:
+        - { name: category, in: query, schema: { type: string } }
+        - { name: page, in: query, schema: { type: integer, minimum: 1 } }
+        - { name: perPage, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 12 } }
+      responses:
+        '200':
+          description: Paginated news
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, meta]
+                properties:
+                  data: { type: array, items: { $ref: '#/components/schemas/NewsItem' } }
+                  meta: { $ref: '#/components/schemas/PageMeta' }
+  /api/v1/news/{slug}:
+    get:
+      tags: [Public content]
+      operationId: getNewsArticle
+      parameters: [{ $ref: '#/components/parameters/Slug' }]
+      responses: { '200': { $ref: '#/components/responses/AnyOne' }, '404': { $ref: '#/components/responses/NotFound' } }
+  /api/v1/news-categories:
+    get: { tags: [Public content], operationId: getNewsCategories, responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/offers:
+    get: { tags: [Public content], operationId: getOffers, description: 'Active offers: startsAt ≤ today ≤ endsAt.', responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/branches:
+    get:
+      tags: [Public content]
+      operationId: getBranches
+      parameters:
+        - { name: city, in: query, description: city slug or name (ar/en), schema: { type: string } }
+        - { name: q, in: query, schema: { type: string } }
+      responses: { '200': { $ref: '#/components/responses/Locations' } }
+  /api/v1/atms:
+    get: { tags: [Public content], operationId: getAtms, parameters: [{ name: city, in: query, schema: { type: string } }, { name: q, in: query, schema: { type: string } }], responses: { '200': { $ref: '#/components/responses/Locations' } } }
+  /api/v1/agents:
+    get: { tags: [Public content], operationId: getAgents, parameters: [{ name: city, in: query, schema: { type: string } }, { name: q, in: query, schema: { type: string } }], responses: { '200': { $ref: '#/components/responses/Locations' } } }
+  /api/v1/cities:
+    get:
+      tags: [Public content]
+      operationId: getCities
+      responses:
+        '200':
+          description: Cities ordered by id (ids match the admin's fixed city select)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { type: object, required: [id, slug, name], properties: { id: { type: integer }, slug: { type: string }, name: { $ref: '#/components/schemas/Localized' } } }
+  /api/v1/faqs:
+    get: { tags: [Public content], operationId: getFaqGroups, responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/jobs:
+    get: { tags: [Public content], operationId: getJobs, description: Open jobs only (active, closesAt ≥ today)., responses: { '200': { $ref: '#/components/responses/AnyList' } } }
+  /api/v1/jobs/{slug}:
+    get:
+      tags: [Public content]
+      operationId: getJob
+      parameters: [{ $ref: '#/components/parameters/Slug' }]
+      responses: { '200': { $ref: '#/components/responses/AnyOne' }, '404': { $ref: '#/components/responses/NotFound' } }
+  /api/v1/sitemap:
+    get:
+      tags: [Public content]
+      operationId: getSitemap
+      responses:
+        '200':
+          description: Locale-less paths
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { type: array, items: { type: object, required: [path, updatedAt], properties: { path: { type: string, example: /news/my-slug }, updatedAt: { type: string, format: date-time } } } }
+
+  /api/v1/applications:
+    post:
+      tags: [Public forms]
+      operationId: submitApplication
+      description: Account, financing or card application. Rate limited 5/min + 30/day per IP. Honeypot `website` filled → fake 201, nothing stored.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - { $ref: '#/components/schemas/AccountApplicationInput' }
+                - { $ref: '#/components/schemas/FinancingApplicationInput' }
+                - { $ref: '#/components/schemas/CardApplicationInput' }
+              discriminator: { propertyName: type }
+      responses:
+        '201': { $ref: '#/components/responses/Submission' }
+        '422': { $ref: '#/components/responses/Validation' }
+        '429': { $ref: '#/components/responses/TooMany' }
+  /api/v1/contact:
+    post:
+      tags: [Public forms]
+      operationId: submitContact
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ContactInput' } } } }
+      responses: { '201': { $ref: '#/components/responses/Submission' }, '422': { $ref: '#/components/responses/Validation' }, '429': { $ref: '#/components/responses/TooMany' } }
+  /api/v1/complaints:
+    post:
+      tags: [Public forms]
+      operationId: submitComplaint
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              allOf:
+                - { $ref: '#/components/schemas/ComplaintInput' }
+                - type: object
+                  properties: { attachment: { type: string, format: binary, description: 'pdf/jpg/png ≤ 5 MB (real type checked with finfo)' } }
+      responses: { '201': { $ref: '#/components/responses/Submission' }, '422': { $ref: '#/components/responses/Validation' }, '429': { $ref: '#/components/responses/TooMany' } }
+  /api/v1/jobs/{slug}/apply:
+    post:
+      tags: [Public forms]
+      operationId: applyForJob
+      parameters: [{ $ref: '#/components/parameters/Slug' }]
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              allOf:
+                - { $ref: '#/components/schemas/JobApplicationInput' }
+                - type: object
+                  required: [cv]
+                  properties: { cv: { type: string, format: binary, description: 'PDF ≤ 5 MB' } }
+      responses: { '201': { $ref: '#/components/responses/Submission' }, '404': { $ref: '#/components/responses/NotFound' }, '422': { $ref: '#/components/responses/Validation' }, '429': { $ref: '#/components/responses/TooMany' } }
+  /api/v1/track:
+    post:
+      tags: [Public forms]
+      operationId: trackPageView
+      description: Cookieless page view. IP is never stored (daily-salted HMAC visitor hash).
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [path], properties: { path: { type: string, example: /ar/financing }, referrer: { type: string, description: host only } } } } } }
+      responses: { '204': { description: Recorded }, '422': { $ref: '#/components/responses/Validation' } }
+
+  /sanctum/csrf-cookie:
+    get:
+      tags: [Admin auth]
+      operationId: csrfCookie
+      description: Sets the `XSRF-TOKEN` cookie. Send it back as `X-XSRF-TOKEN` on every write. Admin requests must come from a `SANCTUM_STATEFUL_DOMAINS` origin.
+      responses: { '204': { description: Cookie set } }
+  /api/admin/v1/auth/login:
+    post:
+      tags: [Admin auth]
+      operationId: login
+      description: Login by e-mail or username. 5 consecutive failures → account locked 15 minutes (423 + `Retry-After`). With 2FA enabled the user is only signed in after the challenge.
+      security: [{ xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [login, password], properties: { login: { type: string }, password: { type: string, format: password }, remember: { type: boolean } } } } } }
+      responses:
+        '200': { description: Login result, content: { application/json: { schema: { type: object, properties: { data: { type: object, required: [twoFactorRequired, user], properties: { twoFactorRequired: { type: boolean }, user: { oneOf: [{ $ref: '#/components/schemas/AdminUser' }, { type: 'null' }] } } } } } } } }
+        '422': { $ref: '#/components/responses/Validation' }
+        '423': { $ref: '#/components/responses/Locked' }
+        '429': { $ref: '#/components/responses/TooMany' }
+  /api/admin/v1/auth/two-factor-challenge:
+    post:
+      tags: [Admin auth]
+      operationId: twoFactorChallenge
+      security: [{ xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { oneOf: [{ type: object, required: [code], properties: { code: { type: string, pattern: '^\d{6}$' } } }, { type: object, required: [recoveryCode], properties: { recoveryCode: { type: string } } }] } } } }
+      responses:
+        '200': { description: Signed in, content: { application/json: { schema: { type: object, properties: { data: { type: object, properties: { user: { $ref: '#/components/schemas/AdminUser' } } } } } } } }
+        '401': { $ref: '#/components/responses/Unauthenticated' }
+        '422': { $ref: '#/components/responses/Validation' }
+        '423': { $ref: '#/components/responses/Locked' }
+  /api/admin/v1/auth/logout:
+    post: { tags: [Admin auth], operationId: logout, security: [{ session: [], xsrf: [] }], responses: { '204': { description: Signed out } } }
+  /api/admin/v1/auth/me:
+    get:
+      tags: [Admin auth]
+      operationId: me
+      security: [{ session: [] }]
+      responses:
+        '200': { description: Current user, content: { application/json: { schema: { type: object, properties: { data: { $ref: '#/components/schemas/AdminUser' } } } } } }
+        '401': { $ref: '#/components/responses/Unauthenticated' }
+  /api/admin/v1/auth/forgot-password:
+    post:
+      tags: [Admin auth]
+      operationId: forgotPassword
+      security: [{ xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [email], properties: { email: { type: string, format: email } } } } } }
+      responses: { '202': { description: Always accepted (never reveals whether the e-mail exists) } }
+  /api/admin/v1/auth/reset-password:
+    post:
+      tags: [Admin auth]
+      operationId: resetPassword
+      security: [{ xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/PasswordReset' } } } }
+      responses: { '204': { description: Password changed; all sessions revoked }, '422': { $ref: '#/components/responses/Validation' } }
+  /api/admin/v1/auth/two-factor:
+    post:
+      tags: [Admin auth]
+      operationId: enableTwoFactor
+      security: [{ session: [], xsrf: [] }]
+      responses:
+        '200': { description: TOTP setup, content: { application/json: { schema: { type: object, properties: { data: { type: object, required: [secret, otpauthUrl, qrSvg], properties: { secret: { type: string }, otpauthUrl: { type: string }, qrSvg: { type: string } } } } } } } }
+    delete:
+      tags: [Admin auth]
+      operationId: disableTwoFactor
+      security: [{ session: [], xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [password], properties: { password: { type: string, format: password } } } } } }
+      responses: { '204': { description: Disabled }, '403': { description: 2FA mandatory for this role }, '422': { $ref: '#/components/responses/Validation' } }
+  /api/admin/v1/auth/two-factor/confirm:
+    post:
+      tags: [Admin auth]
+      operationId: confirmTwoFactor
+      security: [{ session: [], xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [code], properties: { code: { type: string } } } } } }
+      responses:
+        '200': { description: Recovery codes (shown once, stored hashed), content: { application/json: { schema: { type: object, properties: { data: { type: object, properties: { recoveryCodes: { type: array, items: { type: string } } } } } } } } }
+        '422': { $ref: '#/components/responses/Validation' }
+  /api/admin/v1/auth/password:
+    put:
+      tags: [Admin auth]
+      operationId: changePassword
+      description: '≥ 12 chars, upper + lower + digit + symbol, not breached (production). Other sessions are signed out.'
+      security: [{ session: [], xsrf: [] }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [currentPassword, password, passwordConfirmation], properties: { currentPassword: { type: string }, password: { type: string }, passwordConfirmation: { type: string } } } } } }
+      responses: { '204': { description: Changed }, '422': { $ref: '#/components/responses/Validation' } }
+  /api/admin/v1/auth/sessions:
+    get:
+      tags: [Admin auth]
+      operationId: listSessions
+      security: [{ session: [] }]
+      responses:
+        '200': { description: Active sessions, content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: '#/components/schemas/AdminSession' } } } } } } }
+  /api/admin/v1/auth/sessions/{id}:
+    delete:
+      tags: [Admin auth]
+      operationId: revokeSession
+      security: [{ session: [], xsrf: [] }]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, pattern: '^[a-f0-9]{64}$' } }]
+      responses: { '204': { description: Revoked }, '404': { $ref: '#/components/responses/NotFound' }, '422': { description: Cannot revoke the current session (use logout) } }
+
+x-admin-resources:
+  base: /api/admin/v1
+  generic: 'GET /{r} (ListQuery: page, perPage ≤ 100, search, status, sort=[-]field, filter[...]) · POST /{r} · GET|PUT|DELETE /{r}/{id} · POST /{r}/bulk {action, ids} · PATCH /{r}/reorder {ids}'
+  resources: [pages, news, news-categories, services, products, financing-products, cards, offers, banners, faqs, faq-categories, menus, branches, atms, agents, jobs, cities, users, roles]
+  extra:
+    - PUT /pages/{id}/sections · POST /pages/{id}/publish · POST /pages/{id}/schedule {publishAt}
+    - POST /news/{id}/submit|approve|publish · POST /news/{id}/reject {reason} · POST /news/{id}/schedule {publishAt}
+    - GET|POST /media (multipart file, alt[ar], alt[en]; ?kind=image) · GET|PUT|DELETE /media/{id}
+    - GET /{inbox} · GET /{inbox}/{id} · PATCH /{inbox}/{id} {status?, assignedTo?} · POST /{inbox}/{id}/notes {body} · GET /{inbox}/export (CSV) — inbox ∈ applications, contact-requests, complaints, job-applications
+    - GET /complaints/{id}/attachment · GET /job-applications/{id}/cv → {url, expiresAt, filename} (5-minute signed URL)
+    - PUT /users/{id}/roles {roles} · POST /users/{id}/unlock · PUT /roles/{id}/permissions {permissions} · GET /permissions
+    - GET|PUT /settings · GET|POST /seo · GET|PUT|DELETE /seo/{id} · GET /audit-logs (filter[userId|action|resourceType|from|to]) · GET /dashboard
+
+components:
+  securitySchemes:
+    session: { type: apiKey, in: cookie, name: withaq_bank_api_session, description: Sanctum SPA session cookie (HttpOnly, Secure, SameSite=Strict) }
+    xsrf: { type: apiKey, in: header, name: X-XSRF-TOKEN, description: Value of the XSRF-TOKEN cookie from /sanctum/csrf-cookie }
+  parameters:
+    Slug: { name: slug, in: path, required: true, schema: { type: string, pattern: '^[a-z0-9-]+$' } }
+  responses:
+    NotFound: { description: Not found, content: { application/json: { schema: { $ref: '#/components/schemas/Message' } } } }
+    Unauthenticated: { description: Unauthenticated, content: { application/json: { schema: { $ref: '#/components/schemas/Message' } } } }
+    Locked:
+      description: Account locked
+      headers: { Retry-After: { schema: { type: integer } } }
+      content: { application/json: { schema: { type: object, properties: { message: { type: string }, lockedUntil: { type: string, format: date-time } } } } }
+    TooMany:
+      description: Rate limited
+      headers: { Retry-After: { schema: { type: integer } } }
+      content: { application/json: { schema: { $ref: '#/components/schemas/Message' } } }
+    Validation: { description: Validation failed, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationError' } } } }
+    Submission:
+      description: Created
+      content: { application/json: { schema: { type: object, properties: { data: { type: object, required: [reference], properties: { reference: { type: string, pattern: '^WTQ-(ACC|FIN|CRD|CB|CMP|JOB)-\d{4}-\d{6}$', example: WTQ-FIN-2026-000412 } } } } } } }
+    SiteSettings: { description: Site settings, content: { application/json: { schema: { type: object, properties: { data: { $ref: '#/components/schemas/SiteSettings' } } } } } }
+    Locations: { description: Locations, content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: '#/components/schemas/Location' } } } } } } }
+    AnyList: { description: 'List (shapes: packages/api-types)', content: { application/json: { schema: { $ref: '#/components/schemas/ListOf' } } } }
+    AnyOne: { description: 'Single item (shapes: packages/api-types)', content: { application/json: { schema: { type: object, properties: { data: { type: object } } } } } }
+  schemas:
+    Message: { type: object, required: [message], properties: { message: { type: string } } }
+    ValidationError: { type: object, required: [message, errors], properties: { message: { type: string }, errors: { type: object, additionalProperties: { type: array, items: { type: string } } } } }
+    ListOf: { type: object, required: [data], properties: { data: { type: array, items: { type: object } } } }
+    Localized: { type: object, required: [ar, en], properties: { ar: { type: string }, en: { type: string } } }
+    LocalizedList: { type: object, required: [ar, en], properties: { ar: { type: array, items: { type: string } }, en: { type: array, items: { type: string } } } }
+    PageMeta: { type: object, required: [currentPage, lastPage, perPage, total], properties: { currentPage: { type: integer }, lastPage: { type: integer }, perPage: { type: integer }, total: { type: integer } } }
+    MediaRef: { type: object, required: [id, url, alt, mime], properties: { id: { type: integer }, url: { type: string }, alt: { $ref: '#/components/schemas/Localized' }, mime: { type: string }, width: { type: [integer, 'null'] }, height: { type: [integer, 'null'] } } }
+    Seo:
+      type: object
+      required: [title, description]
+      properties:
+        title: { $ref: '#/components/schemas/Localized' }
+        description: { $ref: '#/components/schemas/Localized' }
+        keywords: { $ref: '#/components/schemas/Localized' }
+        canonical: { type: [string, 'null'] }
+        ogImage: { oneOf: [{ $ref: '#/components/schemas/MediaRef' }, { type: 'null' }] }
+        noindex: { type: boolean }
+    SiteSettings:
+      type: object
+      required: [bankName, phone, tollFree, email, address, internetBankingUrl, social, appStores]
+      properties:
+        bankName: { $ref: '#/components/schemas/Localized' }
+        phone: { type: string }
+        tollFree: { type: string }
+        email: { type: string }
+        address: { $ref: '#/components/schemas/Localized' }
+        internetBankingUrl: { type: string }
+        social: { type: object, properties: { facebook: { type: string }, instagram: { type: string }, x: { type: string }, linkedin: { type: string }, youtube: { type: string } } }
+        appStores: { type: object, properties: { googlePlay: { type: string }, appStore: { type: string } } }
+        turnstileSiteKey: { type: [string, 'null'] }
+    MenuItem:
+      type: object
+      required: [id, label, href]
+      properties: { id: { type: integer }, label: { $ref: '#/components/schemas/Localized' }, href: { type: string }, children: { type: array, items: { $ref: '#/components/schemas/MenuItem' } } }
+    Location:
+      type: object
+      required: [id, type, name, city, district, address, phone, hours, services, lat, lng]
+      properties:
+        id: { type: string }
+        type: { type: string, enum: [branch, atm, agent] }
+        name: { $ref: '#/components/schemas/Localized' }
+        city: { $ref: '#/components/schemas/Localized' }
+        district: { $ref: '#/components/schemas/Localized' }
+        address: { $ref: '#/components/schemas/Localized' }
+        phone: { type: string }
+        hours: { $ref: '#/components/schemas/Localized' }
+        services: { $ref: '#/components/schemas/LocalizedList' }
+        lat: { type: number }
+        lng: { type: number }
+    NewsItem:
+      type: object
+      required: [id, slug, title, excerpt, category, publishedAt, image]
+      properties:
+        id: { type: string }
+        slug: { type: string }
+        title: { $ref: '#/components/schemas/Localized' }
+        excerpt: { $ref: '#/components/schemas/Localized' }
+        category: { $ref: '#/components/schemas/Localized' }
+        categorySlug: { type: string }
+        publishedAt: { type: string, format: date-time }
+        image: { type: string }
+    HomeContent:
+      type: object
+      required: [settings, services, needs, accounts, financing, digital, cards, stats, locations, news, offers, reasons, reasonStats, faqs]
+      properties:
+        settings: { $ref: '#/components/schemas/SiteSettings' }
+        services: { type: array, items: { type: object } }
+        needs: { type: array, items: { type: object } }
+        accounts: { type: array, items: { type: object } }
+        financing: { type: array, items: { type: object } }
+        digital: { type: array, items: { type: object } }
+        cards: { type: array, items: { type: object } }
+        stats: { type: array, items: { type: object } }
+        locations: { type: array, items: { $ref: '#/components/schemas/Location' } }
+        news: { type: array, items: { $ref: '#/components/schemas/NewsItem' } }
+        offers: { type: array, items: { type: object } }
+        reasons: { type: array, items: { type: object } }
+        reasonStats: { type: array, items: { type: object } }
+        faqs: { type: array, items: { type: object } }
+        layout:
+          type: array
+          description: Visible home blocks in order (plain HomeSectionType names; stored as `home:<type>` in page_sections)
+          items: { type: string, enum: [hero, services, needs, accounts, financing, digital, cards, network, news, offers, why, app, faq, cta] }
+    CmsPage:
+      type: object
+      required: [slug, title, seo, sections, updatedAt]
+      properties:
+        slug: { type: string }
+        title: { $ref: '#/components/schemas/Localized' }
+        summary: { oneOf: [{ $ref: '#/components/schemas/Localized' }, { type: 'null' }] }
+        seo: { $ref: '#/components/schemas/Seo' }
+        sections:
+          type: array
+          items: { type: object, required: [id, type, data], properties: { id: { type: integer }, type: { type: string, enum: [hero, text, image, cards, features, statistics, faq, cta, gallery, video, map, people, documents] }, data: { type: object } } }
+        updatedAt: { type: string, format: date-time }
+    AntiSpam:
+      type: object
+      required: [locale]
+      properties:
+        website: { type: string, description: 'Honeypot — must be empty' }
+        turnstileToken: { type: string }
+        locale: { type: string, enum: [ar, en] }
+    Applicant:
+      allOf:
+        - { $ref: '#/components/schemas/AntiSpam' }
+        - type: object
+          required: [fullName, nationalId, phone, city, consent]
+          properties:
+            fullName: { type: string, minLength: 6, maxLength: 120 }
+            nationalId: { type: string, pattern: '^\d{8,12}$' }
+            phone: { type: string, pattern: '^(\+?967)?7[01378]\d{7}$', description: spaces/dashes stripped before testing }
+            email: { type: string, format: email }
+            city: { type: string }
+            consent: { const: true }
+    AccountApplicationInput:
+      allOf:
+        - { $ref: '#/components/schemas/Applicant' }
+        - { type: object, required: [type, accountType], properties: { type: { const: account }, accountType: { type: string, enum: [current, savings, investment, business] }, branchId: { type: [string, 'null'], description: branch slug } } }
+    FinancingApplicationInput:
+      allOf:
+        - { $ref: '#/components/schemas/Applicant' }
+        - type: object
+          required: [type, financingProductId, amount, months, monthlyIncome]
+          properties:
+            type: { const: financing }
+            financingProductId: { type: string, description: product slug }
+            amount: { type: integer, minimum: 100000, maximum: 500000000 }
+            months: { type: integer, minimum: 6, maximum: 84 }
+            monthlyIncome: { type: integer, minimum: 1 }
+            employer: { type: string, maxLength: 120 }
+            notes: { type: string, maxLength: 2000 }
+    CardApplicationInput:
+      allOf:
+        - { $ref: '#/components/schemas/Applicant' }
+        - { type: object, required: [type, cardId], properties: { type: { const: card }, cardId: { type: string }, hasAccount: { type: boolean }, accountLast4: { type: [string, 'null'], pattern: '^\d{4}$' } } }
+    ContactInput:
+      allOf:
+        - { $ref: '#/components/schemas/AntiSpam' }
+        - type: object
+          required: [fullName, phone, subject, message]
+          properties:
+            fullName: { type: string, minLength: 6, maxLength: 120 }
+            phone: { type: string }
+            email: { type: string, format: email }
+            subject: { type: string, enum: [general, accounts, financing, cards, digital, other] }
+            message: { type: string, minLength: 20, maxLength: 2000 }
+            preferredTime: { type: [string, 'null'], enum: [morning, afternoon, evening, null] }
+    ComplaintInput:
+      allOf:
+        - { $ref: '#/components/schemas/AntiSpam' }
+        - type: object
+          required: [fullName, phone, category, description, consent]
+          properties:
+            fullName: { type: string }
+            phone: { type: string }
+            email: { type: string }
+            nationalId: { type: string }
+            category: { type: string, enum: [service, transaction, staff, digital, fees, other] }
+            branchId: { type: string }
+            transactionDate: { type: string, format: date }
+            description: { type: string, minLength: 20, maxLength: 2000 }
+            consent: { type: string, enum: ['1', 'true'] }
+    JobApplicationInput:
+      allOf:
+        - { $ref: '#/components/schemas/AntiSpam' }
+        - type: object
+          required: [fullName, phone, email, city, education, experienceYears, consent]
+          properties:
+            fullName: { type: string }
+            phone: { type: string }
+            email: { type: string, format: email }
+            city: { type: string }
+            education: { type: string }
+            experienceYears: { type: integer, minimum: 0, maximum: 50 }
+            coverLetter: { type: string, maxLength: 2000 }
+            consent: { type: string, enum: ['1', 'true'] }
+    AdminUser:
+      type: object
+      required: [id, name, email, username, roles, permissions, twoFactorEnabled, isActive, lastLoginAt, createdAt]
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        email: { type: string }
+        username: { type: string }
+        roles: { type: array, items: { type: string, enum: [super_admin, content_manager, news_manager, marketing_manager, hr_manager, branch_manager, customer_service, reviewer, viewer] } }
+        permissions: { type: array, items: { type: string, example: news.approve } }
+        twoFactorEnabled: { type: boolean }
+        isActive: { type: boolean }
+        lastLoginAt: { type: [string, 'null'], format: date-time }
+        createdAt: { type: string, format: date-time }
+    AdminSession: { type: object, required: [id, ipAddress, userAgent, lastActiveAt, current], properties: { id: { type: string }, ipAddress: { type: string }, userAgent: { type: string }, lastActiveAt: { type: string, format: date-time }, current: { type: boolean } } }
+    PasswordReset: { type: object, required: [token, email, password, passwordConfirmation], properties: { token: { type: string }, email: { type: string, format: email }, password: { type: string }, passwordConfirmation: { type: string } } }

@@ -1,0 +1,137 @@
+# Public edge — rendered by the nginx image's envsubst (WEB_HOST, ADMIN_HOST, API_HOST, MEDIA_HOST, ADMIN_ALLOW_CIDR).
+# Origin should only accept traffic from Cloudflare (firewall) — Cloudflare provides WAF, DDoS and bot protection.
+
+include /etc/nginx/snippets/cloudflare-real-ip.conf;
+server_tokens off;
+gzip on;
+gzip_types text/css application/javascript application/json image/svg+xml text/plain;
+
+limit_req_zone $binary_remote_addr zone=site:10m rate=30r/s;
+limit_req_zone $binary_remote_addr zone=forms:10m rate=10r/m;
+limit_req_zone $binary_remote_addr zone=adminauth:10m rate=10r/m;
+limit_req_status 429;
+
+upstream web_upstream   { server web:3000;   keepalive 32; }
+upstream admin_upstream { server admin:3000; keepalive 16; }
+upstream api_upstream   { server nginx-internal:80; keepalive 16; }
+upstream media_upstream { server minio:9000; }
+
+# HTTP → HTTPS
+server {
+    listen 80 default_server;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+
+# Unknown hosts on 443 are dropped.
+server {
+    listen 443 ssl default_server;
+    ssl_certificate     /etc/nginx/tls/fullchain.pem;
+    ssl_certificate_key /etc/nginx/tls/privkey.pem;
+    return 444;
+}
+
+# ── Public website ──
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name ${WEB_HOST};
+    ssl_certificate     /etc/nginx/tls/fullchain.pem;
+    ssl_certificate_key /etc/nginx/tls/privkey.pem;
+    include /etc/nginx/snippets/tls.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+    client_max_body_size 7m;
+
+    location ~ /\. { deny all; }
+    location /_next/static/ {
+        proxy_pass http://web_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+        # add_header in a location replaces inherited ones, so re-include the security headers.
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+    location /api/forms/ {
+        limit_req zone=forms burst=5 nodelay;
+        proxy_pass http://web_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+    location /api/revalidate { deny all; }   # only reachable from the API on the private network
+    location / {
+        limit_req zone=site burst=60 nodelay;
+        proxy_pass http://web_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+}
+
+# ── Admin dashboard (restricted to office/VPN ranges; Cloudflare Access recommended in front) ──
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name ${ADMIN_HOST};
+    ssl_certificate     /etc/nginx/tls/fullchain.pem;
+    ssl_certificate_key /etc/nginx/tls/privkey.pem;
+    include /etc/nginx/snippets/tls.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+    client_max_body_size 7m;
+
+    allow ${ADMIN_ALLOW_CIDR};
+    deny all;
+
+    location ~ /\. { deny all; }
+    # Same-origin API path for Sanctum cookies: /backend/* → API (prefix stripped).
+    location /backend/api/admin/v1/auth/ {
+        limit_req zone=adminauth burst=5 nodelay;
+        rewrite ^/backend/(.*)$ /$1 break;
+        proxy_pass http://api_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+    location /backend/ {
+        rewrite ^/backend/(.*)$ /$1 break;
+        proxy_pass http://api_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+    location / {
+        proxy_pass http://admin_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+}
+
+# ── API (public read endpoints for integrations; the website calls it over the private network) ──
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name ${API_HOST};
+    ssl_certificate     /etc/nginx/tls/fullchain.pem;
+    ssl_certificate_key /etc/nginx/tls/privkey.pem;
+    include /etc/nginx/snippets/tls.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+    client_max_body_size 7m;
+
+    location ~ /\. { deny all; }
+    location /api/admin/ { return 404; }   # admin API is only exposed through the admin host
+    location / {
+        limit_req zone=site burst=30 nodelay;
+        proxy_pass http://api_upstream;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+}
+
+# ── Public media (MinIO bucket, read-only GET) ──
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name ${MEDIA_HOST};
+    ssl_certificate     /etc/nginx/tls/fullchain.pem;
+    ssl_certificate_key /etc/nginx/tls/privkey.pem;
+    include /etc/nginx/snippets/tls.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+
+    location / {
+        limit_except GET HEAD { deny all; }
+        proxy_pass http://media_upstream;
+        proxy_set_header Host minio:9000;
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=2592000";
+        add_header Content-Security-Policy "default-src 'none'; img-src 'self'; media-src 'self'; style-src 'unsafe-inline'; sandbox" always;
+    }
+}

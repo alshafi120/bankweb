@@ -1,0 +1,5920 @@
+{
+ "_source": "Generated from apps/web/src/content/demo/*.ts — regenerate with the command in apps/api/README.md",
+ "home": {
+  "settings": {
+   "bankName": {
+    "ar": "بنك وِثاق",
+    "en": "Withaq Bank"
+   },
+   "phone": "+967 1 400 400",
+   "tollFree": "8008 800",
+   "email": "care@withaq-bank.example",
+   "address": {
+    "ar": "شارع الزبيري، صنعاء، الجمهورية اليمنية",
+    "en": "Al-Zubairi St., Sana'a, Republic of Yemen"
+   },
+   "internetBankingUrl": "https://ebank.withaq-bank.example",
+   "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "x": "https://x.com/",
+    "linkedin": "https://linkedin.com/",
+    "youtube": "https://youtube.com/"
+   },
+   "appStores": {
+    "googlePlay": "https://play.google.com/",
+    "appStore": "https://apps.apple.com/"
+   }
+  },
+  "services": [
+   {
+    "id": "accounts",
+    "icon": "account",
+    "href": "/accounts",
+    "title": {
+     "ar": "فتح حساب",
+     "en": "Open an account"
+    },
+    "summary": {
+     "ar": "افتح حسابك الجاري أو التوفير خلال دقائق، وتابع طلبك برقم مرجعي.",
+     "en": "Open a current or savings account in minutes and track it with a reference number."
+    }
+   },
+   {
+    "id": "financing",
+    "icon": "financing",
+    "href": "/financing",
+    "title": {
+     "ar": "التمويل",
+     "en": "Financing"
+    },
+    "summary": {
+     "ar": "حلول تمويل متوافقة مع الشريعة للأفراد والمشاريع والشركات.",
+     "en": "Sharia-compliant financing for individuals, small businesses and companies."
+    }
+   },
+   {
+    "id": "transfers",
+    "icon": "transfer",
+    "href": "/transfers",
+    "title": {
+     "ar": "التحويلات",
+     "en": "Transfers"
+    },
+    "summary": {
+     "ar": "أرسل واستقبل الحوالات المحلية والدولية عبر الفروع والوكلاء والتطبيق.",
+     "en": "Send and receive local and international remittances through branches, agents and the app."
+    }
+   },
+   {
+    "id": "cards",
+    "icon": "card",
+    "href": "/cards",
+    "title": {
+     "ar": "البطاقات",
+     "en": "Cards"
+    },
+    "summary": {
+     "ar": "بطاقات خصم ومسبقة الدفع وائتمانية تناسب مصاريفك اليومية وسفرك.",
+     "en": "Debit, prepaid and credit cards for everyday spending and travel."
+    }
+   },
+   {
+    "id": "payments",
+    "icon": "payment",
+    "href": "/digital#payments",
+    "title": {
+     "ar": "الدفع الإلكتروني",
+     "en": "E-payments"
+    },
+    "summary": {
+     "ar": "سدّد فواتير الكهرباء والمياه والاتصالات والرسوم من مكانك.",
+     "en": "Pay electricity, water, telecom bills and fees from anywhere."
+    }
+   },
+   {
+    "id": "digital",
+    "icon": "digital",
+    "href": "/digital",
+    "title": {
+     "ar": "الخدمات الرقمية",
+     "en": "Digital banking"
+    },
+    "summary": {
+     "ar": "تطبيق الجوال والخدمات المصرفية عبر الإنترنت والمحفظة الرقمية.",
+     "en": "Mobile app, internet banking and a digital wallet."
+    }
+   }
+  ],
+  "needs": [
+   {
+    "id": "n1",
+    "icon": "account",
+    "href": "/apply/account",
+    "label": {
+     "ar": "أريد فتح حساب",
+     "en": "Open an account"
+    }
+   },
+   {
+    "id": "n2",
+    "icon": "financing",
+    "href": "/apply/financing",
+    "label": {
+     "ar": "أريد تمويلاً",
+     "en": "Get financing"
+    }
+   },
+   {
+    "id": "n3",
+    "icon": "card",
+    "href": "/apply/card",
+    "label": {
+     "ar": "أريد بطاقة",
+     "en": "Get a card"
+    }
+   },
+   {
+    "id": "n4",
+    "icon": "send",
+    "href": "/transfers#send",
+    "label": {
+     "ar": "أريد إرسال حوالة",
+     "en": "Send money"
+    }
+   },
+   {
+    "id": "n5",
+    "icon": "receive",
+    "href": "/transfers#receive",
+    "label": {
+     "ar": "أريد استقبال حوالة",
+     "en": "Receive money"
+    }
+   },
+   {
+    "id": "n6",
+    "icon": "branch",
+    "href": "/branches",
+    "label": {
+     "ar": "أريد معرفة أقرب فرع",
+     "en": "Find a branch"
+    }
+   }
+  ],
+  "accounts": [
+   {
+    "id": "current",
+    "accountType": "current",
+    "href": "/accounts/current",
+    "currency": "YER",
+    "minimumBalance": 10000,
+    "name": {
+     "ar": "الحساب الجاري",
+     "en": "Current account"
+    },
+    "tagline": {
+     "ar": "لمعاملاتك اليومية",
+     "en": "For everyday banking"
+    },
+    "features": {
+     "ar": [
+      "دفتر شيكات",
+      "بطاقة خصم مجانية",
+      "تطبيق الجوال والإنترنت المصرفي",
+      "تحويل الراتب"
+     ],
+     "en": [
+      "Cheque book",
+      "Free debit card",
+      "Mobile and internet banking",
+      "Salary transfer"
+     ]
+    },
+    "requirements": {
+     "ar": [
+      "بطاقة شخصية سارية",
+      "صورة شخصية",
+      "إثبات عنوان السكن"
+     ],
+     "en": [
+      "Valid national ID",
+      "Personal photo",
+      "Proof of address"
+     ]
+    }
+   },
+   {
+    "id": "savings",
+    "accountType": "savings",
+    "href": "/accounts/savings",
+    "currency": "YER",
+    "minimumBalance": 5000,
+    "name": {
+     "ar": "حساب التوفير",
+     "en": "Savings account"
+    },
+    "tagline": {
+     "ar": "ادّخر لأهدافك",
+     "en": "Save for your goals"
+    },
+    "features": {
+     "ar": [
+      "أرباح دورية وفق المضاربة",
+      "سحب مرن",
+      "كشف حساب شهري",
+      "حساب توفير للأبناء"
+     ],
+     "en": [
+      "Periodic mudaraba profit",
+      "Flexible withdrawals",
+      "Monthly statement",
+      "Children's savings option"
+     ]
+    },
+    "requirements": {
+     "ar": [
+      "بطاقة شخصية سارية",
+      "رقم هاتف"
+     ],
+     "en": [
+      "Valid national ID",
+      "Phone number"
+     ]
+    }
+   },
+   {
+    "id": "investment",
+    "accountType": "investment",
+    "href": "/accounts/investment",
+    "currency": "YER",
+    "minimumBalance": 500000,
+    "name": {
+     "ar": "الحساب الاستثماري",
+     "en": "Investment account"
+    },
+    "tagline": {
+     "ar": "ودائع لأجل بعوائد أعلى",
+     "en": "Term deposits, higher returns"
+    },
+    "features": {
+     "ar": [
+      "آجال 3 و6 و12 شهراً",
+      "عائد متوقع أعلى",
+      "تجديد تلقائي",
+      "إمكانية التمويل بضمان الوديعة"
+     ],
+     "en": [
+      "3, 6 and 12-month terms",
+      "Higher expected return",
+      "Auto-renewal",
+      "Financing secured by the deposit"
+     ]
+    },
+    "requirements": {
+     "ar": [
+      "حساب جارٍ أو توفير",
+      "بطاقة شخصية سارية"
+     ],
+     "en": [
+      "Current or savings account",
+      "Valid national ID"
+     ]
+    }
+   },
+   {
+    "id": "business",
+    "accountType": "business",
+    "href": "/accounts/business",
+    "currency": "YER",
+    "minimumBalance": null,
+    "name": {
+     "ar": "حساب الشركات",
+     "en": "Business account"
+    },
+    "tagline": {
+     "ar": "للمنشآت والمؤسسات",
+     "en": "For companies and institutions"
+    },
+    "features": {
+     "ar": [
+      "إدارة الرواتب",
+      "صلاحيات متعددة للمفوضين",
+      "خدمات تجارية واعتمادات",
+      "مدير علاقة مخصص"
+     ],
+     "en": [
+      "Payroll management",
+      "Multi-signatory access",
+      "Trade services and LCs",
+      "Dedicated relationship manager"
+     ]
+    },
+    "requirements": {
+     "ar": [
+      "سجل تجاري",
+      "بطاقة ضريبية",
+      "هويات المفوضين",
+      "عقد التأسيس للشركات"
+     ],
+     "en": [
+      "Commercial register",
+      "Tax card",
+      "Signatories' IDs",
+      "Articles of association (companies)"
+     ]
+    }
+   }
+  ],
+  "financing": [
+   {
+    "id": "personal",
+    "maxAmount": 10000000,
+    "maxMonths": 48,
+    "annualProfitRate": 9,
+    "name": {
+     "ar": "التمويل الشخصي",
+     "en": "Personal financing"
+    },
+    "summary": {
+     "ar": "مرابحة للسلع والاحتياجات الشخصية.",
+     "en": "Murabaha for personal goods and needs."
+    },
+    "body": {
+     "ar": "<p>يشتري البنك السلعة التي تحتاجها ثم يبيعها لك بربح معلوم مسبقاً، وتسدّد ثمنها على أقساط شهرية ثابتة.</p><ul><li>أقساط ثابتة طوال المدة</li><li>بدون غرامات تأخير ربوية</li><li>تأمين تكافلي على التمويل</li></ul>",
+     "en": "<p>The bank buys the goods you need and sells them to you at a profit agreed up front. You repay in fixed monthly instalments.</p><ul><li>Fixed instalments for the full term</li><li>No interest-based late fees</li><li>Takaful cover on the financing</li></ul>"
+    },
+    "requirements": {
+     "ar": [
+      "بطاقة شخصية سارية",
+      "تعريف بالراتب أو ما يثبت الدخل",
+      "حساب جارٍ لدى البنك",
+      "عرض سعر من المورد"
+     ],
+     "en": [
+      "Valid national ID",
+      "Salary certificate or proof of income",
+      "Current account with the bank",
+      "Supplier quotation"
+     ]
+    }
+   },
+   {
+    "id": "small-business",
+    "maxAmount": 25000000,
+    "maxMonths": 60,
+    "annualProfitRate": 8,
+    "name": {
+     "ar": "تمويل المشاريع الصغيرة",
+     "en": "Small business financing"
+    },
+    "summary": {
+     "ar": "رأس مال عامل ومعدات للمشاريع الناشئة.",
+     "en": "Working capital and equipment for growing businesses."
+    },
+    "body": {
+     "ar": "<p>تمويل للمعدات ورأس المال العامل بصيغ المرابحة والإجارة المنتهية بالتمليك، مع فترة سماح تصل إلى 3 أشهر.</p>",
+     "en": "<p>Equipment and working-capital financing through murabaha and ijara ending in ownership, with up to 3 months' grace.</p>"
+    },
+    "requirements": {
+     "ar": [
+      "سجل تجاري أو ترخيص مزاولة",
+      "كشف حساب 6 أشهر",
+      "دراسة جدوى مبسطة"
+     ],
+     "en": [
+      "Commercial register or trade licence",
+      "6-month bank statement",
+      "Simple feasibility study"
+     ]
+    }
+   },
+   {
+    "id": "commercial",
+    "maxAmount": 150000000,
+    "maxMonths": 60,
+    "annualProfitRate": 7.5,
+    "name": {
+     "ar": "التمويل التجاري",
+     "en": "Commercial financing"
+    },
+    "summary": {
+     "ar": "تمويل البضائع والاعتمادات المستندية.",
+     "en": "Goods and letters-of-credit financing."
+    },
+    "body": {
+     "ar": "<p>تمويل استيراد البضائع وفتح الاعتمادات المستندية وخطابات الضمان للتجار والموزعين.</p>",
+     "en": "<p>Import financing, documentary letters of credit and letters of guarantee for traders and distributors.</p>"
+    },
+    "requirements": {
+     "ar": [
+      "سجل تجاري",
+      "بطاقة ضريبية",
+      "قوائم مالية",
+      "فواتير مبدئية"
+     ],
+     "en": [
+      "Commercial register",
+      "Tax card",
+      "Financial statements",
+      "Pro-forma invoices"
+     ]
+    }
+   },
+   {
+    "id": "corporate",
+    "maxAmount": 500000000,
+    "maxMonths": 84,
+    "annualProfitRate": 7,
+    "name": {
+     "ar": "تمويل المؤسسات",
+     "en": "Corporate financing"
+    },
+    "summary": {
+     "ar": "تمويل المشاريع الكبيرة والتوسعات.",
+     "en": "Large projects and expansions."
+    },
+    "body": {
+     "ar": "<p>تمويلات مشتركة ومشاركة متناقصة للمشاريع الكبيرة في الطاقة والصناعة والبنية التحتية.</p>",
+     "en": "<p>Syndicated and diminishing-musharaka financing for large energy, industrial and infrastructure projects.</p>"
+    },
+    "requirements": {
+     "ar": [
+      "قوائم مالية مدققة لـ 3 سنوات",
+      "دراسة جدوى",
+      "ضمانات مقبولة"
+     ],
+     "en": [
+      "3 years of audited financial statements",
+      "Feasibility study",
+      "Acceptable collateral"
+     ]
+    }
+   },
+   {
+    "id": "agricultural",
+    "maxAmount": 15000000,
+    "maxMonths": 36,
+    "annualProfitRate": 6,
+    "name": {
+     "ar": "التمويل الزراعي",
+     "en": "Agricultural financing"
+    },
+    "summary": {
+     "ar": "منظومات ري بالطاقة الشمسية ومدخلات زراعية.",
+     "en": "Solar irrigation systems and farm inputs."
+    },
+    "body": {
+     "ar": "<p>تمويل منظومات الري بالطاقة الشمسية والبذور والأسمدة، بأقساط تتوافق مع مواسم الحصاد.</p>",
+     "en": "<p>Financing for solar irrigation, seeds and fertiliser, with instalments aligned to harvest seasons.</p>"
+    },
+    "requirements": {
+     "ar": [
+      "بطاقة شخصية",
+      "ما يثبت حيازة الأرض أو استئجارها",
+      "عرض سعر للمنظومة"
+     ],
+     "en": [
+      "National ID",
+      "Proof of land ownership or lease",
+      "System quotation"
+     ]
+    }
+   },
+   {
+    "id": "women",
+    "maxAmount": 8000000,
+    "maxMonths": 36,
+    "annualProfitRate": 5.5,
+    "name": {
+     "ar": "تمويل المرأة",
+     "en": "Women entrepreneurs"
+    },
+    "summary": {
+     "ar": "تمويل ميسّر لمشاريع رائدات الأعمال.",
+     "en": "Preferential financing for women-led businesses."
+    },
+    "body": {
+     "ar": "<p>نسبة ربح تفضيلية وبرنامج إرشاد مجاني لرائدات الأعمال بالشراكة مع حاضنات أعمال محلية.</p>",
+     "en": "<p>A preferential profit rate and free mentoring for women entrepreneurs, with local business incubators.</p>"
+    },
+    "requirements": {
+     "ar": [
+      "بطاقة شخصية",
+      "وصف المشروع",
+      "حساب لدى البنك"
+     ],
+     "en": [
+      "National ID",
+      "Business description",
+      "Account with the bank"
+     ]
+    }
+   }
+  ],
+  "digital": [
+   {
+    "id": "d1",
+    "icon": "mobile",
+    "name": {
+     "ar": "تطبيق الجوال",
+     "en": "Mobile Banking"
+    },
+    "summary": {
+     "ar": "رصيدك وتحويلاتك وفواتيرك في تطبيق واحد.",
+     "en": "Balance, transfers and bills in one app."
+    }
+   },
+   {
+    "id": "d2",
+    "icon": "web",
+    "name": {
+     "ar": "الإنترنت المصرفي",
+     "en": "Internet Banking"
+    },
+    "summary": {
+     "ar": "إدارة حساباتك من المتصفح بأمان.",
+     "en": "Manage your accounts securely in the browser."
+    }
+   },
+   {
+    "id": "d3",
+    "icon": "wallet",
+    "name": {
+     "ar": "المحفظة الرقمية",
+     "en": "Digital Wallet"
+    },
+    "summary": {
+     "ar": "ادفع واستلم الأموال برقم جوالك.",
+     "en": "Pay and get paid with your phone number."
+    }
+   },
+   {
+    "id": "d4",
+    "icon": "qr",
+    "name": {
+     "ar": "الدفع بـ QR",
+     "en": "QR Payments"
+    },
+    "summary": {
+     "ar": "امسح وادفع لدى آلاف التجار.",
+     "en": "Scan and pay at thousands of merchants."
+    }
+   },
+   {
+    "id": "d5",
+    "icon": "card",
+    "name": {
+     "ar": "البطاقات الرقمية",
+     "en": "Digital Cards"
+    },
+    "summary": {
+     "ar": "بطاقة افتراضية للتسوق عبر الإنترنت.",
+     "en": "A virtual card for online shopping."
+    }
+   }
+  ],
+  "cards": [
+   {
+    "id": "debit",
+    "tone": "jade",
+    "network": "Visa",
+    "name": {
+     "ar": "بطاقة الخصم",
+     "en": "Debit card"
+    },
+    "summary": {
+     "ar": "مرتبطة بحسابك مباشرة للسحب والشراء.",
+     "en": "Linked to your account for cash and purchases."
+    },
+    "features": {
+     "ar": [
+      "سحب مجاني من صرافات البنك",
+      "دفع لاتلامسي",
+      "تجميد البطاقة من التطبيق",
+      "إشعار فوري بكل عملية"
+     ],
+     "en": [
+      "Free withdrawals at our ATMs",
+      "Contactless payments",
+      "Freeze from the app",
+      "Instant alert on every transaction"
+     ]
+    },
+    "fees": {
+     "ar": "الإصدار مجاني · التجديد 3,000 ر.ي سنوياً · السحب من صرافات البنوك الأخرى 300 ر.ي",
+     "en": "Free issuance · YER 3,000 yearly renewal · YER 300 per withdrawal at other banks' ATMs"
+    }
+   },
+   {
+    "id": "prepaid",
+    "tone": "lapis",
+    "network": "Mastercard",
+    "name": {
+     "ar": "بطاقة مسبقة الدفع",
+     "en": "Prepaid card"
+    },
+    "summary": {
+     "ar": "اشحنها بالمبلغ الذي تريده وتحكّم بإنفاقك.",
+     "en": "Top up what you need and control spending."
+    },
+    "features": {
+     "ar": [
+      "لا تتطلب حساباً",
+      "مناسبة للتسوق عبر الإنترنت",
+      "شحن من التطبيق أو الوكلاء"
+     ],
+     "en": [
+      "No account needed",
+      "Ideal for online shopping",
+      "Top up via the app or agents"
+     ]
+    },
+    "fees": {
+     "ar": "الإصدار 2,000 ر.ي · الشحن مجاني من التطبيق",
+     "en": "YER 2,000 issuance · free top-ups in the app"
+    }
+   },
+   {
+    "id": "credit",
+    "tone": "saffron",
+    "network": "Visa",
+    "name": {
+     "ar": "البطاقة الائتمانية",
+     "en": "Credit card"
+    },
+    "summary": {
+     "ar": "سقف شهري ومزايا سفر وفق ضوابط الشريعة.",
+     "en": "Monthly limit and travel benefits, Sharia-compliant."
+    },
+    "features": {
+     "ar": [
+      "سقف حتى 3 أضعاف الراتب",
+      "تأمين سفر",
+      "دخول صالات المطارات",
+      "قائمة برسوم شهرية ثابتة دون فوائد"
+     ],
+     "en": [
+      "Limit up to 3× salary",
+      "Travel insurance",
+      "Airport lounge access",
+      "Fixed monthly fee, no interest"
+     ]
+    },
+    "fees": {
+     "ar": "رسم شهري ثابت حسب الفئة · لا فوائد على الرصيد",
+     "en": "Fixed monthly fee by tier · no interest on balance"
+    }
+   },
+   {
+    "id": "business-card",
+    "tone": "graphite",
+    "network": "Mastercard",
+    "name": {
+     "ar": "بطاقة الشركات",
+     "en": "Business card"
+    },
+    "summary": {
+     "ar": "إدارة مصاريف الموظفين بحدود لكل بطاقة.",
+     "en": "Employee expenses with per-card limits."
+    },
+    "features": {
+     "ar": [
+      "حد لكل موظف",
+      "تقارير مصاريف شهرية",
+      "إيقاف فوري من لوحة الشركة"
+     ],
+     "en": [
+      "Per-employee limits",
+      "Monthly expense reports",
+      "Instant block from the company portal"
+     ]
+    },
+    "fees": {
+     "ar": "5,000 ر.ي لكل بطاقة سنوياً",
+     "en": "YER 5,000 per card per year"
+    }
+   }
+  ],
+  "stats": [
+   {
+    "id": "st1",
+    "value": 42,
+    "label": {
+     "ar": "فرعاً",
+     "en": "Branches"
+    }
+   },
+   {
+    "id": "st2",
+    "value": 118,
+    "label": {
+     "ar": "جهاز صراف آلي",
+     "en": "ATMs"
+    }
+   },
+   {
+    "id": "st3",
+    "value": 1350,
+    "suffix": "+",
+    "label": {
+     "ar": "وكيلاً معتمداً",
+     "en": "Agents"
+    }
+   },
+   {
+    "id": "st4",
+    "value": 19,
+    "label": {
+     "ar": "مدينة",
+     "en": "Cities"
+    }
+   }
+  ],
+  "locations": [
+   {
+    "id": "main-branch",
+    "type": "branch",
+    "lat": 15.3547,
+    "lng": 44.2066,
+    "phone": "+967 1 400 401",
+    "name": {
+     "ar": "الفرع الرئيسي",
+     "en": "Main Branch"
+    },
+    "city": {
+     "ar": "صنعاء",
+     "en": "Sana'a"
+    },
+    "district": {
+     "ar": "التحرير",
+     "en": "Al-Tahrir"
+    },
+    "address": {
+     "ar": "شارع الزبيري، جوار البريد",
+     "en": "Al-Zubairi St., near the post office"
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات",
+      "بطاقات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances",
+      "Cards"
+     ]
+    }
+   },
+   {
+    "id": "hadda-branch",
+    "type": "branch",
+    "lat": 15.3289,
+    "lng": 44.1902,
+    "phone": "+967 1 400 402",
+    "name": {
+     "ar": "فرع حدة",
+     "en": "Hadda Branch"
+    },
+    "city": {
+     "ar": "صنعاء",
+     "en": "Sana'a"
+    },
+    "district": {
+     "ar": "حدة",
+     "en": "Hadda"
+    },
+    "address": {
+     "ar": "شارع حدة، مقابل الجامعة",
+     "en": "Hadda St., opposite the university"
+    },
+    "hours": {
+     "ar": "السبت–الخميس 8:00–15:00",
+     "en": "Sat–Thu 8:00–15:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "حوالات",
+      "صراف آلي"
+     ],
+     "en": [
+      "Accounts",
+      "Remittances",
+      "ATM"
+     ]
+    }
+   },
+   {
+    "id": "aden-crater",
+    "type": "branch",
+    "lat": 12.7855,
+    "lng": 45.0187,
+    "phone": "+967 2 400 403",
+    "name": {
+     "ar": "فرع عدن – كريتر",
+     "en": "Aden – Crater Branch"
+    },
+    "city": {
+     "ar": "عدن",
+     "en": "Aden"
+    },
+    "district": {
+     "ar": "كريتر",
+     "en": "Crater"
+    },
+    "address": {
+     "ar": "شارع الملكة أروى",
+     "en": "Queen Arwa St."
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances"
+     ]
+    }
+   },
+   {
+    "id": "aden-mansoura",
+    "type": "branch",
+    "lat": 12.864,
+    "lng": 44.987,
+    "phone": "+967 2 400 413",
+    "name": {
+     "ar": "فرع عدن – المنصورة",
+     "en": "Aden – Mansoura Branch"
+    },
+    "city": {
+     "ar": "عدن",
+     "en": "Aden"
+    },
+    "district": {
+     "ar": "المنصورة",
+     "en": "Al-Mansoura"
+    },
+    "address": {
+     "ar": "الشارع التسعين",
+     "en": "Al-Tisaeen St."
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات",
+      "بطاقات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances",
+      "Cards"
+     ]
+    }
+   },
+   {
+    "id": "taiz-branch",
+    "type": "branch",
+    "lat": 13.5795,
+    "lng": 44.0209,
+    "phone": "+967 4 400 404",
+    "name": {
+     "ar": "فرع تعز",
+     "en": "Taiz Branch"
+    },
+    "city": {
+     "ar": "تعز",
+     "en": "Taiz"
+    },
+    "district": {
+     "ar": "جمال",
+     "en": "Jamal"
+    },
+    "address": {
+     "ar": "شارع جمال عبدالناصر",
+     "en": "Gamal Abdel Nasser St."
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "حوالات",
+      "بطاقات"
+     ],
+     "en": [
+      "Accounts",
+      "Remittances",
+      "Cards"
+     ]
+    }
+   },
+   {
+    "id": "mukalla-branch",
+    "type": "branch",
+    "lat": 14.5426,
+    "lng": 49.1242,
+    "phone": "+967 5 400 405",
+    "name": {
+     "ar": "فرع المكلا",
+     "en": "Mukalla Branch"
+    },
+    "city": {
+     "ar": "المكلا",
+     "en": "Mukalla"
+    },
+    "district": {
+     "ar": "الشرج",
+     "en": "Al-Sharj"
+    },
+    "address": {
+     "ar": "الخط العام، الشرج",
+     "en": "Main road, Al-Sharj"
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances"
+     ]
+    }
+   },
+   {
+    "id": "seiyun-branch",
+    "type": "branch",
+    "lat": 15.943,
+    "lng": 48.7873,
+    "phone": "+967 5 400 415",
+    "name": {
+     "ar": "فرع سيئون",
+     "en": "Seiyun Branch"
+    },
+    "city": {
+     "ar": "سيئون",
+     "en": "Seiyun"
+    },
+    "district": {
+     "ar": "السحيل",
+     "en": "Al-Suhail"
+    },
+    "address": {
+     "ar": "شارع الجزائر",
+     "en": "Algeria St."
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات",
+      "بطاقات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances",
+      "Cards"
+     ]
+    }
+   },
+   {
+    "id": "marib-branch",
+    "type": "branch",
+    "lat": 15.47,
+    "lng": 45.325,
+    "phone": "+967 6 400 416",
+    "name": {
+     "ar": "فرع مأرب",
+     "en": "Marib Branch"
+    },
+    "city": {
+     "ar": "مأرب",
+     "en": "Marib"
+    },
+    "district": {
+     "ar": "المدينة",
+     "en": "City centre"
+    },
+    "address": {
+     "ar": "شارع الجمهورية",
+     "en": "Al-Jumhuriya St."
+    },
+    "hours": {
+     "ar": "السبت–الأربعاء 8:00–14:00",
+     "en": "Sat–Wed 8:00–14:00"
+    },
+    "services": {
+     "ar": [
+      "حسابات",
+      "تمويل",
+      "حوالات"
+     ],
+     "en": [
+      "Accounts",
+      "Financing",
+      "Remittances"
+     ]
+    }
+   },
+   {
+    "id": "marib-complex-atm",
+    "type": "atm",
+    "lat": 15.4627,
+    "lng": 45.322,
+    "phone": "+967 6 400 406",
+    "name": {
+     "ar": "صراف مأرب – المجمع",
+     "en": "Marib ATM – Complex"
+    },
+    "city": {
+     "ar": "مأرب",
+     "en": "Marib"
+    },
+    "district": {
+     "ar": "المجمع",
+     "en": "Al-Mujamma"
+    },
+    "address": {
+     "ar": "جوار المجمع الحكومي",
+     "en": "Next to the government complex"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "استعلام رصيد"
+     ],
+     "en": [
+      "Cash withdrawal",
+      "Balance enquiry"
+     ]
+    }
+   },
+   {
+    "id": "ibb-city-atm",
+    "type": "atm",
+    "lat": 13.9667,
+    "lng": 44.1833,
+    "phone": "+967 4 400 408",
+    "name": {
+     "ar": "صراف إب – المدينة",
+     "en": "Ibb ATM – City"
+    },
+    "city": {
+     "ar": "إب",
+     "en": "Ibb"
+    },
+    "district": {
+     "ar": "المشنة",
+     "en": "Al-Mashannah"
+    },
+    "address": {
+     "ar": "الشارع العام، المشنة",
+     "en": "Main road, Al-Mashannah"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "إيداع"
+     ],
+     "en": [
+      "Withdrawal",
+      "Deposit"
+     ]
+    }
+   },
+   {
+    "id": "sanaa-mall-atm",
+    "type": "atm",
+    "lat": 15.312,
+    "lng": 44.201,
+    "phone": "+967 1 400 409",
+    "name": {
+     "ar": "صراف صنعاء – المول",
+     "en": "Sana'a ATM – Mall"
+    },
+    "city": {
+     "ar": "صنعاء",
+     "en": "Sana'a"
+    },
+    "district": {
+     "ar": "السبعين",
+     "en": "Al-Sabeen"
+    },
+    "address": {
+     "ar": "المدخل الرئيسي للمول",
+     "en": "Mall main entrance"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "إيداع"
+     ],
+     "en": [
+      "Withdrawal",
+      "Deposit"
+     ]
+    }
+   },
+   {
+    "id": "sanaa-airport-atm",
+    "type": "atm",
+    "lat": 15.476,
+    "lng": 44.219,
+    "phone": "+967 1 400 410",
+    "name": {
+     "ar": "صراف المطار",
+     "en": "Airport ATM"
+    },
+    "city": {
+     "ar": "صنعاء",
+     "en": "Sana'a"
+    },
+    "district": {
+     "ar": "بني الحارث",
+     "en": "Bani Al-Harith"
+    },
+    "address": {
+     "ar": "صالة الوصول",
+     "en": "Arrivals hall"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "استعلام رصيد"
+     ],
+     "en": [
+      "Cash withdrawal",
+      "Balance enquiry"
+     ]
+    }
+   },
+   {
+    "id": "aden-port-atm",
+    "type": "atm",
+    "lat": 12.795,
+    "lng": 44.985,
+    "phone": "+967 2 400 411",
+    "name": {
+     "ar": "صراف عدن – المعلا",
+     "en": "Aden ATM – Mualla"
+    },
+    "city": {
+     "ar": "عدن",
+     "en": "Aden"
+    },
+    "district": {
+     "ar": "المعلا",
+     "en": "Al-Mualla"
+    },
+    "address": {
+     "ar": "الشارع الرئيسي",
+     "en": "Main Street"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "استعلام رصيد"
+     ],
+     "en": [
+      "Cash withdrawal",
+      "Balance enquiry"
+     ]
+    }
+   },
+   {
+    "id": "taiz-atm",
+    "type": "atm",
+    "lat": 13.585,
+    "lng": 44.015,
+    "phone": "+967 4 400 412",
+    "name": {
+     "ar": "صراف تعز – الحوبان",
+     "en": "Taiz ATM – Al-Hawban"
+    },
+    "city": {
+     "ar": "تعز",
+     "en": "Taiz"
+    },
+    "district": {
+     "ar": "الحوبان",
+     "en": "Al-Hawban"
+    },
+    "address": {
+     "ar": "جولة القصر",
+     "en": "Al-Qasr roundabout"
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "إيداع"
+     ],
+     "en": [
+      "Withdrawal",
+      "Deposit"
+     ]
+    }
+   },
+   {
+    "id": "mukalla-atm",
+    "type": "atm",
+    "lat": 14.53,
+    "lng": 49.13,
+    "phone": "+967 5 400 417",
+    "name": {
+     "ar": "صراف المكلا – فوّه",
+     "en": "Mukalla ATM – Fuwwah"
+    },
+    "city": {
+     "ar": "المكلا",
+     "en": "Mukalla"
+    },
+    "district": {
+     "ar": "فوّه",
+     "en": "Fuwwah"
+    },
+    "address": {
+     "ar": "شارع الستين",
+     "en": "Sixty St."
+    },
+    "hours": {
+     "ar": "24 ساعة",
+     "en": "24 hours"
+    },
+    "services": {
+     "ar": [
+      "سحب",
+      "استعلام رصيد"
+     ],
+     "en": [
+      "Cash withdrawal",
+      "Balance enquiry"
+     ]
+    }
+   },
+   {
+    "id": "hodeidah-port-agent",
+    "type": "agent",
+    "lat": 14.7978,
+    "lng": 42.9545,
+    "phone": "+967 3 400 407",
+    "name": {
+     "ar": "وكيل الحديدة – الميناء",
+     "en": "Hodeidah Agent – Port"
+    },
+    "city": {
+     "ar": "الحديدة",
+     "en": "Hodeidah"
+    },
+    "district": {
+     "ar": "الميناء",
+     "en": "Al-Mina"
+    },
+    "address": {
+     "ar": "شارع الميناء",
+     "en": "Port Street"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   },
+   {
+    "id": "hodeidah-city-agent",
+    "type": "agent",
+    "lat": 14.802,
+    "lng": 42.951,
+    "phone": "+967 3 400 418",
+    "name": {
+     "ar": "وكيل الحديدة – صنعاء ستريت",
+     "en": "Hodeidah Agent – Sana'a St."
+    },
+    "city": {
+     "ar": "الحديدة",
+     "en": "Hodeidah"
+    },
+    "district": {
+     "ar": "الحالي",
+     "en": "Al-Hali"
+    },
+    "address": {
+     "ar": "شارع صنعاء",
+     "en": "Sana'a Street"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   },
+   {
+    "id": "ibb-agent",
+    "type": "agent",
+    "lat": 13.97,
+    "lng": 44.17,
+    "phone": "+967 4 400 419",
+    "name": {
+     "ar": "وكيل إب – الظهار",
+     "en": "Ibb Agent – Al-Dhihar"
+    },
+    "city": {
+     "ar": "إب",
+     "en": "Ibb"
+    },
+    "district": {
+     "ar": "الظهار",
+     "en": "Al-Dhihar"
+    },
+    "address": {
+     "ar": "سوق الظهار",
+     "en": "Al-Dhihar market"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   },
+   {
+    "id": "sanaa-shumaila-agent",
+    "type": "agent",
+    "lat": 15.295,
+    "lng": 44.19,
+    "phone": "+967 1 400 420",
+    "name": {
+     "ar": "وكيل صنعاء – شميلة",
+     "en": "Sana'a Agent – Shumaila"
+    },
+    "city": {
+     "ar": "صنعاء",
+     "en": "Sana'a"
+    },
+    "district": {
+     "ar": "شميلة",
+     "en": "Shumaila"
+    },
+    "address": {
+     "ar": "شارع تعز",
+     "en": "Taiz Street"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   },
+   {
+    "id": "seiyun-agent",
+    "type": "agent",
+    "lat": 15.94,
+    "lng": 48.79,
+    "phone": "+967 5 400 421",
+    "name": {
+     "ar": "وكيل سيئون – السوق",
+     "en": "Seiyun Agent – Market"
+    },
+    "city": {
+     "ar": "سيئون",
+     "en": "Seiyun"
+    },
+    "district": {
+     "ar": "السوق",
+     "en": "Market"
+    },
+    "address": {
+     "ar": "سوق سيئون القديم",
+     "en": "Old Seiyun market"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   },
+   {
+    "id": "marib-agent",
+    "type": "agent",
+    "lat": 15.455,
+    "lng": 45.33,
+    "phone": "+967 6 400 422",
+    "name": {
+     "ar": "وكيل مأرب – الروضة",
+     "en": "Marib Agent – Al-Rawdah"
+    },
+    "city": {
+     "ar": "مأرب",
+     "en": "Marib"
+    },
+    "district": {
+     "ar": "الروضة",
+     "en": "Al-Rawdah"
+    },
+    "address": {
+     "ar": "حي الروضة",
+     "en": "Al-Rawdah district"
+    },
+    "hours": {
+     "ar": "يومياً 8:00–21:00",
+     "en": "Daily 8:00–21:00"
+    },
+    "services": {
+     "ar": [
+      "حوالات",
+      "سداد فواتير"
+     ],
+     "en": [
+      "Remittances",
+      "Bill payment"
+     ]
+    }
+   }
+  ],
+  "news": [
+   {
+    "id": "nw1",
+    "slug": "solar-irrigation-financing-2026",
+    "categorySlug": "financing",
+    "publishedAt": "2026-09-28",
+    "image": "",
+    "category": {
+     "ar": "التمويل",
+     "en": "Financing"
+    },
+    "title": {
+     "ar": "إطلاق برنامج لتمويل منظومات الري بالطاقة الشمسية لصغار المزارعين",
+     "en": "New programme finances solar irrigation for smallholder farmers"
+    },
+    "excerpt": {
+     "ar": "يتيح البرنامج تمويلاً بآجال تصل إلى 36 شهراً مع فترة سماح تتوافق مع مواسم الحصاد.",
+     "en": "Terms up to 36 months with a grace period aligned to harvest seasons."
+    }
+   },
+   {
+    "id": "nw2",
+    "slug": "app-v4-launch",
+    "categorySlug": "digital",
+    "publishedAt": "2026-09-15",
+    "image": "",
+    "category": {
+     "ar": "الخدمات الرقمية",
+     "en": "Digital"
+    },
+    "title": {
+     "ar": "الإصدار الرابع من تطبيق الجوال بواجهة جديدة",
+     "en": "Version 4 of the mobile app ships with a new interface"
+    },
+    "excerpt": {
+     "ar": "تحويلات أسرع ودفع بالـ QR وإشعارات فورية.",
+     "en": "Faster transfers, QR payments and instant alerts."
+    }
+   },
+   {
+    "id": "nw3",
+    "slug": "seiyun-branch-opening",
+    "categorySlug": "network",
+    "publishedAt": "2026-08-30",
+    "image": "",
+    "category": {
+     "ar": "الانتشار",
+     "en": "Network"
+    },
+    "title": {
+     "ar": "افتتاح فرع جديد في سيئون",
+     "en": "New branch opens in Seiyun"
+    },
+    "excerpt": {
+     "ar": "يقدّم الفرع جميع الخدمات المصرفية للأفراد والشركات.",
+     "en": "Full retail and business services."
+    }
+   },
+   {
+    "id": "nw4",
+    "slug": "financial-literacy-week",
+    "categorySlug": "csr",
+    "publishedAt": "2026-08-12",
+    "image": "",
+    "category": {
+     "ar": "المسؤولية المجتمعية",
+     "en": "CSR"
+    },
+    "title": {
+     "ar": "أسبوع الثقافة المالية في 6 جامعات يمنية",
+     "en": "Financial literacy week across 6 Yemeni universities"
+    },
+    "excerpt": {
+     "ar": "ورش عن الادخار وإدارة الميزانية الشخصية.",
+     "en": "Workshops on saving and personal budgeting."
+    }
+   }
+  ],
+  "offers": [
+   {
+    "id": "back-to-school",
+    "href": "/financing/personal",
+    "startsAt": "2026-09-01",
+    "endsAt": "2026-10-31",
+    "image": "",
+    "title": {
+     "ar": "عرض العودة للمدارس",
+     "en": "Back to school"
+    },
+    "details": {
+     "ar": "تمويل الرسوم الدراسية بدون رسوم إدارية.",
+     "en": "School-fee financing with no admin fee."
+    }
+   },
+   {
+    "id": "card-cashback",
+    "href": "/cards/debit",
+    "startsAt": "2026-10-01",
+    "endsAt": "2026-12-31",
+    "image": "",
+    "title": {
+     "ar": "استرداد نقدي 5%",
+     "en": "5% cashback"
+    },
+    "details": {
+     "ar": "على مشتريات بطاقة الخصم لدى المتاجر المشاركة.",
+     "en": "On debit card purchases at partner stores."
+    }
+   },
+   {
+    "id": "new-account",
+    "href": "/accounts/current",
+    "startsAt": "2026-10-01",
+    "endsAt": "2026-11-30",
+    "image": "",
+    "title": {
+     "ar": "حساب جديد، بطاقة مجانية",
+     "en": "New account, free card"
+    },
+    "details": {
+     "ar": "إعفاء من رسوم إصدار البطاقة للسنة الأولى.",
+     "en": "First-year card fee waived."
+    }
+   }
+  ],
+  "reasons": [
+   {
+    "id": "r1",
+    "icon": "shield",
+    "title": {
+     "ar": "الأمان",
+     "en": "Security"
+    },
+    "summary": {
+     "ar": "حماية متعددة الطبقات وتحقق ثنائي لكل عملية.",
+     "en": "Layered protection and two-factor verification."
+    }
+   },
+   {
+    "id": "r2",
+    "icon": "network",
+    "title": {
+     "ar": "الانتشار",
+     "en": "Reach"
+    },
+    "summary": {
+     "ar": "فروع وصرافات ووكلاء في معظم المحافظات.",
+     "en": "Branches, ATMs and agents across most governorates."
+    }
+   },
+   {
+    "id": "r3",
+    "icon": "digital",
+    "title": {
+     "ar": "الخدمات الرقمية",
+     "en": "Digital first"
+    },
+    "summary": {
+     "ar": "معظم الخدمات متاحة من الجوال.",
+     "en": "Most services available on mobile."
+    }
+   },
+   {
+    "id": "r4",
+    "icon": "speed",
+    "title": {
+     "ar": "السرعة",
+     "en": "Speed"
+    },
+    "summary": {
+     "ar": "رد على طلبات التمويل خلال 3 أيام عمل.",
+     "en": "Financing decisions within 3 working days."
+    }
+   },
+   {
+    "id": "r5",
+    "icon": "eye",
+    "title": {
+     "ar": "الشفافية",
+     "en": "Transparency"
+    },
+    "summary": {
+     "ar": "رسوم ونسب منشورة وواضحة قبل التوقيع.",
+     "en": "Fees and rates published before you sign."
+    }
+   },
+   {
+    "id": "r6",
+    "icon": "support",
+    "title": {
+     "ar": "خدمة العملاء",
+     "en": "Customer care"
+    },
+    "summary": {
+     "ar": "مركز اتصال يعمل طوال أيام الأسبوع.",
+     "en": "Contact centre open every day."
+    }
+   }
+  ],
+  "reasonStats": [
+   {
+    "id": "rs1",
+    "value": 420,
+    "suffix": "K+",
+    "label": {
+     "ar": "عميل",
+     "en": "Customers"
+    }
+   },
+   {
+    "id": "rs2",
+    "value": 99.9,
+    "suffix": "%",
+    "label": {
+     "ar": "جاهزية الخدمات الرقمية",
+     "en": "Digital uptime"
+    }
+   },
+   {
+    "id": "rs3",
+    "value": 3,
+    "label": {
+     "ar": "أيام عمل لقرار التمويل",
+     "en": "Days to financing decision"
+    }
+   },
+   {
+    "id": "rs4",
+    "value": 24,
+    "suffix": "/7",
+    "label": {
+     "ar": "خدمة العملاء",
+     "en": "Customer care"
+    }
+   }
+  ],
+  "faqs": [
+   {
+    "id": "q1",
+    "question": {
+     "ar": "كيف أفتح حساباً؟",
+     "en": "How do I open an account?"
+    },
+    "answer": {
+     "ar": "عبّئ نموذج فتح الحساب في الموقع وستصلك رسالة برقم مرجعي، ثم زر أقرب فرع بالبطاقة الشخصية لإكمال التحقق، أو أكمله من التطبيق إن كان التحقق الرقمي متاحاً في منطقتك.",
+     "en": "Fill in the online form to get a reference number, then visit a branch with your ID to complete verification, or finish it in the app where digital verification is available."
+    }
+   },
+   {
+    "id": "q2",
+    "question": {
+     "ar": "ما متطلبات التمويل؟",
+     "en": "What do I need for financing?"
+    },
+    "answer": {
+     "ar": "بطاقة شخصية سارية، ما يثبت مصدر الدخل، وحساب لدى البنك. تختلف المتطلبات الإضافية حسب نوع التمويل.",
+     "en": "A valid ID, proof of income and an account with the bank. Extra documents depend on the product."
+    }
+   },
+   {
+    "id": "q3",
+    "question": {
+     "ar": "كيف أطلب بطاقة؟",
+     "en": "How do I request a card?"
+    },
+    "answer": {
+     "ar": "من صفحة البطاقات اختر البطاقة المناسبة وقدّم الطلب، وستُبلَّغ عند جاهزيتها للاستلام من الفرع.",
+     "en": "Choose a card on the Cards page and apply. We'll notify you when it's ready for pickup."
+    }
+   },
+   {
+    "id": "q4",
+    "question": {
+     "ar": "أين أقرب فرع؟",
+     "en": "Where is my nearest branch?"
+    },
+    "answer": {
+     "ar": "استخدم أداة البحث في قسم «نحن أقرب إليك» واختر المدينة ونوع الخدمة.",
+     "en": "Use the finder in “We're close to you” and filter by city and service type."
+    }
+   },
+   {
+    "id": "q5",
+    "question": {
+     "ar": "كيف أستخدم التطبيق؟",
+     "en": "How do I use the app?"
+    },
+    "answer": {
+     "ar": "حمّل التطبيق، سجّل برقم حسابك ورقم جوالك المسجّل، ثم فعّل رمز التحقق المرسل إليك.",
+     "en": "Download the app, register with your account and registered phone number, then enter the code we send."
+    }
+   },
+   {
+    "id": "q6",
+    "question": {
+     "ar": "كيف أتواصل مع خدمة العملاء؟",
+     "en": "How do I contact customer care?"
+    },
+    "answer": {
+     "ar": "اتصل بالرقم المجاني 8008 800، أو راسلنا عبر نموذج «تواصل معنا». لن نطلب منك أبداً رقمك السري أو رمز التحقق.",
+     "en": "Call 8008 800 toll-free or use the Contact form. We will never ask for your PIN or OTP."
+    }
+   }
+  ]
+ },
+ "services": [
+  {
+   "id": "accounts",
+   "icon": "account",
+   "href": "/accounts",
+   "title": {
+    "ar": "فتح حساب",
+    "en": "Open an account"
+   },
+   "summary": {
+    "ar": "افتح حسابك الجاري أو التوفير خلال دقائق، وتابع طلبك برقم مرجعي.",
+    "en": "Open a current or savings account in minutes and track it with a reference number."
+   }
+  },
+  {
+   "id": "financing",
+   "icon": "financing",
+   "href": "/financing",
+   "title": {
+    "ar": "التمويل",
+    "en": "Financing"
+   },
+   "summary": {
+    "ar": "حلول تمويل متوافقة مع الشريعة للأفراد والمشاريع والشركات.",
+    "en": "Sharia-compliant financing for individuals, small businesses and companies."
+   }
+  },
+  {
+   "id": "transfers",
+   "icon": "transfer",
+   "href": "/transfers",
+   "title": {
+    "ar": "التحويلات",
+    "en": "Transfers"
+   },
+   "summary": {
+    "ar": "أرسل واستقبل الحوالات المحلية والدولية عبر الفروع والوكلاء والتطبيق.",
+    "en": "Send and receive local and international remittances through branches, agents and the app."
+   }
+  },
+  {
+   "id": "cards",
+   "icon": "card",
+   "href": "/cards",
+   "title": {
+    "ar": "البطاقات",
+    "en": "Cards"
+   },
+   "summary": {
+    "ar": "بطاقات خصم ومسبقة الدفع وائتمانية تناسب مصاريفك اليومية وسفرك.",
+    "en": "Debit, prepaid and credit cards for everyday spending and travel."
+   }
+  },
+  {
+   "id": "payments",
+   "icon": "payment",
+   "href": "/digital#payments",
+   "title": {
+    "ar": "الدفع الإلكتروني",
+    "en": "E-payments"
+   },
+   "summary": {
+    "ar": "سدّد فواتير الكهرباء والمياه والاتصالات والرسوم من مكانك.",
+    "en": "Pay electricity, water, telecom bills and fees from anywhere."
+   }
+  },
+  {
+   "id": "digital",
+   "icon": "digital",
+   "href": "/digital",
+   "title": {
+    "ar": "الخدمات الرقمية",
+    "en": "Digital banking"
+   },
+   "summary": {
+    "ar": "تطبيق الجوال والخدمات المصرفية عبر الإنترنت والمحفظة الرقمية.",
+    "en": "Mobile app, internet banking and a digital wallet."
+   }
+  },
+  {
+   "id": "network",
+   "icon": "branch",
+   "href": "/branches",
+   "title": {
+    "ar": "الفروع والصرافات",
+    "en": "Branches & ATMs"
+   },
+   "summary": {
+    "ar": "شبكة فروع وصرافات آلية ووكلاء معتمدين في معظم المحافظات.",
+    "en": "Branches, ATMs and licensed agents across most governorates."
+   }
+  },
+  {
+   "id": "offers",
+   "icon": "wallet",
+   "href": "/offers",
+   "title": {
+    "ar": "العروض",
+    "en": "Offers"
+   },
+   "summary": {
+    "ar": "حملات موسمية وإعفاءات من الرسوم واسترداد نقدي.",
+    "en": "Seasonal campaigns, fee waivers and cashback."
+   }
+  },
+  {
+   "id": "support",
+   "icon": "support",
+   "href": "/contact",
+   "title": {
+    "ar": "خدمة العملاء",
+    "en": "Customer care"
+   },
+   "summary": {
+    "ar": "اطلب اتصالاً من خدمة العملاء أو قدّم شكوى وتابعها برقم مرجعي.",
+    "en": "Request a callback or file a complaint and track it with a reference."
+   }
+  }
+ ],
+ "accounts": [
+  {
+   "id": "current",
+   "accountType": "current",
+   "href": "/accounts/current",
+   "currency": "YER",
+   "minimumBalance": 10000,
+   "name": {
+    "ar": "الحساب الجاري",
+    "en": "Current account"
+   },
+   "tagline": {
+    "ar": "لمعاملاتك اليومية",
+    "en": "For everyday banking"
+   },
+   "features": {
+    "ar": [
+     "دفتر شيكات",
+     "بطاقة خصم مجانية",
+     "تطبيق الجوال والإنترنت المصرفي",
+     "تحويل الراتب"
+    ],
+    "en": [
+     "Cheque book",
+     "Free debit card",
+     "Mobile and internet banking",
+     "Salary transfer"
+    ]
+   },
+   "requirements": {
+    "ar": [
+     "بطاقة شخصية سارية",
+     "صورة شخصية",
+     "إثبات عنوان السكن"
+    ],
+    "en": [
+     "Valid national ID",
+     "Personal photo",
+     "Proof of address"
+    ]
+   }
+  },
+  {
+   "id": "savings",
+   "accountType": "savings",
+   "href": "/accounts/savings",
+   "currency": "YER",
+   "minimumBalance": 5000,
+   "name": {
+    "ar": "حساب التوفير",
+    "en": "Savings account"
+   },
+   "tagline": {
+    "ar": "ادّخر لأهدافك",
+    "en": "Save for your goals"
+   },
+   "features": {
+    "ar": [
+     "أرباح دورية وفق المضاربة",
+     "سحب مرن",
+     "كشف حساب شهري",
+     "حساب توفير للأبناء"
+    ],
+    "en": [
+     "Periodic mudaraba profit",
+     "Flexible withdrawals",
+     "Monthly statement",
+     "Children's savings option"
+    ]
+   },
+   "requirements": {
+    "ar": [
+     "بطاقة شخصية سارية",
+     "رقم هاتف"
+    ],
+    "en": [
+     "Valid national ID",
+     "Phone number"
+    ]
+   }
+  },
+  {
+   "id": "investment",
+   "accountType": "investment",
+   "href": "/accounts/investment",
+   "currency": "YER",
+   "minimumBalance": 500000,
+   "name": {
+    "ar": "الحساب الاستثماري",
+    "en": "Investment account"
+   },
+   "tagline": {
+    "ar": "ودائع لأجل بعوائد أعلى",
+    "en": "Term deposits, higher returns"
+   },
+   "features": {
+    "ar": [
+     "آجال 3 و6 و12 شهراً",
+     "عائد متوقع أعلى",
+     "تجديد تلقائي",
+     "إمكانية التمويل بضمان الوديعة"
+    ],
+    "en": [
+     "3, 6 and 12-month terms",
+     "Higher expected return",
+     "Auto-renewal",
+     "Financing secured by the deposit"
+    ]
+   },
+   "requirements": {
+    "ar": [
+     "حساب جارٍ أو توفير",
+     "بطاقة شخصية سارية"
+    ],
+    "en": [
+     "Current or savings account",
+     "Valid national ID"
+    ]
+   }
+  },
+  {
+   "id": "business",
+   "accountType": "business",
+   "href": "/accounts/business",
+   "currency": "YER",
+   "minimumBalance": null,
+   "name": {
+    "ar": "حساب الشركات",
+    "en": "Business account"
+   },
+   "tagline": {
+    "ar": "للمنشآت والمؤسسات",
+    "en": "For companies and institutions"
+   },
+   "features": {
+    "ar": [
+     "إدارة الرواتب",
+     "صلاحيات متعددة للمفوضين",
+     "خدمات تجارية واعتمادات",
+     "مدير علاقة مخصص"
+    ],
+    "en": [
+     "Payroll management",
+     "Multi-signatory access",
+     "Trade services and LCs",
+     "Dedicated relationship manager"
+    ]
+   },
+   "requirements": {
+    "ar": [
+     "سجل تجاري",
+     "بطاقة ضريبية",
+     "هويات المفوضين",
+     "عقد التأسيس للشركات"
+    ],
+    "en": [
+     "Commercial register",
+     "Tax card",
+     "Signatories' IDs",
+     "Articles of association (companies)"
+    ]
+   }
+  }
+ ],
+ "financing": [
+  {
+   "id": "personal",
+   "maxAmount": 10000000,
+   "maxMonths": 48,
+   "annualProfitRate": 9,
+   "name": {
+    "ar": "التمويل الشخصي",
+    "en": "Personal financing"
+   },
+   "summary": {
+    "ar": "مرابحة للسلع والاحتياجات الشخصية.",
+    "en": "Murabaha for personal goods and needs."
+   },
+   "body": {
+    "ar": "<p>يشتري البنك السلعة التي تحتاجها ثم يبيعها لك بربح معلوم مسبقاً، وتسدّد ثمنها على أقساط شهرية ثابتة.</p><ul><li>أقساط ثابتة طوال المدة</li><li>بدون غرامات تأخير ربوية</li><li>تأمين تكافلي على التمويل</li></ul>",
+    "en": "<p>The bank buys the goods you need and sells them to you at a profit agreed up front. You repay in fixed monthly instalments.</p><ul><li>Fixed instalments for the full term</li><li>No interest-based late fees</li><li>Takaful cover on the financing</li></ul>"
+   },
+   "requirements": {
+    "ar": [
+     "بطاقة شخصية سارية",
+     "تعريف بالراتب أو ما يثبت الدخل",
+     "حساب جارٍ لدى البنك",
+     "عرض سعر من المورد"
+    ],
+    "en": [
+     "Valid national ID",
+     "Salary certificate or proof of income",
+     "Current account with the bank",
+     "Supplier quotation"
+    ]
+   }
+  },
+  {
+   "id": "small-business",
+   "maxAmount": 25000000,
+   "maxMonths": 60,
+   "annualProfitRate": 8,
+   "name": {
+    "ar": "تمويل المشاريع الصغيرة",
+    "en": "Small business financing"
+   },
+   "summary": {
+    "ar": "رأس مال عامل ومعدات للمشاريع الناشئة.",
+    "en": "Working capital and equipment for growing businesses."
+   },
+   "body": {
+    "ar": "<p>تمويل للمعدات ورأس المال العامل بصيغ المرابحة والإجارة المنتهية بالتمليك، مع فترة سماح تصل إلى 3 أشهر.</p>",
+    "en": "<p>Equipment and working-capital financing through murabaha and ijara ending in ownership, with up to 3 months' grace.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "سجل تجاري أو ترخيص مزاولة",
+     "كشف حساب 6 أشهر",
+     "دراسة جدوى مبسطة"
+    ],
+    "en": [
+     "Commercial register or trade licence",
+     "6-month bank statement",
+     "Simple feasibility study"
+    ]
+   }
+  },
+  {
+   "id": "commercial",
+   "maxAmount": 150000000,
+   "maxMonths": 60,
+   "annualProfitRate": 7.5,
+   "name": {
+    "ar": "التمويل التجاري",
+    "en": "Commercial financing"
+   },
+   "summary": {
+    "ar": "تمويل البضائع والاعتمادات المستندية.",
+    "en": "Goods and letters-of-credit financing."
+   },
+   "body": {
+    "ar": "<p>تمويل استيراد البضائع وفتح الاعتمادات المستندية وخطابات الضمان للتجار والموزعين.</p>",
+    "en": "<p>Import financing, documentary letters of credit and letters of guarantee for traders and distributors.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "سجل تجاري",
+     "بطاقة ضريبية",
+     "قوائم مالية",
+     "فواتير مبدئية"
+    ],
+    "en": [
+     "Commercial register",
+     "Tax card",
+     "Financial statements",
+     "Pro-forma invoices"
+    ]
+   }
+  },
+  {
+   "id": "corporate",
+   "maxAmount": 500000000,
+   "maxMonths": 84,
+   "annualProfitRate": 7,
+   "name": {
+    "ar": "تمويل المؤسسات",
+    "en": "Corporate financing"
+   },
+   "summary": {
+    "ar": "تمويل المشاريع الكبيرة والتوسعات.",
+    "en": "Large projects and expansions."
+   },
+   "body": {
+    "ar": "<p>تمويلات مشتركة ومشاركة متناقصة للمشاريع الكبيرة في الطاقة والصناعة والبنية التحتية.</p>",
+    "en": "<p>Syndicated and diminishing-musharaka financing for large energy, industrial and infrastructure projects.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "قوائم مالية مدققة لـ 3 سنوات",
+     "دراسة جدوى",
+     "ضمانات مقبولة"
+    ],
+    "en": [
+     "3 years of audited financial statements",
+     "Feasibility study",
+     "Acceptable collateral"
+    ]
+   }
+  },
+  {
+   "id": "agricultural",
+   "maxAmount": 15000000,
+   "maxMonths": 36,
+   "annualProfitRate": 6,
+   "name": {
+    "ar": "التمويل الزراعي",
+    "en": "Agricultural financing"
+   },
+   "summary": {
+    "ar": "منظومات ري بالطاقة الشمسية ومدخلات زراعية.",
+    "en": "Solar irrigation systems and farm inputs."
+   },
+   "body": {
+    "ar": "<p>تمويل منظومات الري بالطاقة الشمسية والبذور والأسمدة، بأقساط تتوافق مع مواسم الحصاد.</p>",
+    "en": "<p>Financing for solar irrigation, seeds and fertiliser, with instalments aligned to harvest seasons.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "بطاقة شخصية",
+     "ما يثبت حيازة الأرض أو استئجارها",
+     "عرض سعر للمنظومة"
+    ],
+    "en": [
+     "National ID",
+     "Proof of land ownership or lease",
+     "System quotation"
+    ]
+   }
+  },
+  {
+   "id": "women",
+   "maxAmount": 8000000,
+   "maxMonths": 36,
+   "annualProfitRate": 5.5,
+   "name": {
+    "ar": "تمويل المرأة",
+    "en": "Women entrepreneurs"
+   },
+   "summary": {
+    "ar": "تمويل ميسّر لمشاريع رائدات الأعمال.",
+    "en": "Preferential financing for women-led businesses."
+   },
+   "body": {
+    "ar": "<p>نسبة ربح تفضيلية وبرنامج إرشاد مجاني لرائدات الأعمال بالشراكة مع حاضنات أعمال محلية.</p>",
+    "en": "<p>A preferential profit rate and free mentoring for women entrepreneurs, with local business incubators.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "بطاقة شخصية",
+     "وصف المشروع",
+     "حساب لدى البنك"
+    ],
+    "en": [
+     "National ID",
+     "Business description",
+     "Account with the bank"
+    ]
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "debit",
+   "tone": "jade",
+   "network": "Visa",
+   "name": {
+    "ar": "بطاقة الخصم",
+    "en": "Debit card"
+   },
+   "summary": {
+    "ar": "مرتبطة بحسابك مباشرة للسحب والشراء.",
+    "en": "Linked to your account for cash and purchases."
+   },
+   "features": {
+    "ar": [
+     "سحب مجاني من صرافات البنك",
+     "دفع لاتلامسي",
+     "تجميد البطاقة من التطبيق",
+     "إشعار فوري بكل عملية"
+    ],
+    "en": [
+     "Free withdrawals at our ATMs",
+     "Contactless payments",
+     "Freeze from the app",
+     "Instant alert on every transaction"
+    ]
+   },
+   "fees": {
+    "ar": "الإصدار مجاني · التجديد 3,000 ر.ي سنوياً · السحب من صرافات البنوك الأخرى 300 ر.ي",
+    "en": "Free issuance · YER 3,000 yearly renewal · YER 300 per withdrawal at other banks' ATMs"
+   }
+  },
+  {
+   "id": "prepaid",
+   "tone": "lapis",
+   "network": "Mastercard",
+   "name": {
+    "ar": "بطاقة مسبقة الدفع",
+    "en": "Prepaid card"
+   },
+   "summary": {
+    "ar": "اشحنها بالمبلغ الذي تريده وتحكّم بإنفاقك.",
+    "en": "Top up what you need and control spending."
+   },
+   "features": {
+    "ar": [
+     "لا تتطلب حساباً",
+     "مناسبة للتسوق عبر الإنترنت",
+     "شحن من التطبيق أو الوكلاء"
+    ],
+    "en": [
+     "No account needed",
+     "Ideal for online shopping",
+     "Top up via the app or agents"
+    ]
+   },
+   "fees": {
+    "ar": "الإصدار 2,000 ر.ي · الشحن مجاني من التطبيق",
+    "en": "YER 2,000 issuance · free top-ups in the app"
+   }
+  },
+  {
+   "id": "credit",
+   "tone": "saffron",
+   "network": "Visa",
+   "name": {
+    "ar": "البطاقة الائتمانية",
+    "en": "Credit card"
+   },
+   "summary": {
+    "ar": "سقف شهري ومزايا سفر وفق ضوابط الشريعة.",
+    "en": "Monthly limit and travel benefits, Sharia-compliant."
+   },
+   "features": {
+    "ar": [
+     "سقف حتى 3 أضعاف الراتب",
+     "تأمين سفر",
+     "دخول صالات المطارات",
+     "قائمة برسوم شهرية ثابتة دون فوائد"
+    ],
+    "en": [
+     "Limit up to 3× salary",
+     "Travel insurance",
+     "Airport lounge access",
+     "Fixed monthly fee, no interest"
+    ]
+   },
+   "fees": {
+    "ar": "رسم شهري ثابت حسب الفئة · لا فوائد على الرصيد",
+    "en": "Fixed monthly fee by tier · no interest on balance"
+   }
+  },
+  {
+   "id": "business-card",
+   "tone": "graphite",
+   "network": "Mastercard",
+   "name": {
+    "ar": "بطاقة الشركات",
+    "en": "Business card"
+   },
+   "summary": {
+    "ar": "إدارة مصاريف الموظفين بحدود لكل بطاقة.",
+    "en": "Employee expenses with per-card limits."
+   },
+   "features": {
+    "ar": [
+     "حد لكل موظف",
+     "تقارير مصاريف شهرية",
+     "إيقاف فوري من لوحة الشركة"
+    ],
+    "en": [
+     "Per-employee limits",
+     "Monthly expense reports",
+     "Instant block from the company portal"
+    ]
+   },
+   "fees": {
+    "ar": "5,000 ر.ي لكل بطاقة سنوياً",
+    "en": "YER 5,000 per card per year"
+   }
+  }
+ ],
+ "locations": [
+  {
+   "id": "main-branch",
+   "type": "branch",
+   "lat": 15.3547,
+   "lng": 44.2066,
+   "phone": "+967 1 400 401",
+   "name": {
+    "ar": "الفرع الرئيسي",
+    "en": "Main Branch"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "district": {
+    "ar": "التحرير",
+    "en": "Al-Tahrir"
+   },
+   "address": {
+    "ar": "شارع الزبيري، جوار البريد",
+    "en": "Al-Zubairi St., near the post office"
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات",
+     "بطاقات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances",
+     "Cards"
+    ]
+   }
+  },
+  {
+   "id": "hadda-branch",
+   "type": "branch",
+   "lat": 15.3289,
+   "lng": 44.1902,
+   "phone": "+967 1 400 402",
+   "name": {
+    "ar": "فرع حدة",
+    "en": "Hadda Branch"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "district": {
+    "ar": "حدة",
+    "en": "Hadda"
+   },
+   "address": {
+    "ar": "شارع حدة، مقابل الجامعة",
+    "en": "Hadda St., opposite the university"
+   },
+   "hours": {
+    "ar": "السبت–الخميس 8:00–15:00",
+    "en": "Sat–Thu 8:00–15:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "حوالات",
+     "صراف آلي"
+    ],
+    "en": [
+     "Accounts",
+     "Remittances",
+     "ATM"
+    ]
+   }
+  },
+  {
+   "id": "aden-crater",
+   "type": "branch",
+   "lat": 12.7855,
+   "lng": 45.0187,
+   "phone": "+967 2 400 403",
+   "name": {
+    "ar": "فرع عدن – كريتر",
+    "en": "Aden – Crater Branch"
+   },
+   "city": {
+    "ar": "عدن",
+    "en": "Aden"
+   },
+   "district": {
+    "ar": "كريتر",
+    "en": "Crater"
+   },
+   "address": {
+    "ar": "شارع الملكة أروى",
+    "en": "Queen Arwa St."
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances"
+    ]
+   }
+  },
+  {
+   "id": "aden-mansoura",
+   "type": "branch",
+   "lat": 12.864,
+   "lng": 44.987,
+   "phone": "+967 2 400 413",
+   "name": {
+    "ar": "فرع عدن – المنصورة",
+    "en": "Aden – Mansoura Branch"
+   },
+   "city": {
+    "ar": "عدن",
+    "en": "Aden"
+   },
+   "district": {
+    "ar": "المنصورة",
+    "en": "Al-Mansoura"
+   },
+   "address": {
+    "ar": "الشارع التسعين",
+    "en": "Al-Tisaeen St."
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات",
+     "بطاقات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances",
+     "Cards"
+    ]
+   }
+  },
+  {
+   "id": "taiz-branch",
+   "type": "branch",
+   "lat": 13.5795,
+   "lng": 44.0209,
+   "phone": "+967 4 400 404",
+   "name": {
+    "ar": "فرع تعز",
+    "en": "Taiz Branch"
+   },
+   "city": {
+    "ar": "تعز",
+    "en": "Taiz"
+   },
+   "district": {
+    "ar": "جمال",
+    "en": "Jamal"
+   },
+   "address": {
+    "ar": "شارع جمال عبدالناصر",
+    "en": "Gamal Abdel Nasser St."
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "حوالات",
+     "بطاقات"
+    ],
+    "en": [
+     "Accounts",
+     "Remittances",
+     "Cards"
+    ]
+   }
+  },
+  {
+   "id": "mukalla-branch",
+   "type": "branch",
+   "lat": 14.5426,
+   "lng": 49.1242,
+   "phone": "+967 5 400 405",
+   "name": {
+    "ar": "فرع المكلا",
+    "en": "Mukalla Branch"
+   },
+   "city": {
+    "ar": "المكلا",
+    "en": "Mukalla"
+   },
+   "district": {
+    "ar": "الشرج",
+    "en": "Al-Sharj"
+   },
+   "address": {
+    "ar": "الخط العام، الشرج",
+    "en": "Main road, Al-Sharj"
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances"
+    ]
+   }
+  },
+  {
+   "id": "seiyun-branch",
+   "type": "branch",
+   "lat": 15.943,
+   "lng": 48.7873,
+   "phone": "+967 5 400 415",
+   "name": {
+    "ar": "فرع سيئون",
+    "en": "Seiyun Branch"
+   },
+   "city": {
+    "ar": "سيئون",
+    "en": "Seiyun"
+   },
+   "district": {
+    "ar": "السحيل",
+    "en": "Al-Suhail"
+   },
+   "address": {
+    "ar": "شارع الجزائر",
+    "en": "Algeria St."
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات",
+     "بطاقات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances",
+     "Cards"
+    ]
+   }
+  },
+  {
+   "id": "marib-branch",
+   "type": "branch",
+   "lat": 15.47,
+   "lng": 45.325,
+   "phone": "+967 6 400 416",
+   "name": {
+    "ar": "فرع مأرب",
+    "en": "Marib Branch"
+   },
+   "city": {
+    "ar": "مأرب",
+    "en": "Marib"
+   },
+   "district": {
+    "ar": "المدينة",
+    "en": "City centre"
+   },
+   "address": {
+    "ar": "شارع الجمهورية",
+    "en": "Al-Jumhuriya St."
+   },
+   "hours": {
+    "ar": "السبت–الأربعاء 8:00–14:00",
+    "en": "Sat–Wed 8:00–14:00"
+   },
+   "services": {
+    "ar": [
+     "حسابات",
+     "تمويل",
+     "حوالات"
+    ],
+    "en": [
+     "Accounts",
+     "Financing",
+     "Remittances"
+    ]
+   }
+  },
+  {
+   "id": "marib-complex-atm",
+   "type": "atm",
+   "lat": 15.4627,
+   "lng": 45.322,
+   "phone": "+967 6 400 406",
+   "name": {
+    "ar": "صراف مأرب – المجمع",
+    "en": "Marib ATM – Complex"
+   },
+   "city": {
+    "ar": "مأرب",
+    "en": "Marib"
+   },
+   "district": {
+    "ar": "المجمع",
+    "en": "Al-Mujamma"
+   },
+   "address": {
+    "ar": "جوار المجمع الحكومي",
+    "en": "Next to the government complex"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "استعلام رصيد"
+    ],
+    "en": [
+     "Cash withdrawal",
+     "Balance enquiry"
+    ]
+   }
+  },
+  {
+   "id": "ibb-city-atm",
+   "type": "atm",
+   "lat": 13.9667,
+   "lng": 44.1833,
+   "phone": "+967 4 400 408",
+   "name": {
+    "ar": "صراف إب – المدينة",
+    "en": "Ibb ATM – City"
+   },
+   "city": {
+    "ar": "إب",
+    "en": "Ibb"
+   },
+   "district": {
+    "ar": "المشنة",
+    "en": "Al-Mashannah"
+   },
+   "address": {
+    "ar": "الشارع العام، المشنة",
+    "en": "Main road, Al-Mashannah"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "إيداع"
+    ],
+    "en": [
+     "Withdrawal",
+     "Deposit"
+    ]
+   }
+  },
+  {
+   "id": "sanaa-mall-atm",
+   "type": "atm",
+   "lat": 15.312,
+   "lng": 44.201,
+   "phone": "+967 1 400 409",
+   "name": {
+    "ar": "صراف صنعاء – المول",
+    "en": "Sana'a ATM – Mall"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "district": {
+    "ar": "السبعين",
+    "en": "Al-Sabeen"
+   },
+   "address": {
+    "ar": "المدخل الرئيسي للمول",
+    "en": "Mall main entrance"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "إيداع"
+    ],
+    "en": [
+     "Withdrawal",
+     "Deposit"
+    ]
+   }
+  },
+  {
+   "id": "sanaa-airport-atm",
+   "type": "atm",
+   "lat": 15.476,
+   "lng": 44.219,
+   "phone": "+967 1 400 410",
+   "name": {
+    "ar": "صراف المطار",
+    "en": "Airport ATM"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "district": {
+    "ar": "بني الحارث",
+    "en": "Bani Al-Harith"
+   },
+   "address": {
+    "ar": "صالة الوصول",
+    "en": "Arrivals hall"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "استعلام رصيد"
+    ],
+    "en": [
+     "Cash withdrawal",
+     "Balance enquiry"
+    ]
+   }
+  },
+  {
+   "id": "aden-port-atm",
+   "type": "atm",
+   "lat": 12.795,
+   "lng": 44.985,
+   "phone": "+967 2 400 411",
+   "name": {
+    "ar": "صراف عدن – المعلا",
+    "en": "Aden ATM – Mualla"
+   },
+   "city": {
+    "ar": "عدن",
+    "en": "Aden"
+   },
+   "district": {
+    "ar": "المعلا",
+    "en": "Al-Mualla"
+   },
+   "address": {
+    "ar": "الشارع الرئيسي",
+    "en": "Main Street"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "استعلام رصيد"
+    ],
+    "en": [
+     "Cash withdrawal",
+     "Balance enquiry"
+    ]
+   }
+  },
+  {
+   "id": "taiz-atm",
+   "type": "atm",
+   "lat": 13.585,
+   "lng": 44.015,
+   "phone": "+967 4 400 412",
+   "name": {
+    "ar": "صراف تعز – الحوبان",
+    "en": "Taiz ATM – Al-Hawban"
+   },
+   "city": {
+    "ar": "تعز",
+    "en": "Taiz"
+   },
+   "district": {
+    "ar": "الحوبان",
+    "en": "Al-Hawban"
+   },
+   "address": {
+    "ar": "جولة القصر",
+    "en": "Al-Qasr roundabout"
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "إيداع"
+    ],
+    "en": [
+     "Withdrawal",
+     "Deposit"
+    ]
+   }
+  },
+  {
+   "id": "mukalla-atm",
+   "type": "atm",
+   "lat": 14.53,
+   "lng": 49.13,
+   "phone": "+967 5 400 417",
+   "name": {
+    "ar": "صراف المكلا – فوّه",
+    "en": "Mukalla ATM – Fuwwah"
+   },
+   "city": {
+    "ar": "المكلا",
+    "en": "Mukalla"
+   },
+   "district": {
+    "ar": "فوّه",
+    "en": "Fuwwah"
+   },
+   "address": {
+    "ar": "شارع الستين",
+    "en": "Sixty St."
+   },
+   "hours": {
+    "ar": "24 ساعة",
+    "en": "24 hours"
+   },
+   "services": {
+    "ar": [
+     "سحب",
+     "استعلام رصيد"
+    ],
+    "en": [
+     "Cash withdrawal",
+     "Balance enquiry"
+    ]
+   }
+  },
+  {
+   "id": "hodeidah-port-agent",
+   "type": "agent",
+   "lat": 14.7978,
+   "lng": 42.9545,
+   "phone": "+967 3 400 407",
+   "name": {
+    "ar": "وكيل الحديدة – الميناء",
+    "en": "Hodeidah Agent – Port"
+   },
+   "city": {
+    "ar": "الحديدة",
+    "en": "Hodeidah"
+   },
+   "district": {
+    "ar": "الميناء",
+    "en": "Al-Mina"
+   },
+   "address": {
+    "ar": "شارع الميناء",
+    "en": "Port Street"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  },
+  {
+   "id": "hodeidah-city-agent",
+   "type": "agent",
+   "lat": 14.802,
+   "lng": 42.951,
+   "phone": "+967 3 400 418",
+   "name": {
+    "ar": "وكيل الحديدة – صنعاء ستريت",
+    "en": "Hodeidah Agent – Sana'a St."
+   },
+   "city": {
+    "ar": "الحديدة",
+    "en": "Hodeidah"
+   },
+   "district": {
+    "ar": "الحالي",
+    "en": "Al-Hali"
+   },
+   "address": {
+    "ar": "شارع صنعاء",
+    "en": "Sana'a Street"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  },
+  {
+   "id": "ibb-agent",
+   "type": "agent",
+   "lat": 13.97,
+   "lng": 44.17,
+   "phone": "+967 4 400 419",
+   "name": {
+    "ar": "وكيل إب – الظهار",
+    "en": "Ibb Agent – Al-Dhihar"
+   },
+   "city": {
+    "ar": "إب",
+    "en": "Ibb"
+   },
+   "district": {
+    "ar": "الظهار",
+    "en": "Al-Dhihar"
+   },
+   "address": {
+    "ar": "سوق الظهار",
+    "en": "Al-Dhihar market"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  },
+  {
+   "id": "sanaa-shumaila-agent",
+   "type": "agent",
+   "lat": 15.295,
+   "lng": 44.19,
+   "phone": "+967 1 400 420",
+   "name": {
+    "ar": "وكيل صنعاء – شميلة",
+    "en": "Sana'a Agent – Shumaila"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "district": {
+    "ar": "شميلة",
+    "en": "Shumaila"
+   },
+   "address": {
+    "ar": "شارع تعز",
+    "en": "Taiz Street"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  },
+  {
+   "id": "seiyun-agent",
+   "type": "agent",
+   "lat": 15.94,
+   "lng": 48.79,
+   "phone": "+967 5 400 421",
+   "name": {
+    "ar": "وكيل سيئون – السوق",
+    "en": "Seiyun Agent – Market"
+   },
+   "city": {
+    "ar": "سيئون",
+    "en": "Seiyun"
+   },
+   "district": {
+    "ar": "السوق",
+    "en": "Market"
+   },
+   "address": {
+    "ar": "سوق سيئون القديم",
+    "en": "Old Seiyun market"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  },
+  {
+   "id": "marib-agent",
+   "type": "agent",
+   "lat": 15.455,
+   "lng": 45.33,
+   "phone": "+967 6 400 422",
+   "name": {
+    "ar": "وكيل مأرب – الروضة",
+    "en": "Marib Agent – Al-Rawdah"
+   },
+   "city": {
+    "ar": "مأرب",
+    "en": "Marib"
+   },
+   "district": {
+    "ar": "الروضة",
+    "en": "Al-Rawdah"
+   },
+   "address": {
+    "ar": "حي الروضة",
+    "en": "Al-Rawdah district"
+   },
+   "hours": {
+    "ar": "يومياً 8:00–21:00",
+    "en": "Daily 8:00–21:00"
+   },
+   "services": {
+    "ar": [
+     "حوالات",
+     "سداد فواتير"
+    ],
+    "en": [
+     "Remittances",
+     "Bill payment"
+    ]
+   }
+  }
+ ],
+ "offers": [
+  {
+   "id": "back-to-school",
+   "href": "/financing/personal",
+   "startsAt": "2026-09-01",
+   "endsAt": "2026-10-31",
+   "image": "",
+   "title": {
+    "ar": "عرض العودة للمدارس",
+    "en": "Back to school"
+   },
+   "details": {
+    "ar": "تمويل الرسوم الدراسية بدون رسوم إدارية.",
+    "en": "School-fee financing with no admin fee."
+   }
+  },
+  {
+   "id": "card-cashback",
+   "href": "/cards/debit",
+   "startsAt": "2026-10-01",
+   "endsAt": "2026-12-31",
+   "image": "",
+   "title": {
+    "ar": "استرداد نقدي 5%",
+    "en": "5% cashback"
+   },
+   "details": {
+    "ar": "على مشتريات بطاقة الخصم لدى المتاجر المشاركة.",
+    "en": "On debit card purchases at partner stores."
+   }
+  },
+  {
+   "id": "new-account",
+   "href": "/accounts/current",
+   "startsAt": "2026-10-01",
+   "endsAt": "2026-11-30",
+   "image": "",
+   "title": {
+    "ar": "حساب جديد، بطاقة مجانية",
+    "en": "New account, free card"
+   },
+   "details": {
+    "ar": "إعفاء من رسوم إصدار البطاقة للسنة الأولى.",
+    "en": "First-year card fee waived."
+   }
+  },
+  {
+   "id": "solar-season",
+   "href": "/financing/agricultural",
+   "startsAt": "2026-09-15",
+   "endsAt": "2027-01-31",
+   "image": "",
+   "title": {
+    "ar": "موسم الطاقة الشمسية",
+    "en": "Solar season"
+   },
+   "details": {
+    "ar": "فترة سماح 6 أشهر لتمويل منظومات الري.",
+    "en": "6-month grace period on solar irrigation financing."
+   }
+  },
+  {
+   "id": "ramadan-2026",
+   "href": "/offers",
+   "startsAt": "2026-02-15",
+   "endsAt": "2026-03-31",
+   "image": "",
+   "title": {
+    "ar": "عروض رمضان",
+    "en": "Ramadan offers"
+   },
+   "details": {
+    "ar": "انتهى العرض.",
+    "en": "This offer has ended."
+   }
+  }
+ ],
+ "newsCategories": [
+  {
+   "slug": "financing",
+   "name": {
+    "ar": "التمويل",
+    "en": "Financing"
+   }
+  },
+  {
+   "slug": "digital",
+   "name": {
+    "ar": "الخدمات الرقمية",
+    "en": "Digital"
+   }
+  },
+  {
+   "slug": "network",
+   "name": {
+    "ar": "الانتشار",
+    "en": "Network"
+   }
+  },
+  {
+   "slug": "csr",
+   "name": {
+    "ar": "المسؤولية المجتمعية",
+    "en": "CSR"
+   }
+  },
+  {
+   "slug": "corporate",
+   "name": {
+    "ar": "أخبار البنك",
+    "en": "Corporate"
+   }
+  }
+ ],
+ "news": [
+  {
+   "id": "nw1",
+   "slug": "solar-irrigation-financing-2026",
+   "categorySlug": "financing",
+   "publishedAt": "2026-09-28",
+   "image": "",
+   "category": {
+    "ar": "التمويل",
+    "en": "Financing"
+   },
+   "title": {
+    "ar": "إطلاق برنامج لتمويل منظومات الري بالطاقة الشمسية لصغار المزارعين",
+    "en": "New programme finances solar irrigation for smallholder farmers"
+   },
+   "excerpt": {
+    "ar": "يتيح البرنامج تمويلاً بآجال تصل إلى 36 شهراً مع فترة سماح تتوافق مع مواسم الحصاد.",
+    "en": "Terms up to 36 months with a grace period aligned to harvest seasons."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>أعلن بنك وِثاق عن إطلاق برنامج جديد لتمويل منظومات الري بالطاقة الشمسية موجّه لصغار المزارعين في المحافظات الزراعية.</p><p>ويتيح البرنامج تمويلاً بصيغة المرابحة بآجال تصل إلى 36 شهراً، مع فترة سماح تتوافق مع مواسم الحصاد، وبنسبة ربح تفضيلية.</p><p>ويأتي البرنامج ضمن توجه البنك لدعم الأمن الغذائي وتقليل كلفة الوقود على المزارعين.</p>",
+    "en": "<p>Withaq Bank has launched a new programme financing solar-powered irrigation for smallholder farmers in Yemen's agricultural governorates.</p><p>The murabaha-based programme offers terms of up to 36 months, a grace period aligned with harvest seasons and a preferential profit rate.</p><p>The programme is part of the bank's commitment to food security and to cutting farmers' fuel costs.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "إطلاق برنامج لتمويل منظومات الري بالطاقة الشمسية لصغار المزارعين",
+     "en": "New programme finances solar irrigation for smallholder farmers"
+    },
+    "description": {
+     "ar": "يتيح البرنامج تمويلاً بآجال تصل إلى 36 شهراً مع فترة سماح تتوافق مع مواسم الحصاد.",
+     "en": "Terms up to 36 months with a grace period aligned to harvest seasons."
+    }
+   }
+  },
+  {
+   "id": "nw2",
+   "slug": "app-v4-launch",
+   "categorySlug": "digital",
+   "publishedAt": "2026-09-15",
+   "image": "",
+   "category": {
+    "ar": "الخدمات الرقمية",
+    "en": "Digital"
+   },
+   "title": {
+    "ar": "الإصدار الرابع من تطبيق الجوال بواجهة جديدة",
+    "en": "Version 4 of the mobile app ships with a new interface"
+   },
+   "excerpt": {
+    "ar": "تحويلات أسرع ودفع بالـ QR وإشعارات فورية.",
+    "en": "Faster transfers, QR payments and instant alerts."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>أطلق البنك الإصدار الرابع من تطبيق الجوال بواجهة أعيد تصميمها بالكامل لتكون أسرع وأسهل.</p><p>يدعم الإصدار الجديد الدفع عبر رمز QR لدى التجار، وإشعارات فورية لكل عملية، ووضعاً خاصاً بالاتصال الضعيف.</p>",
+    "en": "<p>The bank has released version 4 of its mobile app with a fully redesigned, faster interface.</p><p>The new version supports QR payments at merchants, instant alerts for every transaction and a low-bandwidth mode.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "الإصدار الرابع من تطبيق الجوال بواجهة جديدة",
+     "en": "Version 4 of the mobile app ships with a new interface"
+    },
+    "description": {
+     "ar": "تحويلات أسرع ودفع بالـ QR وإشعارات فورية.",
+     "en": "Faster transfers, QR payments and instant alerts."
+    }
+   }
+  },
+  {
+   "id": "nw3",
+   "slug": "seiyun-branch-opening",
+   "categorySlug": "network",
+   "publishedAt": "2026-08-30",
+   "image": "",
+   "category": {
+    "ar": "الانتشار",
+    "en": "Network"
+   },
+   "title": {
+    "ar": "افتتاح فرع جديد في سيئون",
+    "en": "New branch opens in Seiyun"
+   },
+   "excerpt": {
+    "ar": "يقدّم الفرع جميع الخدمات المصرفية للأفراد والشركات.",
+    "en": "Full retail and business services."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>افتتح البنك فرعه الجديد في مدينة سيئون بوادي حضرموت، ليرتفع عدد فروعه إلى 42 فرعاً.</p><p>يقدّم الفرع خدمات الحسابات والتمويل والحوالات والبطاقات، ويضم صرافاً آلياً يعمل على مدار الساعة.</p>",
+    "en": "<p>The bank opened its new branch in Seiyun, Wadi Hadramawt, bringing its network to 42 branches.</p><p>The branch offers accounts, financing, remittances and cards, with a 24-hour ATM on site.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "افتتاح فرع جديد في سيئون",
+     "en": "New branch opens in Seiyun"
+    },
+    "description": {
+     "ar": "يقدّم الفرع جميع الخدمات المصرفية للأفراد والشركات.",
+     "en": "Full retail and business services."
+    }
+   }
+  },
+  {
+   "id": "nw4",
+   "slug": "financial-literacy-week",
+   "categorySlug": "csr",
+   "publishedAt": "2026-08-12",
+   "image": "",
+   "category": {
+    "ar": "المسؤولية المجتمعية",
+    "en": "CSR"
+   },
+   "title": {
+    "ar": "أسبوع الثقافة المالية في 6 جامعات يمنية",
+    "en": "Financial literacy week across 6 Yemeni universities"
+   },
+   "excerpt": {
+    "ar": "ورش عن الادخار وإدارة الميزانية الشخصية.",
+    "en": "Workshops on saving and personal budgeting."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>نظّم البنك أسبوع الثقافة المالية في ست جامعات يمنية بمشاركة أكثر من 2,000 طالب وطالبة.</p><p>تناولت الورش الادخار وإدارة الميزانية الشخصية والحماية من الاحتيال الإلكتروني.</p>",
+    "en": "<p>The bank ran a financial literacy week at six Yemeni universities with more than 2,000 students taking part.</p><p>Workshops covered saving, personal budgeting and protection against online fraud.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "أسبوع الثقافة المالية في 6 جامعات يمنية",
+     "en": "Financial literacy week across 6 Yemeni universities"
+    },
+    "description": {
+     "ar": "ورش عن الادخار وإدارة الميزانية الشخصية.",
+     "en": "Workshops on saving and personal budgeting."
+    }
+   }
+  },
+  {
+   "id": "nw5",
+   "slug": "annual-results-2025",
+   "categorySlug": "corporate",
+   "publishedAt": "2026-07-20",
+   "image": "",
+   "category": {
+    "ar": "أخبار البنك",
+    "en": "Corporate"
+   },
+   "title": {
+    "ar": "البنك يعلن نتائجه المالية لعام 2025",
+    "en": "Bank announces 2025 financial results"
+   },
+   "excerpt": {
+    "ar": "نمو في الودائع وقاعدة العملاء رغم التحديات الاقتصادية.",
+    "en": "Growth in deposits and customers despite economic headwinds."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>أقرّت الجمعية العامة القوائم المالية لعام 2025 التي أظهرت نمواً في الودائع وقاعدة العملاء.</p><p>ويمكن تحميل التقرير السنوي الكامل من صفحة التقارير.</p>",
+    "en": "<p>The general assembly approved the 2025 financial statements, which show growth in deposits and customer numbers.</p><p>The full annual report can be downloaded from the Reports page.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "البنك يعلن نتائجه المالية لعام 2025",
+     "en": "Bank announces 2025 financial results"
+    },
+    "description": {
+     "ar": "نمو في الودائع وقاعدة العملاء رغم التحديات الاقتصادية.",
+     "en": "Growth in deposits and customers despite economic headwinds."
+    }
+   }
+  },
+  {
+   "id": "nw6",
+   "slug": "agents-network-1350",
+   "categorySlug": "network",
+   "publishedAt": "2026-07-02",
+   "image": "",
+   "category": {
+    "ar": "الانتشار",
+    "en": "Network"
+   },
+   "title": {
+    "ar": "شبكة الوكلاء تتجاوز 1,350 وكيلاً",
+    "en": "Agent network passes 1,350 agents"
+   },
+   "excerpt": {
+    "ar": "خدمات الحوالات وسداد الفواتير أقرب إلى القرى والأرياف.",
+    "en": "Remittances and bill payments closer to rural communities."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>تجاوزت شبكة الوكلاء المعتمدين لدى البنك 1,350 وكيلاً في 19 مدينة ومئات القرى.</p><p>ويستطيع العملاء إرسال واستقبال الحوالات وسداد الفواتير لدى أي وكيل معتمد.</p>",
+    "en": "<p>The bank's network of licensed agents has passed 1,350 across 19 cities and hundreds of villages.</p><p>Customers can send and receive remittances and pay bills at any licensed agent.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "شبكة الوكلاء تتجاوز 1,350 وكيلاً",
+     "en": "Agent network passes 1,350 agents"
+    },
+    "description": {
+     "ar": "خدمات الحوالات وسداد الفواتير أقرب إلى القرى والأرياف.",
+     "en": "Remittances and bill payments closer to rural communities."
+    }
+   }
+  },
+  {
+   "id": "nw7",
+   "slug": "fraud-awareness-campaign",
+   "categorySlug": "digital",
+   "publishedAt": "2026-06-18",
+   "image": "",
+   "category": {
+    "ar": "الخدمات الرقمية",
+    "en": "Digital"
+   },
+   "title": {
+    "ar": "حملة توعية للحماية من الاحتيال الإلكتروني",
+    "en": "Awareness campaign against online fraud"
+   },
+   "excerpt": {
+    "ar": "البنك لن يطلب منك أبداً رقمك السري أو رمز التحقق.",
+    "en": "The bank will never ask for your PIN or verification code."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>أطلق البنك حملة توعية عبر قنواته الرقمية والفروع للتعريف بأساليب الاحتيال الشائعة.</p><p>ويذكّر البنك عملاءه بعدم مشاركة الرقم السري أو رمز التحقق مع أي جهة.</p>",
+    "en": "<p>The bank launched an awareness campaign across its digital channels and branches about common fraud tactics.</p><p>Customers are reminded never to share their PIN or verification code with anyone.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "حملة توعية للحماية من الاحتيال الإلكتروني",
+     "en": "Awareness campaign against online fraud"
+    },
+    "description": {
+     "ar": "البنك لن يطلب منك أبداً رقمك السري أو رمز التحقق.",
+     "en": "The bank will never ask for your PIN or verification code."
+    }
+   }
+  },
+  {
+   "id": "nw8",
+   "slug": "sme-forum-aden",
+   "categorySlug": "financing",
+   "publishedAt": "2026-05-27",
+   "image": "",
+   "category": {
+    "ar": "التمويل",
+    "en": "Financing"
+   },
+   "title": {
+    "ar": "منتدى تمويل المشاريع الصغيرة في عدن",
+    "en": "SME financing forum in Aden"
+   },
+   "excerpt": {
+    "ar": "لقاء مع أكثر من 150 رائد ورائدة أعمال.",
+    "en": "Meeting more than 150 entrepreneurs."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>استضاف البنك منتدى تمويل المشاريع الصغيرة في عدن بمشاركة أكثر من 150 رائد ورائدة أعمال.</p><p>واستعرض المنتدى منتجات التمويل وبرامج الإرشاد المتاحة.</p>",
+    "en": "<p>The bank hosted an SME financing forum in Aden attended by more than 150 entrepreneurs.</p><p>The forum presented financing products and available mentoring programmes.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "منتدى تمويل المشاريع الصغيرة في عدن",
+     "en": "SME financing forum in Aden"
+    },
+    "description": {
+     "ar": "لقاء مع أكثر من 150 رائد ورائدة أعمال.",
+     "en": "Meeting more than 150 entrepreneurs."
+    }
+   }
+  },
+  {
+   "id": "nw9",
+   "slug": "school-kits-donation",
+   "categorySlug": "csr",
+   "publishedAt": "2026-05-05",
+   "image": "",
+   "category": {
+    "ar": "المسؤولية المجتمعية",
+    "en": "CSR"
+   },
+   "title": {
+    "ar": "توزيع 5,000 حقيبة مدرسية",
+    "en": "5,000 school kits distributed"
+   },
+   "excerpt": {
+    "ar": "مبادرة سنوية بالشراكة مع منظمات محلية.",
+    "en": "An annual initiative with local organisations."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>وزّع البنك 5,000 حقيبة مدرسية على طلاب المدارس الحكومية في ست محافظات.</p><p>وتأتي المبادرة ضمن برنامج المسؤولية المجتمعية للبنك في مجال التعليم.</p>",
+    "en": "<p>The bank distributed 5,000 school kits to public-school pupils in six governorates.</p><p>The initiative is part of the bank's education-focused CSR programme.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "توزيع 5,000 حقيبة مدرسية",
+     "en": "5,000 school kits distributed"
+    },
+    "description": {
+     "ar": "مبادرة سنوية بالشراكة مع منظمات محلية.",
+     "en": "An annual initiative with local organisations."
+    }
+   }
+  },
+  {
+   "id": "nw10",
+   "slug": "iso-27001-certification",
+   "categorySlug": "corporate",
+   "publishedAt": "2026-04-14",
+   "image": "",
+   "category": {
+    "ar": "أخبار البنك",
+    "en": "Corporate"
+   },
+   "title": {
+    "ar": "البنك يحصل على شهادة ISO 27001 لأمن المعلومات",
+    "en": "Bank earns ISO 27001 information-security certification"
+   },
+   "excerpt": {
+    "ar": "اعتراف دولي بأنظمة حماية بيانات العملاء.",
+    "en": "International recognition of how customer data is protected."
+   },
+   "author": "Withaq Media Office",
+   "content": {
+    "ar": "<p>حصل البنك على شهادة ISO/IEC 27001 لنظام إدارة أمن المعلومات بعد تدقيق خارجي مستقل.</p><p>وتؤكد الشهادة التزام البنك بأعلى معايير حماية بيانات العملاء.</p>",
+    "en": "<p>The bank achieved ISO/IEC 27001 certification for its information-security management system after an independent audit.</p><p>The certification confirms the bank's commitment to the highest standards of customer-data protection.</p>"
+   },
+   "seo": {
+    "title": {
+     "ar": "البنك يحصل على شهادة ISO 27001 لأمن المعلومات",
+     "en": "Bank earns ISO 27001 information-security certification"
+    },
+    "description": {
+     "ar": "اعتراف دولي بأنظمة حماية بيانات العملاء.",
+     "en": "International recognition of how customer data is protected."
+    }
+   }
+  }
+ ],
+ "jobs": [
+  {
+   "id": "j1",
+   "slug": "customer-service-officer-sanaa",
+   "employmentType": "full_time",
+   "closesAt": "2026-11-15",
+   "title": {
+    "ar": "موظف خدمة عملاء",
+    "en": "Customer Service Officer"
+   },
+   "department": {
+    "ar": "الخدمات المصرفية للأفراد",
+    "en": "Retail Banking"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "summary": {
+    "ar": "استقبال العملاء وفتح الحسابات وتقديم المشورة حول منتجات البنك.",
+    "en": "Welcome customers, open accounts and advise on the bank's products."
+   },
+   "description": {
+    "ar": "<p>نبحث عن موظف خدمة عملاء شغوف بخدمة الناس للانضمام إلى فريق الفرع الرئيسي.</p><ul><li>فتح الحسابات وتحديث بيانات العملاء</li><li>الرد على الاستفسارات ومتابعة الطلبات</li><li>التعريف بالخدمات الرقمية</li></ul>",
+    "en": "<p>We're looking for a people-focused customer service officer to join the Main Branch team.</p><ul><li>Open accounts and update customer records</li><li>Answer enquiries and follow up requests</li><li>Introduce customers to digital services</li></ul>"
+   },
+   "requirements": {
+    "ar": [
+     "بكالوريوس في العلوم المالية والمصرفية أو ما يعادلها",
+     "مهارات تواصل ممتازة",
+     "إجادة استخدام الحاسوب"
+    ],
+    "en": [
+     "Bachelor's in banking, finance or equivalent",
+     "Excellent communication skills",
+     "Computer literacy"
+    ]
+   }
+  },
+  {
+   "id": "j2",
+   "slug": "teller-aden",
+   "employmentType": "full_time",
+   "closesAt": "2026-11-01",
+   "title": {
+    "ar": "صرّاف",
+    "en": "Teller"
+   },
+   "department": {
+    "ar": "الفروع",
+    "en": "Branches"
+   },
+   "city": {
+    "ar": "عدن",
+    "en": "Aden"
+   },
+   "summary": {
+    "ar": "تنفيذ عمليات الإيداع والسحب والحوالات بدقة.",
+    "en": "Process deposits, withdrawals and remittances accurately."
+   },
+   "description": {
+    "ar": "<p>تنفيذ العمليات النقدية اليومية وفق السياسات والإجراءات المعتمدة.</p>",
+    "en": "<p>Handle daily cash operations in line with approved policies and procedures.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "دبلوم أو بكالوريوس محاسبة",
+     "خبرة سنة في العمليات النقدية (ميزة)",
+     "دقة وأمانة"
+    ],
+    "en": [
+     "Diploma or bachelor's in accounting",
+     "1 year of cash operations experience (a plus)",
+     "Accuracy and integrity"
+    ]
+   }
+  },
+  {
+   "id": "j3",
+   "slug": "backend-engineer",
+   "employmentType": "full_time",
+   "closesAt": "2026-12-01",
+   "title": {
+    "ar": "مهندس برمجيات (Backend)",
+    "en": "Backend Software Engineer"
+   },
+   "department": {
+    "ar": "تقنية المعلومات",
+    "en": "Information Technology"
+   },
+   "city": {
+    "ar": "صنعاء",
+    "en": "Sana'a"
+   },
+   "summary": {
+    "ar": "تطوير واجهات API آمنة للقنوات الرقمية.",
+    "en": "Build secure APIs for the bank's digital channels."
+   },
+   "description": {
+    "ar": "<p>الانضمام إلى فريق القنوات الرقمية لتطوير خدمات PHP/Laravel آمنة وقابلة للتوسع.</p>",
+    "en": "<p>Join the digital channels team building secure, scalable PHP/Laravel services.</p>"
+   },
+   "requirements": {
+    "ar": [
+     "خبرة 3 سنوات في PHP/Laravel",
+     "معرفة بـ MySQL وRedis",
+     "فهم مبادئ OWASP"
+    ],
+    "en": [
+     "3 years of PHP/Laravel",
+     "MySQL and Redis",
+     "Understanding of OWASP principles"
+    ]
+   }
+  },
+  {
+   "id": "j4",
+   "slug": "credit-analyst-mukalla",
+   "employmentType": "full_time",
+   "closesAt": "2026-10-30",
+   "title": {
+    "ar": "محلل ائتمان",
+    "en": "Credit Analyst"
+   },
+   "department": {
+    "ar": "التمويل",
+    "en": "Financing"
+   },
+   "city": {
+    "ar": "المكلا",
+    "en": "Mukalla"
+   },
+   "summary": {
+    "ar": "دراسة طلبات التمويل وتحليل القوائم المالية.",
+    "en": "Assess financing applications and analyse financial statements."
+   },
+   "requirements": {
+    "ar": [
+     "بكالوريوس محاسبة أو تمويل",
+     "خبرة سنتين في التحليل الائتماني"
+    ],
+    "en": [
+     "Bachelor's in accounting or finance",
+     "2 years of credit analysis"
+    ]
+   }
+  },
+  {
+   "id": "j5",
+   "slug": "graduate-internship-2026",
+   "employmentType": "internship",
+   "closesAt": "2026-11-30",
+   "title": {
+    "ar": "برنامج تدريب الخريجين 2026",
+    "en": "Graduate Internship 2026"
+   },
+   "department": {
+    "ar": "الموارد البشرية",
+    "en": "Human Resources"
+   },
+   "city": {
+    "ar": "تعز",
+    "en": "Taiz"
+   },
+   "summary": {
+    "ar": "برنامج تدريبي مدفوع لمدة 6 أشهر لحديثي التخرج.",
+    "en": "A paid 6-month programme for recent graduates."
+   },
+   "requirements": {
+    "ar": [
+     "تخرج خلال آخر سنتين",
+     "معدل جيد جداً فأعلى"
+    ],
+    "en": [
+     "Graduated within the last two years",
+     "Very good grade or higher"
+    ]
+   }
+  },
+  {
+   "id": "j6",
+   "slug": "compliance-officer",
+   "employmentType": "contract",
+   "closesAt": "2026-11-20",
+   "title": {
+    "ar": "مسؤول امتثال",
+    "en": "Compliance Officer"
+   },
+   "department": {
+    "ar": "الامتثال",
+    "en": "Compliance"
+   },
+   "city": {
+    "ar": "عدن",
+    "en": "Aden"
+   },
+   "summary": {
+    "ar": "متابعة الالتزام بتعليمات البنك المركزي ومكافحة غسل الأموال.",
+    "en": "Monitor central-bank and AML/CFT compliance."
+   },
+   "requirements": {
+    "ar": [
+     "خبرة 3 سنوات في الامتثال المصرفي",
+     "شهادة مهنية (ميزة)"
+    ],
+    "en": [
+     "3 years of banking compliance",
+     "Professional certification (a plus)"
+    ]
+   }
+  }
+ ],
+ "faqGroups": [
+  {
+   "category": {
+    "slug": "accounts",
+    "name": {
+     "ar": "الحسابات",
+     "en": "Accounts"
+    }
+   },
+   "items": [
+    {
+     "id": "q1",
+     "question": {
+      "ar": "كيف أفتح حساباً؟",
+      "en": "How do I open an account?"
+     },
+     "answer": {
+      "ar": "عبّئ نموذج فتح الحساب في الموقع وستصلك رسالة برقم مرجعي، ثم زر أقرب فرع بالبطاقة الشخصية لإكمال التحقق.",
+      "en": "Fill in the online form to get a reference number, then visit a branch with your ID to complete verification."
+     }
+    },
+    {
+     "id": "q7",
+     "question": {
+      "ar": "هل يمكنني فتح حساب لابني القاصر؟",
+      "en": "Can I open an account for my child?"
+     },
+     "answer": {
+      "ar": "نعم، يمكن لولي الأمر فتح حساب توفير باسم القاصر بإحضار شهادة الميلاد وهوية ولي الأمر.",
+      "en": "Yes. A guardian can open a savings account in the child's name with the birth certificate and the guardian's ID."
+     }
+    },
+    {
+     "id": "q8",
+     "question": {
+      "ar": "كم يستغرق تفعيل الحساب؟",
+      "en": "How long does activation take?"
+     },
+     "answer": {
+      "ar": "يُفعّل الحساب عادة في يوم العمل نفسه بعد استكمال التحقق في الفرع.",
+      "en": "Accounts are usually activated the same working day once verification is complete."
+     }
+    }
+   ]
+  },
+  {
+   "category": {
+    "slug": "financing",
+    "name": {
+     "ar": "التمويل",
+     "en": "Financing"
+    }
+   },
+   "items": [
+    {
+     "id": "q2",
+     "question": {
+      "ar": "ما متطلبات التمويل؟",
+      "en": "What do I need for financing?"
+     },
+     "answer": {
+      "ar": "بطاقة شخصية سارية، ما يثبت مصدر الدخل، وحساب لدى البنك. تختلف المتطلبات الإضافية حسب نوع التمويل.",
+      "en": "A valid ID, proof of income and an account with the bank. Extra documents depend on the product."
+     }
+    },
+    {
+     "id": "q9",
+     "question": {
+      "ar": "متى أحصل على قرار التمويل؟",
+      "en": "When will I get a decision?"
+     },
+     "answer": {
+      "ar": "خلال 3 أيام عمل من استكمال المستندات.",
+      "en": "Within 3 working days of a complete application."
+     }
+    },
+    {
+     "id": "q10",
+     "question": {
+      "ar": "هل التمويل متوافق مع الشريعة؟",
+      "en": "Is financing Sharia-compliant?"
+     },
+     "answer": {
+      "ar": "نعم، جميع المنتجات مجازة من هيئة الرقابة الشرعية وتعمل بصيغ المرابحة والإجارة والمشاركة.",
+      "en": "Yes. All products are approved by the Sharia board and use murabaha, ijara and musharaka."
+     }
+    }
+   ]
+  },
+  {
+   "category": {
+    "slug": "cards",
+    "name": {
+     "ar": "البطاقات",
+     "en": "Cards"
+    }
+   },
+   "items": [
+    {
+     "id": "q3",
+     "question": {
+      "ar": "كيف أطلب بطاقة؟",
+      "en": "How do I request a card?"
+     },
+     "answer": {
+      "ar": "من صفحة البطاقات اختر البطاقة المناسبة وقدّم الطلب، وستُبلَّغ عند جاهزيتها للاستلام من الفرع.",
+      "en": "Choose a card on the Cards page and apply. We'll notify you when it's ready for pickup."
+     }
+    },
+    {
+     "id": "q11",
+     "question": {
+      "ar": "فقدت بطاقتي، ماذا أفعل؟",
+      "en": "I lost my card — what should I do?"
+     },
+     "answer": {
+      "ar": "جمّد البطاقة فوراً من التطبيق أو اتصل بالرقم المجاني 8008 800 على مدار الساعة.",
+      "en": "Freeze it in the app straight away or call 8008 800, available 24/7."
+     }
+    }
+   ]
+  },
+  {
+   "category": {
+    "slug": "digital",
+    "name": {
+     "ar": "الخدمات الرقمية",
+     "en": "Digital banking"
+    }
+   },
+   "items": [
+    {
+     "id": "q5",
+     "question": {
+      "ar": "كيف أستخدم التطبيق؟",
+      "en": "How do I use the app?"
+     },
+     "answer": {
+      "ar": "حمّل التطبيق، سجّل برقم حسابك ورقم جوالك المسجّل، ثم فعّل رمز التحقق المرسل إليك.",
+      "en": "Download the app, register with your account and registered phone number, then enter the code we send."
+     }
+    },
+    {
+     "id": "q12",
+     "question": {
+      "ar": "هل التطبيق آمن؟",
+      "en": "Is the app secure?"
+     },
+     "answer": {
+      "ar": "نعم، يستخدم التطبيق تشفيراً كاملاً وتحققاً ثنائياً لكل عملية، ودخولاً بالبصمة.",
+      "en": "Yes. The app uses end-to-end encryption, two-factor verification on every transaction and biometric login."
+     }
+    }
+   ]
+  },
+  {
+   "category": {
+    "slug": "support",
+    "name": {
+     "ar": "خدمة العملاء",
+     "en": "Customer care"
+    }
+   },
+   "items": [
+    {
+     "id": "q4",
+     "question": {
+      "ar": "أين أقرب فرع؟",
+      "en": "Where is my nearest branch?"
+     },
+     "answer": {
+      "ar": "استخدم صفحة الفروع واختر المدينة ونوع الخدمة.",
+      "en": "Use the Branches page and filter by city and service type."
+     }
+    },
+    {
+     "id": "q6",
+     "question": {
+      "ar": "كيف أتواصل مع خدمة العملاء؟",
+      "en": "How do I contact customer care?"
+     },
+     "answer": {
+      "ar": "اتصل بالرقم المجاني 8008 800، أو راسلنا عبر نموذج «تواصل معنا». لن نطلب منك أبداً رقمك السري أو رمز التحقق.",
+      "en": "Call 8008 800 toll-free or use the Contact form. We will never ask for your PIN or OTP."
+     }
+    },
+    {
+     "id": "q13",
+     "question": {
+      "ar": "كم تستغرق معالجة الشكوى؟",
+      "en": "How long does a complaint take?"
+     },
+     "answer": {
+      "ar": "نؤكد الاستلام خلال يوم عمل واحد ونرد خلال 10 أيام عمل كحد أقصى.",
+      "en": "We acknowledge within 1 working day and respond within 10 working days at most."
+     }
+    }
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "slug": "about",
+   "title": {
+    "ar": "من نحن",
+    "en": "About us"
+   },
+   "summary": {
+    "ar": "بنك يمني متوافق مع أحكام الشريعة، يجمع بين خبرة العمل المصرفي وروح الابتكار منذ 2009.",
+    "en": "A Yemeni Sharia-compliant bank combining banking experience with a spirit of innovation since 2009."
+   },
+   "seo": {
+    "title": {
+     "ar": "من نحن",
+     "en": "About us"
+    },
+    "description": {
+     "ar": "بنك يمني متوافق مع أحكام الشريعة، يجمع بين خبرة العمل المصرفي وروح الابتكار منذ 2009.",
+     "en": "A Yemeni Sharia-compliant bank combining banking experience with a spirit of innovation since 2009."
+    }
+   },
+   "sections": [
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "قصتنا",
+       "en": "Our story"
+      },
+      "body": {
+       "ar": "<p>تأسس بنك وِثاق عام 2009 برأس مال يمني خالص، بهدف تقديم خدمات مصرفية حديثة وموثوقة متوافقة مع أحكام الشريعة الإسلامية لكل اليمنيين، في المدن والأرياف.</p><p>اسمنا مستلهم من <strong>الوِثاق</strong>: الرباط المتين الذي يجمع الطرفين على الثقة. وهويتنا مستلهمة من <em>القمرية</em> اليمنية التي تُدخل الضوء إلى البيت مرشّحاً وآمناً.</p><p>اليوم نخدم أكثر من 420 ألف عميل عبر 42 فرعاً و118 صرافاً آلياً وأكثر من 1,350 وكيلاً معتمداً، إلى جانب تطبيق الجوال والإنترنت المصرفي.</p>",
+       "en": "<p>Withaq Bank was founded in 2009 with entirely Yemeni capital to bring modern, trustworthy, Sharia-compliant banking to every Yemeni, in cities and rural areas alike.</p><p>Our name comes from <strong>withaq</strong> — the strong bond that holds two parties together in trust. Our identity is inspired by the Yemeni <em>qamariya</em> window, which lets light into the home, filtered and safe.</p><p>Today we serve more than 420,000 customers through 42 branches, 118 ATMs and over 1,350 licensed agents, alongside our mobile app and internet banking.</p>"
+      }
+     },
+     "id": 1
+    },
+    {
+     "type": "statistics",
+     "data": {
+      "heading": {
+       "ar": "وِثاق بالأرقام",
+       "en": "Withaq in numbers"
+      },
+      "items": [
+       {
+        "value": 2009,
+        "label": {
+         "ar": "سنة التأسيس",
+         "en": "Founded"
+        }
+       },
+       {
+        "value": 42,
+        "label": {
+         "ar": "فرعاً",
+         "en": "Branches"
+        }
+       },
+       {
+        "value": 420,
+        "suffix": "K+",
+        "label": {
+         "ar": "عميل",
+         "en": "Customers"
+        }
+       },
+       {
+        "value": 19,
+        "label": {
+         "ar": "مدينة",
+         "en": "Cities"
+        }
+       }
+      ]
+     },
+     "id": 2
+    },
+    {
+     "type": "features",
+     "data": {
+      "heading": {
+       "ar": "قيمنا",
+       "en": "Our values"
+      },
+      "body": {
+       "ar": "خمس قيم توجّه كل قرار نتخذه.",
+       "en": "Five values guide every decision we make."
+      },
+      "items": [
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "الأمانة",
+         "en": "Integrity"
+        },
+        "body": {
+         "ar": "نحفظ أموال عملائنا وبياناتهم كما نحفظ أموالنا.",
+         "en": "We protect customers' money and data as we would our own."
+        }
+       },
+       {
+        "icon": "eye",
+        "title": {
+         "ar": "الشفافية",
+         "en": "Transparency"
+        },
+        "body": {
+         "ar": "رسوم ونسب واضحة ومنشورة قبل التوقيع.",
+         "en": "Clear, published fees and rates before you sign."
+        }
+       },
+       {
+        "icon": "network",
+        "title": {
+         "ar": "الشمول المالي",
+         "en": "Inclusion"
+        },
+        "body": {
+         "ar": "خدمات تصل إلى القرى عبر الوكلاء والجوال.",
+         "en": "Services that reach villages through agents and mobile."
+        }
+       },
+       {
+        "icon": "speed",
+        "title": {
+         "ar": "الكفاءة",
+         "en": "Efficiency"
+        },
+        "body": {
+         "ar": "قرارات سريعة وإجراءات بسيطة.",
+         "en": "Fast decisions and simple procedures."
+        }
+       },
+       {
+        "icon": "support",
+        "title": {
+         "ar": "خدمة العميل أولاً",
+         "en": "Customer first"
+        },
+        "body": {
+         "ar": "نستمع ونتعلم ونتحسن باستمرار.",
+         "en": "We listen, learn and keep improving."
+        }
+       }
+      ]
+     },
+     "id": 3
+    },
+    {
+     "type": "image",
+     "data": {
+      "image": {
+       "id": 101,
+       "url": "/demo/img/headquarters.svg",
+       "alt": {
+        "ar": "المبنى الرئيسي لبنك وِثاق بواجهة مستوحاة من العمارة الصنعانية",
+        "en": "Withaq Bank head office with a façade inspired by Sana'ani architecture"
+       },
+       "mime": "image/svg+xml",
+       "width": 1200,
+       "height": 800
+      },
+      "caption": {
+       "ar": "المركز الرئيسي في صنعاء",
+       "en": "Head office, Sana'a"
+      }
+     },
+     "id": 4
+    },
+    {
+     "type": "cards",
+     "data": {
+      "heading": {
+       "ar": "تعرّف علينا أكثر",
+       "en": "Learn more about us"
+      },
+      "items": [
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "مجلس الإدارة",
+         "en": "Board of directors"
+        },
+        "body": {
+         "ar": "أعضاء المجلس ولجانه.",
+         "en": "Board members and committees."
+        },
+        "href": "/board"
+       },
+       {
+        "icon": "account",
+        "title": {
+         "ar": "الإدارة التنفيذية",
+         "en": "Executive management"
+        },
+        "body": {
+         "ar": "الفريق الذي يقود العمل اليومي.",
+         "en": "The team leading day-to-day operations."
+        },
+        "href": "/executive-management"
+       },
+       {
+        "icon": "eye",
+        "title": {
+         "ar": "الحوكمة",
+         "en": "Governance"
+        },
+        "body": {
+         "ar": "السياسات والمواثيق والإفصاحات.",
+         "en": "Policies, charters and disclosures."
+        },
+        "href": "/governance"
+       },
+       {
+        "icon": "payment",
+        "title": {
+         "ar": "التقارير",
+         "en": "Reports"
+        },
+        "body": {
+         "ar": "التقارير السنوية والقوائم المالية.",
+         "en": "Annual reports and financial statements."
+        },
+        "href": "/reports"
+       }
+      ]
+     },
+     "id": 5
+    },
+    {
+     "type": "video",
+     "data": {
+      "heading": {
+       "ar": "فيلم تعريفي",
+       "en": "Our story on film"
+      },
+      "url": "https://www.youtube.com/@withaq-bank-demo",
+      "poster": {
+       "id": 102,
+       "url": "/demo/img/film-poster.svg",
+       "alt": {
+        "ar": "لقطة من الفيلم التعريفي",
+        "en": "Still from the corporate film"
+       },
+       "mime": "image/svg+xml",
+       "width": 1200,
+       "height": 800
+      }
+     },
+     "id": 6
+    },
+    {
+     "type": "cta",
+     "data": {
+      "title": {
+       "ar": "انضم إلى أكثر من 420 ألف عميل",
+       "en": "Join more than 420,000 customers"
+      },
+      "body": {
+       "ar": "افتح حسابك اليوم واستلم رقماً مرجعياً لمتابعة طلبك.",
+       "en": "Open your account today and get a reference number to track it."
+      },
+      "primary": {
+       "label": {
+        "ar": "افتح حسابك",
+        "en": "Open your account"
+       },
+       "href": "/apply/account"
+      },
+      "secondary": {
+       "label": {
+        "ar": "الوظائف",
+        "en": "Careers"
+       },
+       "href": "/careers"
+      }
+     },
+     "id": 7
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "board",
+   "title": {
+    "ar": "مجلس الإدارة",
+    "en": "Board of directors"
+   },
+   "summary": {
+    "ar": "يضع المجلس الاستراتيجية ويشرف على إدارة المخاطر والامتثال لحماية المودعين والمساهمين.",
+    "en": "The board sets strategy and oversees risk and compliance to protect depositors and shareholders."
+   },
+   "seo": {
+    "title": {
+     "ar": "مجلس الإدارة",
+     "en": "Board of directors"
+    },
+    "description": {
+     "ar": "يضع المجلس الاستراتيجية ويشرف على إدارة المخاطر والامتثال لحماية المودعين والمساهمين.",
+     "en": "The board sets strategy and oversees risk and compliance to protect depositors and shareholders."
+    }
+   },
+   "sections": [
+    {
+     "type": "people",
+     "data": {
+      "heading": {
+       "ar": "أعضاء المجلس",
+       "en": "Board members"
+      },
+      "items": [
+       {
+        "name": {
+         "ar": "د. سالم عبدالرحمن الحكيمي",
+         "en": "Dr. Salem Abdulrahman Al-Hakimi"
+        },
+        "role": {
+         "ar": "رئيس مجلس الإدارة",
+         "en": "Chairman"
+        },
+        "bio": {
+         "ar": "خبرة 30 عاماً في العمل المصرفي والاقتصاد.",
+         "en": "30 years in banking and economics."
+        },
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. نجيب محمد العريقي",
+         "en": "Najib Mohammed Al-Areeqi"
+        },
+        "role": {
+         "ar": "نائب رئيس المجلس",
+         "en": "Vice Chairman"
+        },
+        "bio": {
+         "ar": "رئيس لجنة المخاطر.",
+         "en": "Chair of the Risk Committee."
+        },
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "م. ليلى أحمد باشراحيل",
+         "en": "Eng. Laila Ahmed Basharahil"
+        },
+        "role": {
+         "ar": "عضو مستقل",
+         "en": "Independent member"
+        },
+        "bio": {
+         "ar": "رئيسة لجنة التدقيق.",
+         "en": "Chair of the Audit Committee."
+        },
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. عبدالله صالح الشامي",
+         "en": "Abdullah Saleh Al-Shami"
+        },
+        "role": {
+         "ar": "عضو",
+         "en": "Member"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "د. هدى علي المقطري",
+         "en": "Dr. Huda Ali Al-Maqtari"
+        },
+        "role": {
+         "ar": "عضو مستقل",
+         "en": "Independent member"
+        },
+        "bio": {
+         "ar": "رئيسة لجنة الحوكمة والترشيحات.",
+         "en": "Chair of the Governance & Nominations Committee."
+        },
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. فيصل حسن بن بريك",
+         "en": "Faisal Hassan Bin Breik"
+        },
+        "role": {
+         "ar": "عضو",
+         "en": "Member"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. مروان يحيى الأهدل",
+         "en": "Marwan Yahya Al-Ahdal"
+        },
+        "role": {
+         "ar": "أمين سر المجلس",
+         "en": "Board Secretary"
+        },
+        "bio": null,
+        "photo": null
+       }
+      ]
+     },
+     "id": 8
+    },
+    {
+     "type": "cards",
+     "data": {
+      "heading": {
+       "ar": "لجان المجلس",
+       "en": "Board committees"
+      },
+      "items": [
+       {
+        "icon": "eye",
+        "title": {
+         "ar": "لجنة التدقيق",
+         "en": "Audit Committee"
+        },
+        "body": {
+         "ar": "تشرف على التقارير المالية والتدقيق الداخلي والخارجي.",
+         "en": "Oversees financial reporting and internal and external audit."
+        }
+       },
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "لجنة المخاطر",
+         "en": "Risk Committee"
+        },
+        "body": {
+         "ar": "تراجع إطار شهية المخاطر ومخاطر الائتمان والسيولة والتشغيل.",
+         "en": "Reviews risk appetite and credit, liquidity and operational risk."
+        }
+       },
+       {
+        "icon": "support",
+        "title": {
+         "ar": "لجنة الحوكمة والترشيحات",
+         "en": "Governance & Nominations"
+        },
+        "body": {
+         "ar": "تقيّم أداء المجلس وترشّح الأعضاء والقيادات.",
+         "en": "Evaluates board performance and nominates members and leaders."
+        }
+       },
+       {
+        "icon": "account",
+        "title": {
+         "ar": "اللجنة التنفيذية",
+         "en": "Executive Committee"
+        },
+        "body": {
+         "ar": "تتابع تنفيذ الاستراتيجية بين اجتماعات المجلس.",
+         "en": "Monitors strategy execution between board meetings."
+        }
+       }
+      ]
+     },
+     "id": 9
+    },
+    {
+     "type": "documents",
+     "data": {
+      "heading": {
+       "ar": "وثائق المجلس",
+       "en": "Board documents"
+      },
+      "items": [
+       {
+        "title": {
+         "ar": "ميثاق مجلس الإدارة",
+         "en": "Board charter"
+        },
+        "year": 2025,
+        "file": {
+         "id": 201,
+         "url": "/demo/docs/board-charter-2025.pdf",
+         "alt": {
+          "ar": "ميثاق المجلس",
+          "en": "Board charter"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "ميثاق لجنة التدقيق",
+         "en": "Audit Committee charter"
+        },
+        "year": 2024,
+        "file": {
+         "id": 202,
+         "url": "/demo/docs/audit-committee-charter-2024.pdf",
+         "alt": {
+          "ar": "ميثاق لجنة التدقيق",
+          "en": "Audit Committee charter"
+         },
+         "mime": "application/pdf"
+        }
+       }
+      ]
+     },
+     "id": 10
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "executive-management",
+   "title": {
+    "ar": "الإدارة التنفيذية",
+    "en": "Executive management"
+   },
+   "summary": {
+    "ar": "فريق قيادي يجمع الخبرة المصرفية والتقنية لتنفيذ استراتيجية البنك.",
+    "en": "A leadership team combining banking and technology expertise to execute the bank's strategy."
+   },
+   "seo": {
+    "title": {
+     "ar": "الإدارة التنفيذية",
+     "en": "Executive management"
+    },
+    "description": {
+     "ar": "فريق قيادي يجمع الخبرة المصرفية والتقنية لتنفيذ استراتيجية البنك.",
+     "en": "A leadership team combining banking and technology expertise to execute the bank's strategy."
+    }
+   },
+   "sections": [
+    {
+     "type": "people",
+     "data": {
+      "heading": {
+       "ar": "الفريق التنفيذي",
+       "en": "Executive team"
+      },
+      "items": [
+       {
+        "name": {
+         "ar": "أ. خالد عمر باوزير",
+         "en": "Khaled Omar Bawazir"
+        },
+        "role": {
+         "ar": "الرئيس التنفيذي",
+         "en": "Chief Executive Officer"
+        },
+        "bio": {
+         "ar": "يقود البنك منذ 2019 بعد 20 عاماً في المصارف الإسلامية.",
+         "en": "Has led the bank since 2019 after 20 years in Islamic banking."
+        },
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. سمير ناصر القباطي",
+         "en": "Samir Nasser Al-Qubati"
+        },
+        "role": {
+         "ar": "نائب الرئيس التنفيذي للعمليات",
+         "en": "Deputy CEO, Operations"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. أمل عبدالكريم الصبري",
+         "en": "Amal Abdulkarim Al-Sabri"
+        },
+        "role": {
+         "ar": "المدير المالي",
+         "en": "Chief Financial Officer"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "م. وليد سعيد العبسي",
+         "en": "Eng. Waleed Saeed Al-Absi"
+        },
+        "role": {
+         "ar": "مدير التقنية والتحول الرقمي",
+         "en": "Chief Technology & Digital Officer"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. منى حمود الوصابي",
+         "en": "Muna Hamoud Al-Wesabi"
+        },
+        "role": {
+         "ar": "مدير المخاطر",
+         "en": "Chief Risk Officer"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. ياسر عبده الشرعبي",
+         "en": "Yasser Abdo Al-Sharabi"
+        },
+        "role": {
+         "ar": "مدير الامتثال ومكافحة غسل الأموال",
+         "en": "Chief Compliance & AML Officer"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. رشا محمد الكاف",
+         "en": "Rasha Mohammed Al-Kaf"
+        },
+        "role": {
+         "ar": "مدير الخدمات المصرفية للأفراد",
+         "en": "Head of Retail Banking"
+        },
+        "bio": null,
+        "photo": null
+       },
+       {
+        "name": {
+         "ar": "أ. عادل فؤاد الجنيد",
+         "en": "Adel Fuad Al-Junaid"
+        },
+        "role": {
+         "ar": "مدير الخدمات المصرفية للشركات",
+         "en": "Head of Corporate Banking"
+        },
+        "bio": null,
+        "photo": null
+       }
+      ]
+     },
+     "id": 11
+    },
+    {
+     "type": "cta",
+     "data": {
+      "title": {
+       "ar": "هل تريد العمل معنا؟",
+       "en": "Want to work with us?"
+      },
+      "body": {
+       "ar": "اطلع على الوظائف المتاحة في مختلف الأقسام والمدن.",
+       "en": "See open positions across departments and cities."
+      },
+      "primary": {
+       "label": {
+        "ar": "الوظائف المتاحة",
+        "en": "Open positions"
+       },
+       "href": "/careers"
+      }
+     },
+     "id": 12
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "governance",
+   "title": {
+    "ar": "الحوكمة",
+    "en": "Corporate governance"
+   },
+   "summary": {
+    "ar": "إطار حوكمة يضمن الفصل بين الرقابة والتنفيذ ويحمي حقوق المودعين والمساهمين.",
+    "en": "A governance framework that separates oversight from execution and protects depositors and shareholders."
+   },
+   "seo": {
+    "title": {
+     "ar": "الحوكمة",
+     "en": "Corporate governance"
+    },
+    "description": {
+     "ar": "إطار حوكمة يضمن الفصل بين الرقابة والتنفيذ ويحمي حقوق المودعين والمساهمين.",
+     "en": "A governance framework that separates oversight from execution and protects depositors and shareholders."
+    }
+   },
+   "sections": [
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "إطار الحوكمة",
+       "en": "Our framework"
+      },
+      "body": {
+       "ar": "<p>يلتزم البنك بتعليمات البنك المركزي اليمني بشأن الحوكمة، وبالمعايير الصادرة عن هيئة المحاسبة والمراجعة للمؤسسات المالية الإسلامية (AAOIFI).</p><ul><li>مجلس إدارة بأغلبية غير تنفيذية وثلث مستقل على الأقل.</li><li>هيئة رقابة شرعية مستقلة تجيز المنتجات وتراجع العمليات.</li><li>خطوط دفاع ثلاثة: الإدارات التشغيلية، المخاطر والامتثال، والتدقيق الداخلي.</li><li>سياسة لتعارض المصالح والإبلاغ عن المخالفات بسرية.</li></ul>",
+       "en": "<p>The bank follows the Central Bank of Yemen's governance instructions and the standards of the Accounting and Auditing Organization for Islamic Financial Institutions (AAOIFI).</p><ul><li>A board with a non-executive majority and at least one-third independent members.</li><li>An independent Sharia supervisory board that approves products and reviews operations.</li><li>Three lines of defence: business units, risk and compliance, and internal audit.</li><li>Conflict-of-interest and confidential whistle-blowing policies.</li></ul>"
+      }
+     },
+     "id": 13
+    },
+    {
+     "type": "cards",
+     "data": {
+      "heading": {
+       "ar": "الهيئات الرقابية",
+       "en": "Oversight bodies"
+      },
+      "items": [
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "هيئة الرقابة الشرعية",
+         "en": "Sharia Supervisory Board"
+        },
+        "body": {
+         "ar": "ثلاثة علماء متخصصين في فقه المعاملات.",
+         "en": "Three scholars specialised in Islamic commercial law."
+        }
+       },
+       {
+        "icon": "eye",
+        "title": {
+         "ar": "التدقيق الداخلي",
+         "en": "Internal Audit"
+        },
+        "body": {
+         "ar": "يرفع تقاريره مباشرة إلى لجنة التدقيق.",
+         "en": "Reports directly to the Audit Committee."
+        }
+       },
+       {
+        "icon": "support",
+        "title": {
+         "ar": "الامتثال",
+         "en": "Compliance"
+        },
+        "body": {
+         "ar": "مكافحة غسل الأموال وتمويل الإرهاب وحماية العملاء.",
+         "en": "AML/CFT and customer protection."
+        }
+       }
+      ]
+     },
+     "id": 14
+    },
+    {
+     "type": "documents",
+     "data": {
+      "heading": {
+       "ar": "السياسات والإفصاحات",
+       "en": "Policies and disclosures"
+      },
+      "items": [
+       {
+        "title": {
+         "ar": "دليل الحوكمة المؤسسية",
+         "en": "Corporate governance code"
+        },
+        "year": 2025,
+        "file": {
+         "id": 301,
+         "url": "/demo/docs/governance-code-2025.pdf",
+         "alt": {
+          "ar": "دليل الحوكمة",
+          "en": "Governance code"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "سياسة مكافحة غسل الأموال وتمويل الإرهاب",
+         "en": "AML/CFT policy"
+        },
+        "year": 2025,
+        "file": {
+         "id": 302,
+         "url": "/demo/docs/aml-policy-2025.pdf",
+         "alt": {
+          "ar": "سياسة مكافحة غسل الأموال",
+          "en": "AML policy"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "سياسة تعارض المصالح",
+         "en": "Conflict-of-interest policy"
+        },
+        "year": 2024,
+        "file": {
+         "id": 303,
+         "url": "/demo/docs/conflict-of-interest-2024.pdf",
+         "alt": {
+          "ar": "سياسة تعارض المصالح",
+          "en": "Conflict-of-interest policy"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "سياسة الإبلاغ عن المخالفات",
+         "en": "Whistle-blowing policy"
+        },
+        "year": 2024,
+        "file": {
+         "id": 304,
+         "url": "/demo/docs/whistleblowing-2024.pdf",
+         "alt": {
+          "ar": "سياسة الإبلاغ",
+          "en": "Whistle-blowing policy"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "ميثاق السلوك المهني",
+         "en": "Code of conduct"
+        },
+        "year": 2023,
+        "file": {
+         "id": 305,
+         "url": "/demo/docs/code-of-conduct-2023.pdf",
+         "alt": {
+          "ar": "ميثاق السلوك",
+          "en": "Code of conduct"
+         },
+         "mime": "application/pdf"
+        }
+       }
+      ]
+     },
+     "id": 15
+    },
+    {
+     "type": "faq",
+     "data": {
+      "heading": {
+       "ar": "أسئلة حول الحوكمة",
+       "en": "Governance questions"
+      },
+      "items": [
+       {
+        "question": {
+         "ar": "كيف أبلغ عن مخالفة؟",
+         "en": "How do I report misconduct?"
+        },
+        "answer": {
+         "ar": "عبر البريد المخصص للإبلاغ الوارد في سياسة الإبلاغ، ويُعامل البلاغ بسرية تامة.",
+         "en": "Use the dedicated address in the whistle-blowing policy. Reports are handled in strict confidence."
+        }
+       },
+       {
+        "question": {
+         "ar": "من يجيز المنتجات شرعياً؟",
+         "en": "Who approves products from a Sharia perspective?"
+        },
+        "answer": {
+         "ar": "هيئة الرقابة الشرعية المستقلة، ولا يُطرح أي منتج قبل إجازتها.",
+         "en": "The independent Sharia Supervisory Board. No product launches without its approval."
+        }
+       }
+      ]
+     },
+     "id": 16
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "csr",
+   "title": {
+    "ar": "المسؤولية المجتمعية",
+    "en": "Social responsibility"
+   },
+   "summary": {
+    "ar": "نستثمر في التعليم والشمول المالي والطاقة النظيفة لأن ازدهار مجتمعنا جزء من رسالتنا.",
+    "en": "We invest in education, financial inclusion and clean energy because our community's prosperity is part of our mission."
+   },
+   "seo": {
+    "title": {
+     "ar": "المسؤولية المجتمعية",
+     "en": "Social responsibility"
+    },
+    "description": {
+     "ar": "نستثمر في التعليم والشمول المالي والطاقة النظيفة لأن ازدهار مجتمعنا جزء من رسالتنا.",
+     "en": "We invest in education, financial inclusion and clean energy because our community's prosperity is part of our mission."
+    }
+   },
+   "sections": [
+    {
+     "type": "statistics",
+     "data": {
+      "heading": {
+       "ar": "أثرنا في 2025",
+       "en": "Our impact in 2025"
+      },
+      "items": [
+       {
+        "value": 5000,
+        "label": {
+         "ar": "حقيبة مدرسية",
+         "en": "School kits"
+        }
+       },
+       {
+        "value": 2000,
+        "suffix": "+",
+        "label": {
+         "ar": "طالب في برامج الثقافة المالية",
+         "en": "Students in financial literacy"
+        }
+       },
+       {
+        "value": 320,
+        "label": {
+         "ar": "منظومة ري شمسية مموّلة",
+         "en": "Solar irrigation systems financed"
+        }
+       },
+       {
+        "value": 1.5,
+        "suffix": "%",
+        "label": {
+         "ar": "من الأرباح للمجتمع",
+         "en": "Of profit to community"
+        }
+       }
+      ]
+     },
+     "id": 17
+    },
+    {
+     "type": "cards",
+     "data": {
+      "heading": {
+       "ar": "برامجنا",
+       "en": "Our programmes"
+      },
+      "items": [
+       {
+        "icon": "account",
+        "title": {
+         "ar": "الثقافة المالية",
+         "en": "Financial literacy"
+        },
+        "body": {
+         "ar": "ورش في الجامعات والمدارس عن الادخار والميزانية والحماية من الاحتيال.",
+         "en": "Workshops in universities and schools on saving, budgeting and fraud protection."
+        },
+        "href": "/news/financial-literacy-week"
+       },
+       {
+        "icon": "financing",
+        "title": {
+         "ar": "الطاقة النظيفة",
+         "en": "Clean energy"
+        },
+        "body": {
+         "ar": "تمويل ميسّر لمنظومات الري بالطاقة الشمسية.",
+         "en": "Preferential financing for solar irrigation."
+        },
+        "href": "/financing/agricultural"
+       },
+       {
+        "icon": "support",
+        "title": {
+         "ar": "التعليم",
+         "en": "Education"
+        },
+        "body": {
+         "ar": "حقائب مدرسية ومنح جامعية للطلاب المتفوقين.",
+         "en": "School kits and university scholarships for top students."
+        }
+       },
+       {
+        "icon": "wallet",
+        "title": {
+         "ar": "تمكين المرأة",
+         "en": "Women's empowerment"
+        },
+        "body": {
+         "ar": "تمويل وإرشاد لرائدات الأعمال.",
+         "en": "Financing and mentoring for women entrepreneurs."
+        },
+        "href": "/financing/women"
+       }
+      ]
+     },
+     "id": 18
+    },
+    {
+     "type": "gallery",
+     "data": {
+      "heading": {
+       "ar": "من الميدان",
+       "en": "From the field"
+      },
+      "images": [
+       {
+        "id": 401,
+        "url": "/demo/img/csr-school.svg",
+        "alt": {
+         "ar": "طلاب يستلمون حقائب مدرسية",
+         "en": "Pupils receiving school kits"
+        },
+        "mime": "image/svg+xml",
+        "width": 1200,
+        "height": 800
+       },
+       {
+        "id": 402,
+        "url": "/demo/img/csr-solar.svg",
+        "alt": {
+         "ar": "منظومة ري بالطاقة الشمسية في مزرعة",
+         "en": "A solar irrigation system on a farm"
+        },
+        "mime": "image/svg+xml",
+        "width": 1200,
+        "height": 800
+       },
+       {
+        "id": 403,
+        "url": "/demo/img/csr-workshop.svg",
+        "alt": {
+         "ar": "ورشة ثقافة مالية في جامعة",
+         "en": "A financial literacy workshop at a university"
+        },
+        "mime": "image/svg+xml",
+        "width": 1200,
+        "height": 800
+       }
+      ]
+     },
+     "id": 19
+    },
+    {
+     "type": "cta",
+     "data": {
+      "title": {
+       "ar": "شريك في مبادرة مجتمعية؟",
+       "en": "Partnering on a community initiative?"
+      },
+      "body": {
+       "ar": "نرحب بالشراكات مع المنظمات المحلية.",
+       "en": "We welcome partnerships with local organisations."
+      },
+      "primary": {
+       "label": {
+        "ar": "تواصل معنا",
+        "en": "Contact us"
+       },
+       "href": "/contact"
+      }
+     },
+     "id": 20
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "reports",
+   "title": {
+    "ar": "التقارير",
+    "en": "Reports"
+   },
+   "summary": {
+    "ar": "التقارير السنوية والقوائم المالية المدققة وتقارير الاستدامة.",
+    "en": "Annual reports, audited financial statements and sustainability reports."
+   },
+   "seo": {
+    "title": {
+     "ar": "التقارير",
+     "en": "Reports"
+    },
+    "description": {
+     "ar": "التقارير السنوية والقوائم المالية المدققة وتقارير الاستدامة.",
+     "en": "Annual reports, audited financial statements and sustainability reports."
+    }
+   },
+   "sections": [
+    {
+     "type": "documents",
+     "data": {
+      "heading": {
+       "ar": "التقارير السنوية",
+       "en": "Annual reports"
+      },
+      "items": [
+       {
+        "title": {
+         "ar": "التقرير السنوي 2025",
+         "en": "Annual report 2025"
+        },
+        "year": 2025,
+        "file": {
+         "id": 500,
+         "url": "/demo/docs/annual-report-2025.pdf",
+         "alt": {
+          "ar": "التقرير السنوي 2025",
+          "en": "Annual report 2025"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "التقرير السنوي 2024",
+         "en": "Annual report 2024"
+        },
+        "year": 2024,
+        "file": {
+         "id": 501,
+         "url": "/demo/docs/annual-report-2024.pdf",
+         "alt": {
+          "ar": "التقرير السنوي 2024",
+          "en": "Annual report 2024"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "التقرير السنوي 2023",
+         "en": "Annual report 2023"
+        },
+        "year": 2023,
+        "file": {
+         "id": 502,
+         "url": "/demo/docs/annual-report-2023.pdf",
+         "alt": {
+          "ar": "التقرير السنوي 2023",
+          "en": "Annual report 2023"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "التقرير السنوي 2022",
+         "en": "Annual report 2022"
+        },
+        "year": 2022,
+        "file": {
+         "id": 503,
+         "url": "/demo/docs/annual-report-2022.pdf",
+         "alt": {
+          "ar": "التقرير السنوي 2022",
+          "en": "Annual report 2022"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "التقرير السنوي 2021",
+         "en": "Annual report 2021"
+        },
+        "year": 2021,
+        "file": {
+         "id": 504,
+         "url": "/demo/docs/annual-report-2021.pdf",
+         "alt": {
+          "ar": "التقرير السنوي 2021",
+          "en": "Annual report 2021"
+         },
+         "mime": "application/pdf"
+        }
+       }
+      ]
+     },
+     "id": 21
+    },
+    {
+     "type": "documents",
+     "data": {
+      "heading": {
+       "ar": "القوائم المالية الربعية",
+       "en": "Quarterly financial statements"
+      },
+      "items": [
+       {
+        "title": {
+         "ar": "الربع الثاني 2026",
+         "en": "Q2 2026"
+        },
+        "year": 2026,
+        "file": {
+         "id": 511,
+         "url": "/demo/docs/q2-2026.pdf",
+         "alt": {
+          "ar": "القوائم الربعية",
+          "en": "Quarterly statements"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "الربع الأول 2026",
+         "en": "Q1 2026"
+        },
+        "year": 2026,
+        "file": {
+         "id": 512,
+         "url": "/demo/docs/q1-2026.pdf",
+         "alt": {
+          "ar": "القوائم الربعية",
+          "en": "Quarterly statements"
+         },
+         "mime": "application/pdf"
+        }
+       },
+       {
+        "title": {
+         "ar": "الربع الرابع 2025",
+         "en": "Q4 2025"
+        },
+        "year": 2025,
+        "file": {
+         "id": 513,
+         "url": "/demo/docs/q4-2025.pdf",
+         "alt": {
+          "ar": "القوائم الربعية",
+          "en": "Quarterly statements"
+         },
+         "mime": "application/pdf"
+        }
+       }
+      ]
+     },
+     "id": 22
+    },
+    {
+     "type": "documents",
+     "data": {
+      "heading": {
+       "ar": "الاستدامة",
+       "en": "Sustainability"
+      },
+      "items": [
+       {
+        "title": {
+         "ar": "تقرير الاستدامة والمسؤولية المجتمعية",
+         "en": "Sustainability & CSR report"
+        },
+        "year": 2025,
+        "file": {
+         "id": 521,
+         "url": "/demo/docs/sustainability-2025.pdf",
+         "alt": {
+          "ar": "تقرير الاستدامة",
+          "en": "Sustainability report"
+         },
+         "mime": "application/pdf"
+        }
+       }
+      ]
+     },
+     "id": 23
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "ملاحظة",
+       "en": "Note"
+      },
+      "body": {
+       "ar": "<p>القوائم المالية مدققة من مراجع خارجي مستقل. للاستفسارات: <a href=\"/contact\">تواصل معنا</a>.</p>",
+       "en": "<p>Financial statements are audited by an independent external auditor. For enquiries: <a href=\"/contact\">contact us</a>.</p>"
+      }
+     },
+     "id": 24
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "privacy",
+   "title": {
+    "ar": "سياسة الخصوصية",
+    "en": "Privacy policy"
+   },
+   "summary": {
+    "ar": "كيف نجمع بياناتك الشخصية ونستخدمها ونحميها.",
+    "en": "How we collect, use and protect your personal data."
+   },
+   "seo": {
+    "title": {
+     "ar": "سياسة الخصوصية",
+     "en": "Privacy policy"
+    },
+    "description": {
+     "ar": "كيف نجمع بياناتك الشخصية ونستخدمها ونحميها.",
+     "en": "How we collect, use and protect your personal data."
+    }
+   },
+   "sections": [
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "البيانات التي نجمعها",
+       "en": "Data we collect"
+      },
+      "body": {
+       "ar": "<p>نجمع فقط البيانات اللازمة لتقديم الخدمة: الاسم، رقم الهوية، رقم الجوال، البريد الإلكتروني، المدينة، وبيانات الطلب نفسه. لا نستخدم ملفات تعريف الارتباط للتتبع الإعلاني.</p>",
+       "en": "<p>We collect only what we need to provide the service: name, ID number, mobile number, email, city and the details of your request. We do not use advertising cookies.</p>"
+      }
+     },
+     "id": 25
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "كيف نستخدمها",
+       "en": "How we use it"
+      },
+      "body": {
+       "ar": "<ul><li>معالجة طلبك والتواصل معك بشأنه.</li><li>الالتزام بمتطلبات اعرف عميلك ومكافحة غسل الأموال.</li><li>تحسين خدماتنا عبر إحصاءات زيارات مجمّعة لا تحدد هويتك.</li></ul>",
+       "en": "<ul><li>Processing your request and contacting you about it.</li><li>Meeting know-your-customer and AML requirements.</li><li>Improving our services with aggregated, non-identifying visit statistics.</li></ul>"
+      }
+     },
+     "id": 26
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "كيف نحميها",
+       "en": "How we protect it"
+      },
+      "body": {
+       "ar": "<p>نشفّر رقم الهوية ورقم الجوال في قواعد البيانات، ونقيّد الوصول وفق الصلاحيات، ونسجّل كل عملية اطلاع في سجل تدقيق غير قابل للتعديل. تُحذف بيانات الطلبات غير المكتملة بعد 12 شهراً.</p>",
+       "en": "<p>ID and mobile numbers are encrypted at rest, access is role-restricted and every access is written to an immutable audit log. Data from incomplete requests is deleted after 12 months.</p>"
+      }
+     },
+     "id": 27
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "حقوقك",
+       "en": "Your rights"
+      },
+      "body": {
+       "ar": "<p>يحق لك طلب نسخة من بياناتك أو تصحيحها أو حذفها في حدود ما يسمح به القانون. راسلنا عبر <a href=\"/contact\">صفحة التواصل</a>.</p>",
+       "en": "<p>You may request a copy of your data, its correction or deletion as far as the law allows. Write to us via the <a href=\"/contact\">contact page</a>.</p>"
+      }
+     },
+     "id": 28
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "terms",
+   "title": {
+    "ar": "الشروط والأحكام",
+    "en": "Terms and conditions"
+   },
+   "summary": {
+    "ar": "شروط استخدام الموقع والخدمات الإلكترونية.",
+    "en": "Terms for using this website and our online services."
+   },
+   "seo": {
+    "title": {
+     "ar": "الشروط والأحكام",
+     "en": "Terms and conditions"
+    },
+    "description": {
+     "ar": "شروط استخدام الموقع والخدمات الإلكترونية.",
+     "en": "Terms for using this website and our online services."
+    }
+   },
+   "sections": [
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "استخدام الموقع",
+       "en": "Using this website"
+      },
+      "body": {
+       "ar": "<p>المعلومات في هذا الموقع لأغراض تعريفية، ولا تُعد عرضاً ملزماً. تخضع جميع المنتجات لشروط العقد الموقّع وموافقة البنك.</p>",
+       "en": "<p>Information on this site is for general guidance and is not a binding offer. All products are subject to the signed contract and the bank's approval.</p>"
+      }
+     },
+     "id": 29
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "الطلبات الإلكترونية",
+       "en": "Online requests"
+      },
+      "body": {
+       "ar": "<p>الطلب المقدَّم عبر الموقع هو إبداء رغبة وليس عملية مالية. يستكمل البنك التحقق من الهوية قبل تنفيذ أي خدمة.</p><p>نتائج حاسبة التمويل تقديرية ولا تمثل عرضاً نهائياً.</p>",
+       "en": "<p>A request made through this site is an expression of interest, not a financial transaction. The bank verifies your identity before providing any service.</p><p>Financing calculator results are estimates, not a final offer.</p>"
+      }
+     },
+     "id": 30
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "الأمان",
+       "en": "Security"
+      },
+      "body": {
+       "ar": "<p>لن يطلب منك البنك أبداً الرقم السري أو رمز التحقق. تسجيل الدخول للإنترنت المصرفي يتم فقط عبر البوابة الرسمية.</p>",
+       "en": "<p>The bank will never ask for your PIN or verification code. Internet banking login happens only on the official portal.</p>"
+      }
+     },
+     "id": 31
+    },
+    {
+     "type": "text",
+     "data": {
+      "heading": {
+       "ar": "القانون الواجب التطبيق",
+       "en": "Governing law"
+      },
+      "body": {
+       "ar": "<p>تخضع هذه الشروط لقوانين الجمهورية اليمنية وتعليمات البنك المركزي اليمني.</p>",
+       "en": "<p>These terms are governed by the laws of the Republic of Yemen and Central Bank of Yemen instructions.</p>"
+      }
+     },
+     "id": 32
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "transfers",
+   "title": {
+    "ar": "التحويلات",
+    "en": "Transfers"
+   },
+   "summary": {
+    "ar": "أرسل واستقبل الأموال داخل اليمن وخارجه عبر الفروع والوكلاء والتطبيق.",
+    "en": "Send and receive money in Yemen and abroad through branches, agents and the app."
+   },
+   "seo": {
+    "title": {
+     "ar": "التحويلات",
+     "en": "Transfers"
+    },
+    "description": {
+     "ar": "أرسل واستقبل الأموال داخل اليمن وخارجه عبر الفروع والوكلاء والتطبيق.",
+     "en": "Send and receive money in Yemen and abroad through branches, agents and the app."
+    }
+   },
+   "sections": [
+    {
+     "type": "features",
+     "data": {
+      "heading": {
+       "ar": "إرسال",
+       "en": "Send"
+      },
+      "body": {
+       "ar": "أرسل حوالة محلية أو دولية بخطوات بسيطة.",
+       "en": "Send a local or international transfer in a few simple steps."
+      },
+      "items": [
+       {
+        "icon": "mobile",
+        "title": {
+         "ar": "من التطبيق",
+         "en": "From the app"
+        },
+        "body": {
+         "ar": "تحويل فوري بين الحسابات وإلى البنوك الأخرى على مدار الساعة.",
+         "en": "Instant transfers between accounts and to other banks, 24/7."
+        }
+       },
+       {
+        "icon": "branch",
+        "title": {
+         "ar": "من الفرع أو الوكيل",
+         "en": "At a branch or agent"
+        },
+        "body": {
+         "ar": "أحضر هويتك وبيانات المستلم ورقم جواله.",
+         "en": "Bring your ID and the recipient's name and mobile number."
+        }
+       },
+       {
+        "icon": "network",
+        "title": {
+         "ar": "حوالات دولية",
+         "en": "International"
+        },
+        "body": {
+         "ar": "عبر شبكات التحويل الدولية الشريكة إلى أكثر من 100 دولة.",
+         "en": "Through partner international networks to 100+ countries."
+        }
+       }
+      ]
+     },
+     "id": 33
+    },
+    {
+     "type": "features",
+     "data": {
+      "heading": {
+       "ar": "استقبال",
+       "en": "Receive"
+      },
+      "body": {
+       "ar": "استلم حوالتك نقداً أو مباشرة في حسابك.",
+       "en": "Collect your transfer in cash or straight into your account."
+      },
+      "items": [
+       {
+        "icon": "receive",
+        "title": {
+         "ar": "إلى حسابك",
+         "en": "Into your account"
+        },
+        "body": {
+         "ar": "تُضاف الحوالة تلقائياً وتصلك رسالة فورية.",
+         "en": "Credited automatically with an instant alert."
+        }
+       },
+       {
+        "icon": "wallet",
+        "title": {
+         "ar": "نقداً",
+         "en": "In cash"
+        },
+        "body": {
+         "ar": "من أي فرع أو وكيل معتمد بالهوية ورقم الحوالة.",
+         "en": "At any branch or licensed agent with your ID and transfer number."
+        }
+       },
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "بأمان",
+         "en": "Securely"
+        },
+        "body": {
+         "ar": "لا تشارك رقم الحوالة إلا مع المستفيد.",
+         "en": "Share the transfer number only with the beneficiary."
+        }
+       }
+      ]
+     },
+     "id": 34
+    },
+    {
+     "type": "faq",
+     "data": {
+      "heading": {
+       "ar": "أسئلة عن التحويلات",
+       "en": "Transfer questions"
+      },
+      "items": [
+       {
+        "question": {
+         "ar": "ما رسوم التحويل المحلي؟",
+         "en": "What does a local transfer cost?"
+        },
+        "answer": {
+         "ar": "التحويل بين حسابات البنك مجاني، والرسوم الأخرى منشورة في دليل الرسوم في الفروع.",
+         "en": "Transfers between Withaq accounts are free; other fees are published in branches."
+        }
+       },
+       {
+        "question": {
+         "ar": "كم يستغرق التحويل الدولي؟",
+         "en": "How long do international transfers take?"
+        },
+        "answer": {
+         "ar": "عادة من دقائق إلى يومي عمل حسب الشبكة والدولة.",
+         "en": "Usually minutes to two working days depending on network and country."
+        }
+       }
+      ]
+     },
+     "id": 35
+    },
+    {
+     "type": "map",
+     "data": {
+      "heading": {
+       "ar": "أقرب وكيل إليك",
+       "en": "Find your nearest agent"
+      },
+      "type": "agent",
+      "city": null
+     },
+     "id": 36
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  },
+  {
+   "slug": "digital",
+   "title": {
+    "ar": "الخدمات الرقمية",
+    "en": "Digital banking"
+   },
+   "summary": {
+    "ar": "تطبيق الجوال والإنترنت المصرفي والمحفظة الرقمية والدفع بالـ QR.",
+    "en": "Mobile app, internet banking, digital wallet and QR payments."
+   },
+   "seo": {
+    "title": {
+     "ar": "الخدمات الرقمية",
+     "en": "Digital banking"
+    },
+    "description": {
+     "ar": "تطبيق الجوال والإنترنت المصرفي والمحفظة الرقمية والدفع بالـ QR.",
+     "en": "Mobile app, internet banking, digital wallet and QR payments."
+    }
+   },
+   "sections": [
+    {
+     "type": "features",
+     "data": {
+      "heading": {
+       "ar": "قنواتنا الرقمية",
+       "en": "Our digital channels"
+      },
+      "items": [
+       {
+        "icon": "mobile",
+        "title": {
+         "ar": "تطبيق الجوال",
+         "en": "Mobile Banking"
+        },
+        "body": {
+         "ar": "رصيدك وتحويلاتك وفواتيرك في تطبيق واحد، ويعمل مع اتصال ضعيف.",
+         "en": "Balance, transfers and bills in one app — works on weak connections."
+        }
+       },
+       {
+        "icon": "web",
+        "title": {
+         "ar": "الإنترنت المصرفي",
+         "en": "Internet Banking"
+        },
+        "body": {
+         "ar": "إدارة حساباتك من المتصفح بأمان مع تحقق ثنائي.",
+         "en": "Manage your accounts securely in the browser with two-factor verification."
+        }
+       },
+       {
+        "icon": "wallet",
+        "title": {
+         "ar": "المحفظة الرقمية",
+         "en": "Digital Wallet"
+        },
+        "body": {
+         "ar": "ادفع واستلم الأموال برقم جوالك.",
+         "en": "Pay and get paid with your phone number."
+        }
+       },
+       {
+        "icon": "qr",
+        "title": {
+         "ar": "الدفع بـ QR",
+         "en": "QR Payments"
+        },
+        "body": {
+         "ar": "امسح وادفع لدى آلاف التجار.",
+         "en": "Scan and pay at thousands of merchants."
+        }
+       },
+       {
+        "icon": "card",
+        "title": {
+         "ar": "البطاقات الرقمية",
+         "en": "Digital Cards"
+        },
+        "body": {
+         "ar": "بطاقة افتراضية للتسوق عبر الإنترنت.",
+         "en": "A virtual card for online shopping."
+        }
+       },
+       {
+        "icon": "shield",
+        "title": {
+         "ar": "أمان متعدد الطبقات",
+         "en": "Layered security"
+        },
+        "body": {
+         "ar": "بصمة، تحقق ثنائي، وتجميد البطاقة بلمسة.",
+         "en": "Biometrics, two-factor and one-tap card freeze."
+        }
+       }
+      ]
+     },
+     "id": 37
+    },
+    {
+     "type": "cards",
+     "data": {
+      "heading": {
+       "ar": "الدفع الإلكتروني",
+       "en": "Payments"
+      },
+      "items": [
+       {
+        "icon": "payment",
+        "title": {
+         "ar": "الكهرباء والمياه",
+         "en": "Electricity and water"
+        },
+        "body": {
+         "ar": "سداد فوري للفواتير مع إيصال رقمي.",
+         "en": "Instant bill payment with a digital receipt."
+        }
+       },
+       {
+        "icon": "mobile",
+        "title": {
+         "ar": "الاتصالات والإنترنت",
+         "en": "Telecom and internet"
+        },
+        "body": {
+         "ar": "شحن الرصيد وسداد الفواتير الشهرية.",
+         "en": "Top-ups and monthly bills."
+        }
+       },
+       {
+        "icon": "account",
+        "title": {
+         "ar": "الرسوم الحكومية والجامعية",
+         "en": "Government and university fees"
+        },
+        "body": {
+         "ar": "أكثر من 40 جهة خدمية.",
+         "en": "More than 40 billers."
+        }
+       }
+      ]
+     },
+     "id": 38
+    },
+    {
+     "type": "faq",
+     "data": {
+      "heading": {
+       "ar": "أسئلة شائعة",
+       "en": "Common questions"
+      },
+      "items": [
+       {
+        "question": {
+         "ar": "كيف أسجّل في التطبيق؟",
+         "en": "How do I register in the app?"
+        },
+        "answer": {
+         "ar": "حمّل التطبيق وسجّل برقم حسابك ورقم جوالك المسجّل، ثم أدخل رمز التحقق.",
+         "en": "Download the app, register with your account and registered mobile number, then enter the code."
+        }
+       },
+       {
+        "question": {
+         "ar": "هل يعمل التطبيق خارج اليمن؟",
+         "en": "Does the app work outside Yemen?"
+        },
+        "answer": {
+         "ar": "نعم، مع رقم الجوال المسجّل لاستقبال رمز التحقق.",
+         "en": "Yes, as long as your registered number can receive the verification code."
+        }
+       }
+      ]
+     },
+     "id": 39
+    },
+    {
+     "type": "cta",
+     "data": {
+      "title": {
+       "ar": "ابدأ مع الخدمات الرقمية",
+       "en": "Get started with digital banking"
+      },
+      "body": {
+       "ar": "افتح حساباً ثم فعّل التطبيق خلال دقائق.",
+       "en": "Open an account, then activate the app in minutes."
+      },
+      "primary": {
+       "label": {
+        "ar": "افتح حسابك",
+        "en": "Open your account"
+       },
+       "href": "/apply/account"
+      },
+      "secondary": {
+       "label": {
+        "ar": "الإنترنت المصرفي",
+        "en": "Internet banking"
+       },
+       "href": "https://ebank.withaq-bank.example"
+      }
+     },
+     "id": 40
+    }
+   ],
+   "updatedAt": "2026-09-20T09:00:00+03:00"
+  }
+ ]
+}

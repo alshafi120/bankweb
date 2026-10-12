@@ -1,0 +1,11 @@
+node_modules/
+.next/
+vendor/
+.env
+.env.local
+*.sqlite
+.phpunit.cache/
+*.tsbuildinfo
+next-env.d.ts
+infra/docker/.env
+infra/docker/tls/
